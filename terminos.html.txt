@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Condiciones del servicio · CasaClic</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="index.html">CasaClic</a>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="privacidad.html">Privacidad</a>
+    </nav>
+  </header>
+
+  <section>
+    <h1>Condiciones del servicio</h1>
+    <p class="meta">Última actualización: 29 de octubre de 2026</p>
+
+    <h3>Contenido</h3>
+    <p>Las recetas, menús y consejos de CasaClic son informativos y no sustituyen el consejo de un profesional de la salud o la nutrición. Si tienes alergias, intolerancias o una dieta especial, consulta con un profesional.</p>
+
+    <h3>Enlaces de afiliado</h3>
+    <p>Algunos enlaces de esta web y de nuestros canales llevan a productos digitales vendidos a través de Hotmart. Si compras a través de ellos, CasaClic puede recibir una comisión sin coste extra para ti. La compra, el pago y las garantías los gestiona Hotmart y el productor del contenido.</p>
+
+    <h3>Aplicación «CasaClic» de Google Cloud</h3>
+    <p>La aplicación es de uso interno y no está abierta al público. Solo sirve para que CasaClic publique su propio contenido en su canal de YouTube, conforme a las <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">Condiciones del servicio de YouTube</a> y a las normas de la comunidad de YouTube.</p>
+
+    <h3>Contacto</h3>
+    <p>Para cualquier consulta: <strong>casaclic.es@gmail.com</strong>.</p>
+  </section>
+
+  <footer>
+    <span>© 2026 CasaClic</span>
+    <a href="index.html">Inicio</a>
+    <a href="privacidad.html">Política de privacidad</a>
+  </footer>
+</div>
+</body>
+</html>

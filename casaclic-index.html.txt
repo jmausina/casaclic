@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CasaClic · Tu cocina, tu salud, a un clic</title>
+<meta name="description" content="CasaClic: ideas fáciles para cocinar platos sanos, sabrosos y caseros. Recetas paso a paso y menús organizados para toda la semana.">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="index.html">CasaClic</a>
+    <nav>
+      <a href="https://www.youtube.com/@casaclic_oficial" target="_blank" rel="noopener">YouTube</a>
+      <a href="privacidad.html">Privacidad</a>
+      <a href="terminos.html">Condiciones</a>
+    </nav>
+  </header>
+
+  <section>
+    <p class="tag">Tu cocina, tu salud, a un clic.</p>
+    <h1>Comer sano puede ser fácil</h1>
+    <p class="lead">Ideas sencillas para cocinar platos sanos, sabrosos y llenos de color, pensados para la vida real: poco tiempo, ingredientes de siempre y ganas de cuidarte.</p>
+    <p><a class="btn" href="https://hotm.io/n7G5jK" target="_blank" rel="noopener">Ver el recetario: 120 recetas + menú de 21 días</a></p>
+  </section>
+
+  <section>
+    <h2>Qué vas a encontrar</h2>
+    <div class="grid">
+      <div class="card"><h3>Recetas paso a paso</h3><p>Platos caseros explicados de forma clara, sin técnicas complicadas.</p></div>
+      <div class="card"><h3>Menús organizados</h3><p>Planifica la semana y ahorra tiempo en la cocina y en la compra.</p></div>
+      <div class="card"><h3>Trucos de cocina</h3><p>Pequeñas ideas que hacen el día a día más fácil.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Síguenos</h2>
+    <p>Cada semana publicamos nuevas ideas en nuestro canal de YouTube <a href="https://www.youtube.com/@casaclic_oficial" target="_blank" rel="noopener">CasaClic Oficial</a>. Suscríbete para no perderte ninguna receta.</p>
+  </section>
+
+  <section>
+    <h2>Contacto</h2>
+    <p>Escríbenos a <strong>casaclic.es@gmail.com</strong></p>
+  </section>
+
+  <footer>
+    <span>© 2026 CasaClic</span>
+    <a href="privacidad.html">Política de privacidad</a>
+    <a href="terminos.html">Condiciones del servicio</a>
+  </footer>
+  <p class="meta">Las recetas de CasaClic son informativas y no sustituyen el consejo de un profesional de la salud o la nutrición. Algunos enlaces son de afiliado: si compras a través de ellos, CasaClic puede recibir una comisión sin coste extra para ti.</p>
+</div>
+</body>
+</html>

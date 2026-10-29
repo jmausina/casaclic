@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad · CasaClic</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="index.html">CasaClic</a>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="terminos.html">Condiciones</a>
+    </nav>
+  </header>
+
+  <section>
+    <h1>Política de privacidad</h1>
+    <p class="meta">Última actualización: 29 de octubre de 2026</p>
+
+    <h3>Quién es el responsable</h3>
+    <p>CasaClic (José Miguel Ausina). Contacto: <strong>casaclic.es@gmail.com</strong>.</p>
+
+    <h3>Esta web</h3>
+    <p>Esta web no usa cookies propias, no tiene formularios y no recoge datos personales de sus visitantes. Los enlaces a YouTube y a la plataforma de venta (Hotmart) llevan a sitios externos con sus propias políticas de privacidad.</p>
+
+    <h3>La aplicación «CasaClic» de Google Cloud</h3>
+    <p>CasaClic tiene una aplicación interna que usa los Servicios de la API de YouTube solo para publicar sus propios vídeos en su canal de YouTube. Al autorizarla con una cuenta de Google, accede únicamente a:</p>
+    <ul>
+      <li>La información básica del canal autorizado (nombre e identificador).</li>
+      <li>El permiso para subir vídeos y editar sus títulos, descripciones y etiquetas en ese canal.</li>
+    </ul>
+    <p>No lee correos, contactos, archivos ni ningún otro dato de la cuenta de Google.</p>
+
+    <h3>Para qué se usan los datos</h3>
+    <p>Exclusivamente para publicar el contenido de CasaClic en el canal de YouTube de CasaClic. No se usan con fines publicitarios ni para crear perfiles.</p>
+
+    <h3>Con quién se comparten</h3>
+    <p>Con nadie. No vendemos, cedemos ni compartimos datos con terceros. Las credenciales de acceso se guardan cifradas y solo sirven para subir vídeos al canal propio.</p>
+
+    <h3>Servicios de Google y YouTube</h3>
+    <p>Al usar la aplicación aceptas las <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">Condiciones del servicio de YouTube</a>. El tratamiento de datos por parte de Google se rige por la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de privacidad de Google</a>.</p>
+
+    <h3>Cómo retirar el acceso y borrar los datos</h3>
+    <p>Puedes revocar el acceso en cualquier momento en <a href="https://myaccount.google.com/connections" target="_blank" rel="noopener">myaccount.google.com/connections</a>. Si quieres que borremos cualquier dato almacenado, escríbenos a <strong>casaclic.es@gmail.com</strong> y lo eliminaremos en un plazo máximo de 7 días.</p>
+
+    <h3>Tus derechos</h3>
+    <p>Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad escribiendo a <strong>casaclic.es@gmail.com</strong>. También puedes reclamar ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>).</p>
+  </section>
+
+  <footer>
+    <span>© 2026 CasaClic</span>
+    <a href="index.html">Inicio</a>
+    <a href="terminos.html">Condiciones del servicio</a>
+  </footer>
+</div>
+</body>
+</html>
