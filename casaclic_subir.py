@@ -99,7 +99,7 @@ def make_yt(dia,tmp="/tmp/ytc"):
     subprocess.run(["ffmpeg","-y","-loglevel","error","-f","concat","-safe","0","-i",f"{tmp}/list.txt","-i",f"{tmp}/m.wav","-map","0:v","-map","1:a","-c:v","copy","-af",f"afade=t=in:d=0.5,afade=t=out:st={secs-3}:d=3","-c:a","aac","-b:a","160k","-shortest",final],check=True)
     return final
 
-def import datetime as dt
+import datetime as dt
 from zoneinfo import ZoneInfo
 MADRID=ZoneInfo("Europe/Madrid")
 INICIO=dt.date(2026,10,31)   # este día se publica el vídeo 9
