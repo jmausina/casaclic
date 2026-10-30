@@ -1,16 +1,23 @@
 name: CasaClic - subir vídeo a YouTube
 
 on:
+  schedule:
+    # Todos los días a las 09:17 UTC (10:17 en invierno, 11:17 en verano, hora de España).
+    # El vídeo se sube antes y YouTube lo publica solo a las 13:00 hora de España.
+    - cron: "17 9 * * *"
   workflow_dispatch:
     inputs:
       dia:
-        description: "Número de día del vídeo (1, 2, 3...)"
-        required: true
-        default: "8"
+        description: "Número de día (vacío = el que toca hoy)"
+        required: false
+        default: ""
       privacidad:
-        description: "public, unlisted o private"
-        required: true
-        default: "public"
+        description: "programado (13:00), public, unlisted o private"
+        required: false
+        default: "programado"
+
+permissions:
+  contents: write
 
 jobs:
   subir:
@@ -34,4 +41,15 @@ jobs:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
-        run: python casaclic_subir.py "${{ github.event.inputs.dia }}" "${{ github.event.inputs.privacidad }}"
+        run: |
+          set -o pipefail
+          python casaclic_subir.py "${{ github.event.inputs.dia }}" "${{ github.event.inputs.privacidad }}" | tee salida.txt
+
+      - name: Guardar registro (mantiene activa la tarea diaria)
+        run: |
+          echo "$(TZ=Europe/Madrid date '+%Y-%m-%d %H:%M') $(grep SUBIDO salida.txt)" >> registro.txt
+          git config user.name "casaclic-bot"
+          git config user.email "casaclic-bot@users.noreply.github.com"
+          git add registro.txt
+          git commit -m "Registro de subida $(date +%F)"
+          git push
