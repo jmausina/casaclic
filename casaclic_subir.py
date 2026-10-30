@@ -99,6 +99,15 @@ def make_yt(dia,tmp="/tmp/ytc"):
     subprocess.run(["ffmpeg","-y","-loglevel","error","-f","concat","-safe","0","-i",f"{tmp}/list.txt","-i",f"{tmp}/m.wav","-map","0:v","-map","1:a","-c:v","copy","-af",f"afade=t=in:d=0.5,afade=t=out:st={secs-3}:d=3","-c:a","aac","-b:a","160k","-shortest",final],check=True)
     return final
 
+def import datetime as dt
+from zoneinfo import ZoneInfo
+MADRID=ZoneInfo("Europe/Madrid")
+INICIO=dt.date(2026,10,31)   # este día se publica el vídeo 9
+HORA_PUBLICACION=13          # 13:00 hora de España
+
+def dia_de_hoy():
+    return 9+(dt.datetime.now(MADRID).date()-INICIO).days
+
 def subir(path,meta,privacidad="public"):
     from google.oauth2.credentials import Credentials
     from googleapiclient.discovery import build
@@ -111,21 +120,33 @@ def subir(path,meta,privacidad="public"):
     print("Canal autorizado:",canal)
     if canal!="CasaClic Oficial":
         sys.exit(f"ERROR: el token es del canal '{canal}', no de 'CasaClic Oficial'. No subo nada.")
+    status={"privacyStatus":privacidad,"selfDeclaredMadeForKids":False}
+    if privacidad=="programado":
+        ahora=dt.datetime.now(MADRID)
+        cuando=ahora.replace(hour=HORA_PUBLICACION,minute=0,second=0,microsecond=0)
+        if cuando-ahora<dt.timedelta(minutes=20):
+            status["privacyStatus"]="public"
+        else:
+            status["privacyStatus"]="private"; status["publishAt"]=cuando.astimezone(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+            print("Programado para:",cuando.strftime("%d/%m/%Y %H:%M"),"(hora de España)")
     body={"snippet":{"title":meta["yt_title"],"description":meta["yt_description"],"tags":TAGS,"categoryId":"26","defaultLanguage":"es"},
-          "status":{"privacyStatus":privacidad,"selfDeclaredMadeForKids":False}}
+          "status":status}
     req=yt.videos().insert(part="snippet,status",body=body,media_body=MediaFileUpload(path,mimetype="video/mp4",chunksize=-1,resumable=True))
     resp=None
     while resp is None:
         _,resp=req.next_chunk()
     vid=resp["id"]
-    print(f"SUBIDO: https://youtu.be/{vid}  (visibilidad: {resp['status']['privacyStatus']})")
+    st=resp["status"]; vis=st["privacyStatus"]+(f", se publica {st['publishAt']} UTC" if st.get("publishAt") else "")
+    print(f"SUBIDO: https://youtu.be/{vid}  (visibilidad: {vis})")
     gs=os.environ.get("GITHUB_STEP_SUMMARY")
     if gs:
-        with open(gs,"a") as f: f.write(f"### Vídeo subido\n\n**{meta['yt_title']}**\n\nhttps://youtu.be/{vid} · visibilidad: {resp['status']['privacyStatus']}\n")
+        with open(gs,"a") as f: f.write(f"### Vídeo subido\n\n**{meta['yt_title']}**\n\nhttps://youtu.be/{vid} · {vis}\n")
     return vid
 
 if __name__=="__main__":
-    dia=int(sys.argv[1]); priv=sys.argv[2] if len(sys.argv)>2 else "public"
+    a=sys.argv[1].strip() if len(sys.argv)>1 else ""
+    dia=int(a) if a.isdigit() else dia_de_hoy()
+    priv=(sys.argv[2].strip() if len(sys.argv)>2 else "") or "programado"
     m=yt_meta(dia); print("Día",dia,"·",m["yt_title"])
     p=make_yt(dia); print("Vídeo generado:",p,os.path.getsize(p)//1024,"KB")
     subir(p,m,priv)
