@@ -1,0 +1,37 @@
+name: CasaClic - subir vídeo a YouTube
+
+on:
+  workflow_dispatch:
+    inputs:
+      dia:
+        description: "Número de día del vídeo (1, 2, 3...)"
+        required: true
+        default: "8"
+      privacidad:
+        description: "public, unlisted o private"
+        required: true
+        default: "public"
+
+jobs:
+  subir:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar herramientas
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-dejavu-core
+          pip install -q numpy scipy pillow requests google-api-python-client google-auth
+
+      - name: Generar y subir el vídeo
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python casaclic_subir.py "${{ github.event.inputs.dia }}" "${{ github.event.inputs.privacidad }}"
