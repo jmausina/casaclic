@@ -1,1 +1,31 @@
-{"dias": []}
+{
+ "dias": [
+  {
+   "fecha": "2026-11-08",
+   "hora": "16:42",
+   "video": "4mGWJ6viLjw",
+   "canal": "UC-wvAtFM1D_ZSbJAi5ZLqfQ",
+   "titulo": "BOSS The Scent Le Parfum de 139,00 € hoy por 54,99 € #Shorts",
+   "productos": [
+    {
+     "asin": "B09NS3DJY4",
+     "nombre": "BOSS The Scent Le Parfum – Perfume hombre 100 ml",
+     "precio": "54,99 €",
+     "antes": "139,00 €"
+    },
+    {
+     "asin": "B0CGCDP1YF",
+     "nombre": "Labial Revlon ColorStay Limitless Matte",
+     "precio": "5,80 €",
+     "antes": "12,50 €"
+    },
+    {
+     "asin": "B0CH2DHCS3",
+     "nombre": "Champú Babaria Cebolla Antioxidante – Pack 3 x 700 ml",
+     "precio": "7,47 €",
+     "antes": "13,56 €"
+    }
+   ]
+  }
+ ]
+}
