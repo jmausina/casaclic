@@ -1,0 +1,63 @@
+name: Chollos de Belleza - Autorizar YouTube (solo a mano)
+
+# Ayudante de una sola vez para conseguir el token del canal Chollos de Belleza
+# con el mismo cliente de Google Cloud de CasaClic, sin sacar sus secretos del repositorio.
+# Todo lo que devuelve va CIFRADO con la clave pública que se le pasa (solo Claude puede leerlo).
+on:
+  workflow_dispatch:
+    inputs:
+      pubkey:
+        description: 'Clave pública (base64) para cifrar la respuesta'
+        required: true
+      code:
+        description: 'Dirección http://localhost/?code=... (vacío = solo pedir el client_id)'
+        required: false
+        default: ''
+      redirect_uri:
+        description: 'redirect_uri usado en el enlace'
+        required: false
+        default: 'http://localhost'
+
+permissions:
+  contents: read
+
+jobs:
+  auth:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Intercambio cifrado
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          PUBKEY: ${{ inputs.pubkey }}
+          CODE: ${{ inputs.code }}
+          REDIRECT: ${{ inputs.redirect_uri }}
+        run: |
+          python3 -m pip install -q PyNaCl
+          python3 - <<'PY'
+          import os, json, base64, urllib.request, urllib.parse
+          from nacl.public import PublicKey, SealedBox
+          box = SealedBox(PublicKey(base64.b64decode(os.environ['PUBKEY'])))
+          enc = lambda s: base64.b64encode(box.encrypt(s.encode())).decode()
+          code = os.environ.get('CODE', '').strip()
+          if 'code=' in code:
+              code = urllib.parse.parse_qs(urllib.parse.urlparse(code).query).get('code', [''])[0]
+          out = {'client_id': enc(os.environ['YT_CLIENT_ID'])}
+          if code:
+              body = urllib.parse.urlencode({'code': code, 'client_id': os.environ['YT_CLIENT_ID'],
+                  'client_secret': os.environ['YT_CLIENT_SECRET'], 'redirect_uri': os.environ['REDIRECT'],
+                  'grant_type': 'authorization_code'}).encode()
+              try:
+                  r = json.loads(urllib.request.urlopen(urllib.request.Request('https://oauth2.googleapis.com/token', body)).read())
+              except urllib.error.HTTPError as e:
+                  raise SystemExit('Google rechazó el código: ' + e.read().decode()[:300])
+              req = urllib.request.Request('https://www.googleapis.com/youtube/v3/channels?part=snippet&mine=true',
+                                           headers={'Authorization': 'Bearer ' + r['access_token']})
+              ch = json.loads(urllib.request.urlopen(req).read()).get('items', [])
+              out['canales'] = [{'id': c['id'], 'title': c['snippet']['title'], 'customUrl': c['snippet'].get('customUrl')} for c in ch]
+              if 'refresh_token' not in r:
+                  raise SystemExit('Google no devolvió refresh_token (falta prompt=consent). Canales: ' + json.dumps(out['canales']))
+              out['refresh_token'] = enc(r['refresh_token'])
+          print('RESULTADO_CIFRADO=' + json.dumps(out, ensure_ascii=False))
+          PY

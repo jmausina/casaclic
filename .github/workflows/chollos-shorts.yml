@@ -1,0 +1,52 @@
+name: Chollos de Belleza - Short diario
+
+# Todos los días a las 19:30 de Madrid. GitHub usa hora UTC:
+#   18:30 UTC en invierno (UTC+1) y 17:30 UTC en verano (UTC+2).
+# Se programan los dos y el script solo deja pasar el de la estación actual.
+on:
+  schedule:
+    - cron: '30 18 * * *'
+    - cron: '30 17 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: chollos-shorts
+  cancel-in-progress: false
+
+jobs:
+  short:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalar Pillow, fuente DejaVu y ffmpeg
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-dejavu-core ffmpeg
+          python3 -m pip install -q Pillow
+
+      - name: Fabricar y subir el Short
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_CHOLLOS_REFRESH_TOKEN: ${{ secrets.YT_CHOLLOS_REFRESH_TOKEN }}
+          EVENT_NAME: ${{ github.event_name }}
+          EVENT_SCHEDULE: ${{ github.event.schedule }}
+        run: python3 chollos/run_chollos.py
+
+      - name: Guardar el historial
+        run: |
+          if git diff --quiet -- chollos/historial.json; then echo "Historial sin cambios"; exit 0; fi
+          git config user.name "chollos-bot"
+          git config user.email "chollos-bot@users.noreply.github.com"
+          git add chollos/historial.json
+          git commit -m "Chollos: historial del Short $(TZ=Europe/Madrid date +%F)"
+          for i in 1 2 3 4 5; do
+            git pull --rebase -q && git push -q && exit 0
+            sleep $((i*5))
+          done
+          echo "No se pudo guardar el historial"; exit 1
