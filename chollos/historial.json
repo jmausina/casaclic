@@ -26,6 +26,33 @@
      "antes": "13,56 €"
     }
    ]
+  },
+  {
+   "fecha": "2026-11-10",
+   "hora": "02:55",
+   "video": "KMc3o-eqfJI",
+   "canal": "UC-wvAtFM1D_ZSbJAi5ZLqfQ",
+   "titulo": "Máscara de pestañas Rimmel Scandaleyes de 11,33 € hoy por 4,20 € #Shorts",
+   "productos": [
+    {
+     "asin": "B081SWCLBW",
+     "nombre": "Máscara de pestañas Rimmel Scandaleyes Volume on Demand",
+     "precio": "4,20 €",
+     "antes": "11,33 €"
+    },
+    {
+     "asin": "B0CZLJ1F82",
+     "nombre": "NIVEA Luminous630 Fluido CC Antimanchas SPF 30 (40 ml)",
+     "precio": "9,77 €",
+     "antes": "22,99 €"
+    },
+    {
+     "asin": "B0BTTK7V4Z",
+     "nombre": "Elizabeth Arden Sunflowers HoneyDaze EDT 100 ml",
+     "precio": "11,95 €",
+     "antes": "27,65 €"
+    }
+   ]
   }
  ]
 }
