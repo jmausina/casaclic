@@ -53,6 +53,33 @@
      "antes": "27,65 €"
     }
    ]
+  },
+  {
+   "fecha": "2026-11-11",
+   "hora": "00:38",
+   "video": "e8TCiF4atuQ",
+   "canal": "UC-wvAtFM1D_ZSbJAi5ZLqfQ",
+   "titulo": "Tommy Hilfiger Tommy EDT 100 ml de 76,00 € hoy por 25,46 € #Shorts",
+   "productos": [
+    {
+     "asin": "B000273HTW",
+     "nombre": "Tommy Hilfiger Tommy EDT 100 ml",
+     "precio": "25,46 €",
+     "antes": "76,00 €"
+    },
+    {
+     "asin": "B09VN62HF3",
+     "nombre": "Azzaro The Most Wanted Parfum (100 ml)",
+     "precio": "51,27 €",
+     "antes": "135,00 €"
+    },
+    {
+     "asin": "B07QTR9PGD",
+     "nombre": "Secador BaByliss Elegance 2100 Rose Gold",
+     "precio": "34,89 €",
+     "antes": "79,90 €"
+    }
+   ]
   }
  ]
 }
