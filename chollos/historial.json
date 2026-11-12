@@ -107,6 +107,33 @@
      "antes": "51,99 €"
     }
    ]
+  },
+  {
+   "fecha": "2026-11-13",
+   "hora": "00:46",
+   "video": "NCNS8qaYqxM",
+   "canal": "UC-wvAtFM1D_ZSbJAi5ZLqfQ",
+   "titulo": "FOREO IRIS Parches de ojos de 52,90 € hoy por 18,77 € #Shorts",
+   "productos": [
+    {
+     "asin": "B0C2Q7PBY4",
+     "nombre": "FOREO IRIS Parches de ojos con colágeno (60 uds.)",
+     "precio": "18,77 €",
+     "antes": "52,90 €"
+    },
+    {
+     "asin": "B0DR8X7HCB",
+     "nombre": "Neutrogena Hydro Boost Sérum 10% Niacinamida (30 ml)",
+     "precio": "13,27 €",
+     "antes": "26,50 €"
+    },
+    {
+     "asin": "B0DXLBZF4Q",
+     "nombre": "Philips OneBlade 360 QP2824/31 – Recortadora cara y cuerpo",
+     "precio": "32,99 €",
+     "antes": "59,99 €"
+    }
+   ]
   }
  ]
 }
