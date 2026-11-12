@@ -80,6 +80,33 @@
      "antes": "79,90 €"
     }
    ]
+  },
+  {
+   "fecha": "2026-11-12",
+   "hora": "01:56",
+   "video": "0XLiGYfIlzc",
+   "canal": "UC-wvAtFM1D_ZSbJAi5ZLqfQ",
+   "titulo": "Olay Regenerist Crema de Día SPF30 de 29,99 € hoy por 14,99 € #Shorts",
+   "productos": [
+    {
+     "asin": "B08S11XYJW",
+     "nombre": "Olay Regenerist Crema de Día SPF30 (50 ml)",
+     "precio": "14,99 €",
+     "antes": "29,99 €"
+    },
+    {
+     "asin": "B0B3JBYXG8",
+     "nombre": "Braun Series 5 – Afeitadora eléctrica 51-B1000s",
+     "precio": "49,99 €",
+     "antes": "94,90 €"
+    },
+    {
+     "asin": "B0BWNRTRMQ",
+     "nombre": "Oral-B Pro CrossAction – Pack 12 cabezales",
+     "precio": "27,95 €",
+     "antes": "51,99 €"
+    }
+   ]
   }
  ]
 }
