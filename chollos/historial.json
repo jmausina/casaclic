@@ -134,6 +134,33 @@
      "antes": "59,99 €"
     }
    ]
+  },
+  {
+   "fecha": "2026-11-14",
+   "hora": "00:47",
+   "video": "BIRj3sY219Q",
+   "canal": "UC-wvAtFM1D_ZSbJAi5ZLqfQ",
+   "titulo": "Cecotec CeramicCare Allin1 de 100,90 € hoy por 42,82 € #Shorts",
+   "productos": [
+    {
+     "asin": "B0BPYXVMYH",
+     "nombre": "Cecotec CeramicCare Allin1 – Cepillo de aire 4 en 1",
+     "precio": "42,82 €",
+     "antes": "100,90 €"
+    },
+    {
+     "asin": "B005GWRNQQ",
+     "nombre": "Diesel Loverdose – Eau de Parfum mujer 75 ml",
+     "precio": "40,95 €",
+     "antes": "84,50 €"
+    },
+    {
+     "asin": "B08P4YPB8Q",
+     "nombre": "Maybelline Lash Sensational Sky High – Máscara de pestañas negra",
+     "precio": "6,60 €",
+     "antes": "12,99 €"
+    }
+   ]
   }
  ]
 }
