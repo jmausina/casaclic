@@ -161,6 +161,33 @@
      "antes": "12,99 €"
     }
    ]
+  },
+  {
+   "fecha": "2026-11-16",
+   "hora": "00:03",
+   "video": "RH7ITbTENrw",
+   "canal": "UC-wvAtFM1D_ZSbJAi5ZLqfQ",
+   "titulo": "Hugo Boss Boss Bottled Elixir 100 ml de 145,00 € hoy por 53,95 € #Shorts",
+   "productos": [
+    {
+     "asin": "B0C77YPWF9",
+     "nombre": "Hugo Boss Boss Bottled Elixir 100 ml",
+     "precio": "53,95 €",
+     "antes": "145,00 €"
+    },
+    {
+     "asin": "B0F75ZR6H9",
+     "nombre": "Urban Decay All Nighter – Spray fijador de maquillaje",
+     "precio": "17,95 €",
+     "antes": "44,00 €"
+    },
+    {
+     "asin": "B008KMZ8FC",
+     "nombre": "Kiehl's Contorno de Ojos con Aguacate",
+     "precio": "23,93 €",
+     "antes": "56,00 €"
+    }
+   ]
   }
  ]
 }
