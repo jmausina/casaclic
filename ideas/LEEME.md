@@ -21,7 +21,7 @@
 - Descripción con el enlace del producto del canal:
   - CasaClic Oficial → `https://hotm.io/n7G5jK`
   - Belleza Ancestral → `https://go.hotmart.com/M108343227O`
-- Canales con token en GitHub: «CasaClic Oficial» (`YT_REFRESH_TOKEN`), «Chollos de Belleza» (`YT_CHOLLOS_REFRESH_TOKEN`). «Belleza Ancestral» necesita el secreto `YT_BELLEZA_REFRESH_TOKEN` (si falta, el vídeo se fabrica pero no se sube).
+- Canales con token en GitHub: «CasaClic Oficial» (`YT_REFRESH_TOKEN`), «Chollos de Belleza» (`YT_CHOLLOS_REFRESH_TOKEN`). «Belleza Ancestral» (`YT_BELLEZA_REFRESH_TOKEN`, puesto el 16/11). Reparto semanal: 2 Shorts para Belleza Ancestral y 2 para CasaClic Oficial (uno de cada el domingo y uno de cada el miércoles).
 - Ejemplo de ficha: `ideas/fichas/hechas/2026-11-16_helado-platano-v2.json` (o `pendientes/` si aún no se ha subido).
 
 ## Cupo de YouTube (10.000 unidades/día, proyecto CasaClic)
