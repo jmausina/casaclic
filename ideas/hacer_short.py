@@ -202,11 +202,11 @@ def subir(ruta, ficha, creditos):
         '\n\nVoz generada por ordenador. Música original.\n\n#Shorts'
     body = {'snippet': {'title': ficha['titulo'][:100], 'description': desc[:4900], 'tags': ficha.get('tags', [])[:15],
                         'categoryId': ficha.get('categoria', '26'), 'defaultLanguage': 'es', 'defaultAudioLanguage': 'es'},
-            'status': {'privacyStatus': 'private', 'selfDeclaredMadeForKids': False}}
+            'status': {'privacyStatus': ficha.get('privacidad', 'private'), 'selfDeclaredMadeForKids': False}}
     req = yt.videos().insert(part='snippet,status', body=body, media_body=MediaFileUpload(ruta, mimetype='video/mp4', resumable=True))
     resp = None
     while resp is None: _, resp = req.next_chunk()
-    log(f"SUBIDO EN PRIVADO: https://youtube.com/shorts/{resp['id']}  ({nombre})")
+    log(f"SUBIDO ({ficha.get('privacidad', 'private')}): https://youtube.com/shorts/{resp['id']}  ({nombre})")
     return resp['id']
 
 
