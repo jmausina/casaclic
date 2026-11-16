@@ -4,7 +4,7 @@
 1. **Domingo, 07:10 (Madrid):** el flujo `ideas-buscar.yml` busca en YouTube con los filtros de `ideas/config.json` y guarda `ideas/resultados/AAAA-MM-DD_ideas.{json,csv,md}`. Usa ~1.200 unidades del cupo de CasaClic (el que sobra antes de que se reinicie a las 9:00).
 2. **Domingo, 10:37:** tarea programada de Claude. Lee los resultados, los pasa a una hoja de Google, elige **4 ideas** y escribe 4 fichas en `ideas/fichas/pendientes/`: 2 sin fecha (se suben el domingo) y 2 con `"subir_desde": "<fecha del miércoles>"` (se suben solas el miércoles a las 11:20).
    **Objetivo: 4 Shorts a la semana, de 1 minuto cada uno.**
-3. Al subir una ficha, el flujo `ideas-short.yml` fabrica el Short (voz Piper, fotos de Wikimedia, música propia) y lo sube **en PRIVADO**. Jose Miguel decide si se publica.
+3. Al subir una ficha, el flujo `ideas-short.yml` fabrica el Short (voz Piper, fotos de Wikimedia, música propia) y lo sube. **Desde el 16/11 se publican solos** (decisión de Jose Miguel): cada ficha lleva `"privacidad": "public"` y `"hora_publicacion": "19:00"` → YouTube lo publica a las 19:00 de ese día (si ya ha pasado, al momento).
 
 ## Filtros (config.json)
 `idioma`, `pais`, `idioma_estricto`, `periodo_dias`, `visitas_min/max`, `duracion_min/max_seg`, `formato` (todos/cortos/largos), `suscriptores_min/max`, `outlier_min`, `visitas_dia_min`, `interaccion_min_pct`, `rpm_min_usd`, `orden` (outlier/visitas/visitas_dia/interaccion). Cada búsqueda puede llevar sus propios `filtros` y `excluir`.
@@ -17,6 +17,7 @@
 - **Nada de promesas de salud** ni curas («hace crecer el pelo en zonas calvas», «quita el dolor»…). Solo cosas ciertas y prudentes.
 - **Duración: 55–65 s** (Jose Miguel quiere vídeos de 1 minuto). Unas 11–13 escenas de 12–15 palabras cada una (~150 palabras en total). Primera escena = gancho fuerte. Última escena la pone el campo `cierre`.
 - `imagen`: lista de 2–3 búsquedas en inglés, concretas («sliced banana», «banana slices»).
+- Siempre `"privacidad": "public"` y `"hora_publicacion": "19:00"`.
 - Descripción con el enlace del producto del canal:
   - CasaClic Oficial → `https://hotm.io/n7G5jK`
   - Belleza Ancestral → `https://go.hotmart.com/M108343227O`

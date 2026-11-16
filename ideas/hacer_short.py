@@ -203,6 +203,15 @@ def subir(ruta, ficha, creditos):
     body = {'snippet': {'title': ficha['titulo'][:100], 'description': desc[:4900], 'tags': ficha.get('tags', [])[:15],
                         'categoryId': ficha.get('categoria', '26'), 'defaultLanguage': 'es', 'defaultAudioLanguage': 'es'},
             'status': {'privacyStatus': ficha.get('privacidad', 'private'), 'selfDeclaredMadeForKids': False}}
+    hora = ficha.get('hora_publicacion')  # p. ej. "19:00" (hora de España): se sube en privado y YouTube lo publica solo a esa hora
+    if ficha.get('privacidad') == 'public' and hora:
+        import datetime as dt
+        from zoneinfo import ZoneInfo
+        ahora = dt.datetime.now(ZoneInfo('Europe/Madrid')); h, m = map(int, hora.split(':'))
+        cuando = ahora.replace(hour=h, minute=m, second=0, microsecond=0)
+        if cuando - ahora > dt.timedelta(minutes=20):
+            body['status'].update(privacyStatus='private', publishAt=cuando.astimezone(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'))
+            log('Se publicará solo a las', hora)
     req = yt.videos().insert(part='snippet,status', body=body, media_body=MediaFileUpload(ruta, mimetype='video/mp4', resumable=True))
     resp = None
     while resp is None: _, resp = req.next_chunk()
