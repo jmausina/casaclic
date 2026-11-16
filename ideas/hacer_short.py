@@ -212,6 +212,9 @@ def subir(ruta, ficha, creditos):
 
 if __name__ == '__main__':
     ruta_ficha = sys.argv[1]; ficha = json.load(open(ruta_ficha))
+    hoy = time.strftime('%Y-%m-%d')
+    if ficha.get('subir_desde', '') > hoy:
+        log(f"Ficha {ruta_ficha}: toca el {ficha['subir_desde']}. Hoy no."); sys.exit(0)
     video, secs, cred = fabricar(ficha)
     vid = None if os.environ.get('DRY_RUN') == '1' else subir(video, ficha, cred)
     ficha['resultado'] = dict(video_id=vid, segundos=round(secs, 1), creditos=cred, fecha=time.strftime('%Y-%m-%d %H:%M'))

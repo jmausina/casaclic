@@ -1,8 +1,12 @@
 name: Ideas virales - fabricar Shorts
 
-# Se lanza solo cuando Claude deja una ficha nueva en ideas/fichas/pendientes/, o a mano.
+# Se lanza al dejar una ficha nueva en ideas/fichas/pendientes/, los miércoles, o a mano.
+# Las fichas con "subir_desde" en el futuro esperan a su día.
 # Cada Short se sube en PRIVADO; Jose Miguel decide si se publica.
 on:
+  # Miércoles 10:20 UTC (11:20 en invierno): sube las fichas que el domingo dejó para el miércoles.
+  schedule:
+    - cron: '20 10 * * 3'
   push:
     paths: ['ideas/fichas/pendientes/*.json']
   workflow_dispatch:
