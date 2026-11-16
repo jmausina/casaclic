@@ -1,6 +1,6 @@
 {
   "_ayuda": "Buscador de ideas virales. Cambia los filtros aquí. null = sin límite. Los filtros de cada búsqueda mandan sobre los generales.",
-  "presupuesto_unidades": 1500,
+  "presupuesto_unidades": 2300,
   "resultados_por_busqueda": 15,
   "filtros": {
     "idioma": "es",
@@ -50,6 +50,31 @@
       "consultas": [
         "trucos para perros en casa",
         "cuidado de gatos consejos"
+      ]
+    },
+    {
+      "nombre": "Educación y ciencia (inglés)",
+      "canal_destino": "Ciencia y Porqués",
+      "nicho_rpm": "Educación y ciencia",
+      "_aviso": "Solo se usa el TEMA. Guion propio en español, escrito desde cero. Nunca traducir el guion ni usar imágenes o audio del vídeo original.",
+      "filtros": {
+        "idioma": "en",
+        "pais": "US",
+        "idioma_estricto": true,
+        "periodo_dias": 365,
+        "visitas_min": 300000,
+        "duracion_min_seg": 1200,
+        "duracion_max_seg": 2400,
+        "formato": "largos",
+        "suscriptores_max": null,
+        "outlier_min": 1.5
+      },
+      "consultas": [
+        "history documentary explained",
+        "science explained documentary",
+        "how it works engineering",
+        "ancient civilizations documentary",
+        "space universe documentary"
       ]
     }
   ],

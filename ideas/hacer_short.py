@@ -11,9 +11,11 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 W, H = 720, 1280
 FB = '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'
 TOKENS = {'CasaClic Oficial': 'YT_REFRESH_TOKEN', 'Chollos de Belleza': 'YT_CHOLLOS_REFRESH_TOKEN',
-          'Belleza Ancestral': 'YT_BELLEZA_REFRESH_TOKEN'}
+          'Belleza Ancestral': 'YT_BELLEZA_REFRESH_TOKEN',
+          'Ciencia y Porqués': 'YT_CIENCIA_REFRESH_TOKEN'}
 COLORES = {'CasaClic Oficial': ((15, 107, 92), (255, 122, 89)), 'Chollos de Belleza': ((122, 31, 61), (255, 243, 176)),
-           'Belleza Ancestral': ((92, 58, 33), (232, 196, 120))}
+           'Belleza Ancestral': ((92, 58, 33), (232, 196, 120)),
+           'Ciencia y Porqués': ((20, 52, 94), (255, 214, 102))}
 VOZ_URL = 'https://huggingface.co/rhasspy/piper-voices/resolve/main/es/es_ES/davefx/medium/es_ES-davefx-medium.onnx'
 UA = {'User-Agent': 'IdeasShortsBot/1.0 (https://github.com/jmausina/casaclic; contacto por GitHub)'}
 TMP = os.environ.get('OUT_DIR', '/tmp/ideas_short')

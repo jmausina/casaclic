@@ -32,5 +32,13 @@
 - Campos: `"canal": "Belleza Ancestral"`, `"formato": "largo"`, `"privacidad": "public"`, `"hora_publicacion": "19:00"`, `"subir_desde": "<viernes AAAA-MM-DD>"`, `"categoria": "26"`.
 - Ejemplo mínimo de la forma: `{"secciones": [{"rotulo": "Japón: el agua de arroz", "imagen": ["rice water bowl", "rice grains"], "frases": ["…", "…", "…"]}], "cierre": "…"}`
 
+## Canal «Ciencia y Porqués» (educación, desde el 16/11)
+- Canal UCkRqpRmYjLu9bPtxaKTqHBg (@cienciayporques), cuenta de Google «Jose Miguel Ausina Juan». Secreto `YT_CIENCIA_REFRESH_TOKEN`.
+- Ideas: búsqueda «Educación y ciencia (inglés)» de config.json: vídeos en inglés, ≥300.000 visitas en 12 meses, 20–40 min.
+- **Regla de oro:** del vídeo en inglés solo se coge el TEMA. El guion se escribe desde cero en español, con estructura propia y datos comprobados. Nunca traducir su guion, ni usar sus imágenes, audio o título traducido literalmente.
+- 1 vídeo largo a la semana, **20–30 min** (unas 2.900–4.300 palabras, 80–110 secciones de 3–4 frases), `"formato": "largo"`, `"canal": "Ciencia y Porqués"`, `"categoria": "27"` (Educación), público a las 19:00, `"subir_desde"`: el martes siguiente.
+- Descripción: resumen propio + «Imágenes: Wikimedia Commons (créditos abajo). Voz generada por ordenador.» Sin enlaces de venta por ahora.
+- Nada de temas de salud con consejos médicos ni de inversión con recomendaciones.
+
 ## Cupo de YouTube (10.000 unidades/día, proyecto CasaClic)
 Cada subida gasta ~1.600. Máximo **2 Shorts nuevos por día** (por eso se reparten: 2 el domingo y 2 el miércoles) desde aquí para no dejar sin cupo a los robots de CasaClic y Chollos.
