@@ -1,0 +1,76 @@
+{
+ "id": "2026-11-16_prueba-largo",
+ "canal": "Belleza Ancestral",
+ "formato": "largo",
+ "titulo": "PRUEBA vídeo largo",
+ "descripcion": "Prueba",
+ "secciones": [
+  {
+   "rotulo": "Japón: el agua de arroz",
+   "imagen": [
+    "rice water",
+    "rice grains"
+   ],
+   "frases": [
+    "En Japón, el agua de arroz se usaba para lavar el pelo.",
+    "Es el agua que queda al lavar o cocer el arroz.",
+    "Hoy mucha gente la sigue usando como enjuague casero."
+   ]
+  },
+  {
+   "rotulo": "Marruecos: la arcilla",
+   "imagen": [
+    "rhassoul clay",
+    "clay powder"
+   ],
+   "frases": [
+    "En Marruecos se usa una arcilla llamada rassoul.",
+    "Se mezcla con agua hasta formar una pasta suave."
+   ]
+  }
+ ],
+ "cierre": "Esto era solo una prueba del vídeo largo.",
+ "rotulo_cierre": "Prueba",
+ "escenas": [
+  {
+   "texto": "En Japón, el agua de arroz se usaba para lavar el pelo.",
+   "rotulo": "Japón: el agua de arroz",
+   "imagen": [
+    "rice water",
+    "rice grains"
+   ]
+  },
+  {
+   "texto": "Es el agua que queda al lavar o cocer el arroz.",
+   "rotulo": null,
+   "imagen": null
+  },
+  {
+   "texto": "Hoy mucha gente la sigue usando como enjuague casero.",
+   "rotulo": null,
+   "imagen": null
+  },
+  {
+   "texto": "En Marruecos se usa una arcilla llamada rassoul.",
+   "rotulo": "Marruecos: la arcilla",
+   "imagen": [
+    "rhassoul clay",
+    "clay powder"
+   ]
+  },
+  {
+   "texto": "Se mezcla con agua hasta formar una pasta suave.",
+   "rotulo": null,
+   "imagen": null
+  }
+ ],
+ "resultado": {
+  "video_id": null,
+  "segundos": 19.8,
+  "creditos": [
+   "Water reflection of mountains, hut, green rice sheaves scattered in a paddy field and clouds with blue sky in Vang Vieng, Laos.jpg — Basile Morin (CC BY-SA 4.0)",
+   "Fragmentary vase containing lime powder, baked clay, lime - Museo Egizio Turin S 8433 p02.jpg — Desconocido (CC0)"
+  ],
+  "fecha": "2026-11-16 16:35"
+ }
+}
