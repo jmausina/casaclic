@@ -1,0 +1,43 @@
+{
+  "_ayuda": "Buscador de ideas virales. Cambia los filtros aquí. null = sin límite. Los filtros de cada búsqueda mandan sobre los generales.",
+  "presupuesto_unidades": 1500,
+  "resultados_por_busqueda": 15,
+  "filtros": {
+    "idioma": "es",
+    "pais": "ES",
+    "idioma_estricto": false,
+    "periodo_dias": 60,
+    "visitas_min": 5000,
+    "visitas_max": null,
+    "duracion_min_seg": null,
+    "duracion_max_seg": null,
+    "formato": "todos",
+    "suscriptores_min": null,
+    "suscriptores_max": 500000,
+    "outlier_min": 2,
+    "visitas_dia_min": null,
+    "interaccion_min_pct": null,
+    "rpm_min_usd": null,
+    "orden": "outlier"
+  },
+  "busquedas": [
+    {
+      "nombre": "Belleza natural",
+      "canal_destino": "Belleza Ancestral",
+      "nicho_rpm": "Estilo de vida",
+      "consultas": ["remedios caseros para la piel", "mascarilla casera natural", "receta natural para el pelo", "belleza natural antigua"]
+    },
+    {
+      "nombre": "Cocina sana",
+      "canal_destino": "CasaClic Oficial",
+      "nicho_rpm": "Comida y cocina",
+      "consultas": ["recetas saludables fáciles", "comida sana rápida", "cena ligera fácil"]
+    },
+    {
+      "nombre": "Mascotas",
+      "canal_destino": "Free-369",
+      "nicho_rpm": null,
+      "consultas": ["trucos para perros en casa", "cuidado de gatos consejos"]
+    }
+  ]
+}

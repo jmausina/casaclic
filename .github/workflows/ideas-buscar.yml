@@ -1,0 +1,37 @@
+name: Ideas virales - buscar
+
+# Cada domingo a las 06:10 UTC (07:10 en invierno, 08:10 en verano): usa el cupo que sobra
+# del día antes de que YouTube lo reinicie (09:00 hora de España). También se puede lanzar a mano.
+on:
+  schedule:
+    - cron: '10 6 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ideas
+  cancel-in-progress: false
+
+jobs:
+  buscar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Buscar ideas
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python3 ideas/buscar_ideas.py
+      - name: Guardar resultados
+        run: |
+          git config user.name "ideas-bot"
+          git config user.email "ideas-bot@users.noreply.github.com"
+          git add ideas/resultados
+          git diff --cached --quiet && exit 0
+          git commit -m "Ideas virales $(TZ=Europe/Madrid date +%F)"
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && exit 0; sleep $((i*5)); done
+          exit 1

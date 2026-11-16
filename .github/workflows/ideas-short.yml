@@ -1,0 +1,65 @@
+name: Ideas virales - fabricar Shorts
+
+# Se lanza solo cuando Claude deja una ficha nueva en ideas/fichas/pendientes/, o a mano.
+# Cada Short se sube en PRIVADO; Jose Miguel decide si se publica.
+on:
+  push:
+    paths: ['ideas/fichas/pendientes/*.json']
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: '1 = fabricar sin subir'
+        required: false
+        default: '0'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ideas
+  cancel-in-progress: false
+
+jobs:
+  shorts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Instalar herramientas
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-dejavu-core
+          pip install -q piper-tts pillow google-api-python-client google-auth
+      - name: Fabricar y subir
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          YT_CHOLLOS_REFRESH_TOKEN: ${{ secrets.YT_CHOLLOS_REFRESH_TOKEN }}
+          YT_BELLEZA_REFRESH_TOKEN: ${{ secrets.YT_BELLEZA_REFRESH_TOKEN }}
+          DRY_RUN: ${{ github.event.inputs.dry_run || '0' }}
+          OUT_DIR: /tmp/ideas_short
+        run: |
+          shopt -s nullglob
+          fichas=(ideas/fichas/pendientes/*.json)
+          [ ${#fichas[@]} -eq 0 ] && { echo "No hay fichas pendientes"; exit 0; }
+          for f in "${fichas[@]}"; do python3 ideas/hacer_short.py "$f"; done
+      - name: Guardar el vídeo para revisarlo
+        uses: actions/upload-artifact@v4
+        with:
+          name: shorts
+          path: /tmp/ideas_short/final/*.mp4
+          retention-days: 14
+          if-no-files-found: ignore
+      - name: Guardar fichas
+        run: |
+          git config user.name "ideas-bot"
+          git config user.email "ideas-bot@users.noreply.github.com"
+          git add -A ideas/fichas
+          git diff --cached --quiet && exit 0
+          git commit -m "Ideas: Shorts fabricados $(TZ=Europe/Madrid date +%F)"
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && exit 0; sleep $((i*5)); done
+          exit 1
