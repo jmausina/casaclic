@@ -1,0 +1,23 @@
+name: Configurar canal (a mano)
+on:
+  workflow_dispatch:
+    inputs:
+      ficha:
+        description: 'Archivo del canal en ideas/canales/'
+        required: true
+        default: 'ideas/canales/ciencia.json'
+permissions:
+  contents: read
+jobs:
+  config:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q google-api-python-client google-auth
+      - env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_CIENCIA_REFRESH_TOKEN: ${{ secrets.YT_CIENCIA_REFRESH_TOKEN }}
+          YT_BELLEZA_REFRESH_TOKEN: ${{ secrets.YT_BELLEZA_REFRESH_TOKEN }}
+        run: python3 ideas/configurar_canal.py "${{ github.event.inputs.ficha }}"
