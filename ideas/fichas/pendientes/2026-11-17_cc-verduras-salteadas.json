@@ -29,7 +29,7 @@
    "texto": "Elige verduras variadas: calabacín, pimiento, zanahoria, brócoli y cebolla.",
    "imagen": [
     "vegetables",
-    "fresh vegetables"
+    "assorted vegetables"
    ]
   },
   {
@@ -51,8 +51,8 @@
    "rotulo": "Truco 2",
    "texto": "Calienta bien la sartén antes de echar nada. Tiene que estar muy caliente.",
    "imagen": [
-    "frying pan",
-    "pan on stove"
+    "frying pan stove",
+    "skillet"
    ]
   },
   {
@@ -103,8 +103,8 @@
   {
    "texto": "Son perfectas como guarnición o como cena ligera.",
    "imagen": [
-    "vegetable dish",
-    "vegetables plate"
+    "stir fried vegetables plate",
+    "vegetables dish"
    ]
   }
  ],

@@ -54,15 +54,19 @@ def hablar(voz, texto, ruta):
 
 
 # ---------- Imágenes libres (Wikimedia Commons) ----------
-VACIAS = {'with', 'from', 'para', 'como', 'the', 'and', 'photo', 'image'}
+VACIAS = {'with', 'from', 'para', 'como', 'the', 'and', 'photo', 'image', 'del', 'los', 'las'}
+# Palabras que delatan fotos de museo, mapas o lugares que no pegan con una receta (salvo que se pidan).
+EXCLUIR = ['museum', 'museo', 'musée', 'ancient', 'antique', 'artifact', 'artefact', 'excavat', 'archaeolog', 'relief', 'statue',
+           'sarcophag', 'cycladic', 'bronze age', 'map', 'diagram', 'logo', 'factory', 'warehouse', 'market', 'store', 'shop',
+           'protest', 'politic', 'stamp', 'coin', 'painting', 'manuscript', 'inscription', 'tomb', 'grave', 'cemetery']
 
 
 def buscar_imagen(consultas, usadas):
     """Busca en Wikimedia Commons. Solo acepta fotos cuyo título contenga las palabras clave (evita fotos sin relación).
     `consultas` puede ser un texto o una lista de alternativas (en inglés suele haber más fotos)."""
     for q in ([consultas] if isinstance(consultas, str) else consultas):
-        claves = [w for w in re.findall(r'[a-záéíóúñ]+', q.lower()) if len(w) >= 4 and w not in VACIAS]
-        necesita = max(1, len(claves) - 1)
+        claves = [w for w in re.findall(r'[a-záéíóúñ]+', q.lower()) if len(w) >= 3 and w not in VACIAS]
+        necesita = len(claves)  # todas las palabras clave tienen que salir en el título de la foto
         p = dict(action='query', format='json', generator='search', gsrsearch='filetype:bitmap ' + q, gsrnamespace=6, gsrlimit=30,
                  prop='imageinfo', iiprop='url|extmetadata|size|mime', iiurlwidth=1280)
         d = json.loads(get('https://commons.wikimedia.org/w/api.php?' + urllib.parse.urlencode(p), False))
@@ -77,6 +81,8 @@ def buscar_imagen(consultas, usadas):
             if not lic or 'fair use' in lic.lower():
                 continue
             t = pg['title'].lower().replace('_', ' ')
+            if any(x in t and x not in q.lower() for x in EXCLUIR):
+                continue
             puntos = sum(c in t for c in claves)
             if puntos >= necesita:
                 candidatas.append((-puntos, pg.get('index', 99), pg, ii, em, lic))

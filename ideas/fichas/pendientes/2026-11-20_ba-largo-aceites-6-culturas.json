@@ -104,6 +104,18 @@
    ]
   },
   {
+   "rotulo": "El jabón de Castilla",
+   "imagen": [
+    "castile soap",
+    "olive oil soap"
+   ],
+   "frases": [
+    "Con aceite de oliva también se ha hecho jabón durante siglos.",
+    "El famoso jabón de Castilla se fabricaba con aceite de oliva en lugar de grasa animal.",
+    "Es un jabón suave que todavía hoy se sigue haciendo de forma artesanal."
+   ]
+  },
+  {
    "rotulo": "Receta: manos suaves",
    "imagen": [
     "hands",
@@ -173,6 +185,18 @@
     "Un uso muy sencillo: dos o tres gotas de argán en las palmas de las manos.",
     "Frótalas y pásalas solo por las puntas del pelo, ya seco.",
     "Muy poca cantidad, para que el pelo no quede graso."
+   ]
+  },
+  {
+   "rotulo": "Cómo reconocer el argán bueno",
+   "imagen": [
+    "argan oil",
+    "argan nuts"
+   ],
+   "frases": [
+    "Como es caro, a veces se vende argán mezclado con otros aceites.",
+    "Mira que en la etiqueta ponga cien por cien aceite de argán, sin más ingredientes.",
+    "El bueno huele suave, a fruto seco, y tiene un color dorado claro."
    ]
   },
   {
@@ -272,6 +296,18 @@
    ]
   },
   {
+   "rotulo": "Coco para las manos",
+   "imagen": [
+    "coconut oil",
+    "coconut"
+   ],
+   "frases": [
+    "El aceite de coco también se usa en las manos y en los codos.",
+    "Basta con una cantidad muy pequeña, del tamaño de un garbanzo.",
+    "Con el calor de la piel se derrite enseguida y se reparte bien."
+   ]
+  },
+  {
    "rotulo": "5. Tahití: el monoi",
    "imagen": [
     "tiare flower",
@@ -341,6 +377,18 @@
     "Un bálsamo muy fácil: una cucharada de manteca de karité y una de aceite de oliva.",
     "Derrítelo al baño maría y añade un poquito de cera de abeja si quieres que quede más firme.",
     "Viértelo en un tarrito pequeño y deja que se enfríe."
+   ]
+  },
+  {
+   "rotulo": "El karité en invierno",
+   "imagen": [
+    "shea butter",
+    "shea nuts"
+   ],
+   "frases": [
+    "En invierno, el frío y la calefacción resecan mucho la piel.",
+    "Una capa fina de manteca de karité en las zonas más secas puede ayudar a sentirla más cómoda.",
+    "En la zona del Sahel la usaban justamente contra el viento seco del harmatán."
    ]
   },
   {
