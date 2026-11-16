@@ -6,15 +6,18 @@ name: Ideas virales - fabricar Shorts
 on:
   # Miércoles 10:20 UTC (11:20 en invierno): sube las fichas que el domingo dejó para el miércoles.
   schedule:
-    - cron: '20 10 * * 3'
-    # Viernes 10:20 UTC: vídeo largo semanal de Belleza Ancestral.
-    - cron: '20 10 * * 5'
+    # Todos los días a las 10:20 UTC (11:20 en invierno): sube las fichas que tocan ese día.
+    - cron: '20 10 * * *'
   push:
     paths: ['ideas/fichas/pendientes/*.json']
   workflow_dispatch:
     inputs:
       dry_run:
         description: '1 = fabricar sin subir'
+        required: false
+        default: '0'
+      forzar:
+        description: '1 = fabricar también las fichas de días futuros (solo para revisar, con dry_run=1)'
         required: false
         default: '0'
 
@@ -47,6 +50,7 @@ jobs:
           YT_CHOLLOS_REFRESH_TOKEN: ${{ secrets.YT_CHOLLOS_REFRESH_TOKEN }}
           YT_BELLEZA_REFRESH_TOKEN: ${{ secrets.YT_BELLEZA_REFRESH_TOKEN }}
           DRY_RUN: ${{ github.event.inputs.dry_run || '0' }}
+          FORZAR: ${{ github.event.inputs.forzar || '0' }}
           OUT_DIR: /tmp/ideas_short
         run: |
           shopt -s nullglob
