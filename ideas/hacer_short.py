@@ -54,23 +54,39 @@ def hablar(voz, texto, ruta):
 
 
 # ---------- Imágenes libres (Wikimedia Commons) ----------
-def buscar_imagen(q, usadas):
-    p = dict(action='query', format='json', generator='search', gsrsearch='filetype:bitmap ' + q, gsrnamespace=6, gsrlimit=15,
-             prop='imageinfo', iiprop='url|extmetadata|size|mime', iiurlwidth=1280)
-    d = json.loads(get('https://commons.wikimedia.org/w/api.php?' + urllib.parse.urlencode(p), False))
-    pags = sorted(d.get('query', {}).get('pages', {}).values(), key=lambda x: x.get('index', 99))
-    for pg in pags:
-        ii = (pg.get('imageinfo') or [{}])[0]
-        if ii.get('mime') not in ('image/jpeg', 'image/png') or ii.get('width', 0) < 700 or pg['title'] in usadas:
-            continue
-        em = ii.get('extmetadata', {})
-        lic = em.get('LicenseShortName', {}).get('value', '')
-        if not lic or 'fair use' in lic.lower():
-            continue
-        autor = re.sub(r'<[^>]+>', '', em.get('Artist', {}).get('value', 'Desconocido')).strip()[:60]
-        usadas.add(pg['title'])
+VACIAS = {'with', 'from', 'para', 'como', 'the', 'and', 'photo', 'image'}
+
+
+def buscar_imagen(consultas, usadas):
+    """Busca en Wikimedia Commons. Solo acepta fotos cuyo título contenga las palabras clave (evita fotos sin relación).
+    `consultas` puede ser un texto o una lista de alternativas (en inglés suele haber más fotos)."""
+    for q in ([consultas] if isinstance(consultas, str) else consultas):
+        claves = [w for w in re.findall(r'[a-záéíóúñ]+', q.lower()) if len(w) >= 4 and w not in VACIAS]
+        necesita = max(1, len(claves) - 1)
+        p = dict(action='query', format='json', generator='search', gsrsearch='filetype:bitmap ' + q, gsrnamespace=6, gsrlimit=30,
+                 prop='imageinfo', iiprop='url|extmetadata|size|mime', iiurlwidth=1280)
+        d = json.loads(get('https://commons.wikimedia.org/w/api.php?' + urllib.parse.urlencode(p), False))
         time.sleep(1.5)  # evita el error 429 de Wikimedia
-        return get(ii['thumburl']), f"{pg['title'].replace('File:', '')} — {autor} ({lic})"
+        candidatas = []
+        for pg in d.get('query', {}).get('pages', {}).values():
+            ii = (pg.get('imageinfo') or [{}])[0]
+            if ii.get('mime') not in ('image/jpeg', 'image/png') or ii.get('width', 0) < 700 or pg['title'] in usadas:
+                continue
+            em = ii.get('extmetadata', {})
+            lic = em.get('LicenseShortName', {}).get('value', '')
+            if not lic or 'fair use' in lic.lower():
+                continue
+            t = pg['title'].lower().replace('_', ' ')
+            puntos = sum(c in t for c in claves)
+            if puntos >= necesita:
+                candidatas.append((-puntos, pg.get('index', 99), pg, ii, em, lic))
+        if candidatas:
+            _, _, pg, ii, em, lic = sorted(candidatas, key=lambda x: (x[0], x[1]))[0]
+            autor = re.sub(r'<[^>]+>', '', em.get('Artist', {}).get('value', 'Desconocido')).strip()[:60]
+            usadas.add(pg['title'])
+            log('Imagen:', q, '→', pg['title'])
+            return get(ii['thumburl']), f"{pg['title'].replace('File:', '')} — {autor} ({lic})"
+        log('Sin imagen clara para:', q)
     return None, None
 
 
