@@ -21,8 +21,8 @@
    "rotulo": "Pelo seco",
    "texto": "¿Pelo seco y sin brillo? Esta mascarilla se hace con dos cosas que tienes en la cocina.",
    "imagen": [
-    "corn starch",
-    "cornstarch"
+    "dry hair",
+    "hair"
    ]
   },
   {
@@ -37,8 +37,8 @@
    "rotulo": "Paso 1",
    "texto": "Disuelve la maicena en el agua fría, removiendo bien para que no queden grumos.",
    "imagen": [
-    "corn starch powder",
-    "cornstarch bowl"
+    "corn starch",
+    "cornstarch"
    ]
   },
   {
@@ -53,7 +53,7 @@
    "rotulo": "Paso 3",
    "texto": "Retira del fuego, deja templar y añade el aceite de oliva.",
    "imagen": [
-    "olive oil pouring",
+    "olive oil bottle",
     "olive oil"
    ]
   },
@@ -114,12 +114,13 @@
  "cierre": "Más recetas en el enlace de la descripción. Sígueme para más.",
  "resultado": {
   "video_id": null,
-  "segundos": 53.3,
+  "segundos": 53.2,
   "creditos": [
+   "Hair dryer in a bag in the hotel bathroom.jpg — Ser Amantio di Nicolao (CC0)",
+   "Italian olive oil 2007.jpg — my friend (CC BY 2.5)",
    "Corn Starch mixture.jpg — Ayapici (CC BY-SA 3.0)",
-   "Olive oil factory – IMG 20241111 163515 2.jpg — Kızıl (CC BY-SA 4.0)",
    "Hahn 16cm Saucepan.jpg — Cooks &amp; Kitchens from Darlington, UK (CC BY 2.0)",
-   "Votive plaque depicting an olive oil press at Eleusisright.jpg — Furius (CC0)",
+   "Olive oil bottle Bertolli Riserva Premium.jpg — Badagnani (talk) (CC BY 3.0)",
    "Terracotta column-krater (bowl for mixing wine and water) MET DP116935.jpg — Lydos (CC0)",
    "Blond hair going gray 01.jpg — Kritzolina (CC BY-SA 4.0)",
    "Towel rails radiator with hanger.jpg — MB SRL (CC BY 4.0)",
@@ -128,6 +129,6 @@
    "Cornstarch mixed with water.jpg — Picasa author kalaya (CC BY-SA 3.0)",
    "Lun olive tree 1600 years.jpg — Palauenc05 (CC BY-SA 4.0)"
   ],
-  "fecha": "2026-11-16 16:58"
+  "fecha": "2026-11-16 17:07"
  }
 }

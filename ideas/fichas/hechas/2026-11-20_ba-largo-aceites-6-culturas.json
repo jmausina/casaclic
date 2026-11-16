@@ -104,6 +104,18 @@
    ]
   },
   {
+   "rotulo": "El jabón de Castilla",
+   "imagen": [
+    "castile soap",
+    "olive oil soap"
+   ],
+   "frases": [
+    "Con aceite de oliva también se ha hecho jabón durante siglos.",
+    "El famoso jabón de Castilla se fabricaba con aceite de oliva en lugar de grasa animal.",
+    "Es un jabón suave que todavía hoy se sigue haciendo de forma artesanal."
+   ]
+  },
+  {
    "rotulo": "Receta: manos suaves",
    "imagen": [
     "hands",
@@ -173,6 +185,18 @@
     "Un uso muy sencillo: dos o tres gotas de argán en las palmas de las manos.",
     "Frótalas y pásalas solo por las puntas del pelo, ya seco.",
     "Muy poca cantidad, para que el pelo no quede graso."
+   ]
+  },
+  {
+   "rotulo": "Cómo reconocer el argán bueno",
+   "imagen": [
+    "argan oil",
+    "argan nuts"
+   ],
+   "frases": [
+    "Como es caro, a veces se vende argán mezclado con otros aceites.",
+    "Mira que en la etiqueta ponga cien por cien aceite de argán, sin más ingredientes.",
+    "El bueno huele suave, a fruto seco, y tiene un color dorado claro."
    ]
   },
   {
@@ -272,6 +296,18 @@
    ]
   },
   {
+   "rotulo": "Coco para las manos",
+   "imagen": [
+    "coconut oil",
+    "coconut"
+   ],
+   "frases": [
+    "El aceite de coco también se usa en las manos y en los codos.",
+    "Basta con una cantidad muy pequeña, del tamaño de un garbanzo.",
+    "Con el calor de la piel se derrite enseguida y se reparte bien."
+   ]
+  },
+  {
    "rotulo": "5. Tahití: el monoi",
    "imagen": [
     "tiare flower",
@@ -341,6 +377,18 @@
     "Un bálsamo muy fácil: una cucharada de manteca de karité y una de aceite de oliva.",
     "Derrítelo al baño maría y añade un poquito de cera de abeja si quieres que quede más firme.",
     "Viértelo en un tarrito pequeño y deja que se enfríe."
+   ]
+  },
+  {
+   "rotulo": "El karité en invierno",
+   "imagen": [
+    "shea butter",
+    "shea nuts"
+   ],
+   "frases": [
+    "En invierno, el frío y la calefacción resecan mucho la piel.",
+    "Una capa fina de manteca de karité en las zonas más secas puede ayudar a sentirla más cómoda.",
+    "En la zona del Sahel la usaban justamente contra el viento seco del harmatán."
    ]
   },
   {
@@ -569,6 +617,24 @@
    "imagen": null
   },
   {
+   "texto": "Con aceite de oliva también se ha hecho jabón durante siglos.",
+   "rotulo": "El jabón de Castilla",
+   "imagen": [
+    "castile soap",
+    "olive oil soap"
+   ]
+  },
+  {
+   "texto": "El famoso jabón de Castilla se fabricaba con aceite de oliva en lugar de grasa animal.",
+   "rotulo": null,
+   "imagen": null
+  },
+  {
+   "texto": "Es un jabón suave que todavía hoy se sigue haciendo de forma artesanal.",
+   "rotulo": null,
+   "imagen": null
+  },
+  {
    "texto": "Una receta sencilla para las manos secas.",
    "rotulo": "Receta: manos suaves",
    "imagen": [
@@ -673,6 +739,24 @@
   },
   {
    "texto": "Muy poca cantidad, para que el pelo no quede graso.",
+   "rotulo": null,
+   "imagen": null
+  },
+  {
+   "texto": "Como es caro, a veces se vende argán mezclado con otros aceites.",
+   "rotulo": "Cómo reconocer el argán bueno",
+   "imagen": [
+    "argan oil",
+    "argan nuts"
+   ]
+  },
+  {
+   "texto": "Mira que en la etiqueta ponga cien por cien aceite de argán, sin más ingredientes.",
+   "rotulo": null,
+   "imagen": null
+  },
+  {
+   "texto": "El bueno huele suave, a fruto seco, y tiene un color dorado claro.",
    "rotulo": null,
    "imagen": null
   },
@@ -821,6 +905,24 @@
    "imagen": null
   },
   {
+   "texto": "El aceite de coco también se usa en las manos y en los codos.",
+   "rotulo": "Coco para las manos",
+   "imagen": [
+    "coconut oil",
+    "coconut"
+   ]
+  },
+  {
+   "texto": "Basta con una cantidad muy pequeña, del tamaño de un garbanzo.",
+   "rotulo": null,
+   "imagen": null
+  },
+  {
+   "texto": "Con el calor de la piel se derrite enseguida y se reparte bien.",
+   "rotulo": null,
+   "imagen": null
+  },
+  {
    "texto": "De la India saltamos a la Polinesia, a las islas de Tahití.",
    "rotulo": "5. Tahití: el monoi",
    "imagen": [
@@ -925,6 +1027,24 @@
   },
   {
    "texto": "Viértelo en un tarrito pequeño y deja que se enfríe.",
+   "rotulo": null,
+   "imagen": null
+  },
+  {
+   "texto": "En invierno, el frío y la calefacción resecan mucho la piel.",
+   "rotulo": "El karité en invierno",
+   "imagen": [
+    "shea butter",
+    "shea nuts"
+   ]
+  },
+  {
+   "texto": "Una capa fina de manteca de karité en las zonas más secas puede ayudar a sentirla más cómoda.",
+   "rotulo": null,
+   "imagen": null
+  },
+  {
+   "texto": "En la zona del Sahel la usaban justamente contra el viento seco del harmatán.",
    "rotulo": null,
    "imagen": null
   },
@@ -1075,21 +1195,23 @@
  ],
  "resultado": {
   "video_id": null,
-  "segundos": 448.1,
+  "segundos": 497.7,
   "creditos": [
-   "Dante Gabriel Rossetti - Bottles.jpg — Dante Gabriel Rossetti (Public domain)",
-   "Olive oil factory – IMG 20241111 163515 2.jpg — Kızıl (CC BY-SA 4.0)",
+   "Sunflower oil bottles in Dnipro.jpg — Alex Blokha (CC BY-SA 4.0)",
+   "Italian olive oil 2007.jpg — my friend (CC BY 2.5)",
    "Cows in green field - nullamunjie olive grove.jpg — This file is published under the following Creative Commons  (GFDL 1.2)",
-   "Graffiti of ancient athletes in the Ancient Stadium of Nemea, Ancient Nemea, Greece (14114795273).jpg — Carole Raddato from FRANKFURT, Germany (CC BY-SA 2.0)",
+   "1885A1621 Greek Amphora or Stamnos.jpg — Unknown authorUnknown author (CC0)",
    "Strigil LACMA M.80.203.94.jpg — Desconocido (Public domain)",
    "Amphorae stacking.jpg — Ad Meskens (CC BY-SA 3.0)",
    "Olive oil bottle Bertolli Riserva Premium.jpg — Badagnani (talk) (CC BY 3.0)",
+   "Bar of Castile soap.jpg — Surv1v4l1st (CC BY-SA 3.0)",
    "Pupil washes hands during COVID-19 pandemic in Ghana.jpg — Amuzujoe (CC BY-SA 4.0)",
    "Goats in an argan tree Morocco.jpg — Elena Tatiana Chis (CC BY-SA 4.0)",
    "Goats in argan trees-morocco.jpg — Yair Haklai (CC BY-SA 4.0)",
    "Argan Oil Cooperative 01.jpg — Catalin Dordea (CC BY-SA 4.0)",
-   "Huile d'argan 010.JPG — Arnaud 25 (CC BY-SA 3.0)",
+   "Argan oil 01.jpg — Werner100359 (CC BY-SA 4.0)",
    "Hair 5 Split ends.png — Football World Champions (CC0)",
+   "Argan oil 03.jpg — Werner100359 (CC BY-SA 4.0)",
    "Camellia japonica NBG.jpg — PumpkinSky (CC BY-SA 3.0)",
    "Traditional Japanese women's hairstyle 'Yui-wata'.JPG — 都新聞社 Miyako Shinbun (Public domain)",
    "Wooden comb with a horse on top.jpg — SpeakingArch (CC BY-SA 4.0)",
@@ -1098,14 +1220,16 @@
    "Indian Head Massage crop.jpg — Vivek Patankar from Mumbai, India (CC BY 2.0)",
    "Coconut oil 2.jpg — Tiia Monto (CC BY-SA 4.0)",
    "Red symbol indicating high levels of saturated fat on a jar of coconut oil 01.jpg — Chenspec (CC BY-SA 4.0)",
+   "Coconut oil bottle in the background of coconuts from Kaleeswari Farm.jpg — deadrat (CC BY-SA 4.0)",
    "Tiaré flower (Gardenia taitensis).jpg — Octave Fargier (CC BY 2.0)",
    "Tahiti ISS007 14626.jpg — NASA (Public domain)",
    "Shea butter tree 01.jpg — Azorbli (CC BY 4.0)",
-   "USAID in Ghana Shea Butter Processing (41538466472).jpg — USAID in Africa (Public domain)",
+   "Shea nuts@@-.jpg — Dorcas Queen (CC BY-SA 4.0)",
    "Shea butter 1.jpg — Amuzujoe (CC BY-SA 4.0)",
    "Various colorful lip balm sticks (40821280864).jpg — Rawpixel Ltd (CC BY 2.0)",
+   "Shea butter.jpg — Amuzujoe (CC BY-SA 4.0)",
    "Ricinus communis (castor oil plant) at Bandlaguda 002.JPG — Adityamadhav83 (CC BY-SA 3.0)",
-   "Ancient Egyptian cosmetics; National Museum of Egyptian Civilization, Cairo (52087350129).jpg — Richard Mortel from Riyadh, Saudi Arabia (CC BY 2.0)",
+   "AncientEgypt-LadyApplyingCosmetics-ROM.png — Keith Schengili-Roberts (CC BY-SA 3.0)",
    "Castor oil.jpg — Pete Markham from Loretto, USA (CC BY-SA 2.0)",
    "Essential natural oils and skin care products.jpg — Kolobetsoo (CC BY-SA 4.0)",
    "Dropper bottle for chloroform, London, England, 1870-1900 Wellcome L0058166.jpg — Desconocido (CC BY 4.0)",
@@ -1113,6 +1237,6 @@
    "World Map 1689.JPG — Gerard van Schagen (Public domain)",
    "Recipe book of Margaret Countess of Moray.jpg — Unoquha (CC0)"
   ],
-  "fecha": "2026-11-16 17:03"
+  "fecha": "2026-11-16 17:12"
  }
 }
