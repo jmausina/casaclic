@@ -65,8 +65,10 @@
  ],
  "rotulo_cierre": "Sígueme en CasaClic",
  "cierre": "Guárdalo para el próximo antojo y sígueme para más recetas sanas y fáciles.",
+ "privacidad": "public",
+ "_aprobado": "Jose Miguel lo aprueba el 16/11 tras ver el vídeo",
  "resultado": {
-  "video_id": null,
+  "video_id": "pEJ8Hx7HWGg",
   "segundos": 29.1,
   "creditos": [
    "Banana, ice cream and toffee sauce on waffle at The Queen's Head, Boreham, Essex, England.jpg — Acabashi (CC BY-SA 4.0)",
@@ -76,6 +78,6 @@
    "Bananas Foster Ice Cream at Little Giant Ice Cream.jpg — uıɐɾ ʞ ʇɐɯɐs (CC BY-SA 2.0)",
    "Cocoa powder.jpg — blair (CC BY-SA 2.0)"
   ],
-  "fecha": "2026-11-16 16:01"
+  "fecha": "2026-11-16 16:15"
  }
 }
