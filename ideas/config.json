@@ -5,7 +5,7 @@
   "filtros": {
     "idioma": "es",
     "pais": "ES",
-    "idioma_estricto": false,
+    "idioma_estricto": true,
     "periodo_dias": 60,
     "visitas_min": 5000,
     "visitas_max": null,
@@ -25,19 +25,39 @@
       "nombre": "Belleza natural",
       "canal_destino": "Belleza Ancestral",
       "nicho_rpm": "Estilo de vida",
-      "consultas": ["remedios caseros para la piel", "mascarilla casera natural", "receta natural para el pelo", "belleza natural antigua"]
+      "consultas": [
+        "remedios caseros para la piel",
+        "mascarilla casera natural",
+        "receta natural para el pelo",
+        "belleza natural antigua"
+      ],
+      "_aviso": "Ojo: muchos vídeos de remedios prometen curas. Al hacer nuestra versión, nada de promesas de salud."
     },
     {
       "nombre": "Cocina sana",
       "canal_destino": "CasaClic Oficial",
       "nicho_rpm": "Comida y cocina",
-      "consultas": ["recetas saludables fáciles", "comida sana rápida", "cena ligera fácil"]
+      "consultas": [
+        "recetas saludables fáciles",
+        "comida sana rápida",
+        "cena ligera fácil"
+      ]
     },
     {
       "nombre": "Mascotas",
       "canal_destino": "Free-369",
       "nicho_rpm": null,
-      "consultas": ["trucos para perros en casa", "cuidado de gatos consejos"]
+      "consultas": [
+        "trucos para perros en casa",
+        "cuidado de gatos consejos"
+      ]
     }
+  ],
+  "excluir_siempre": [
+    "roblox",
+    "minecraft",
+    "fortnite",
+    "avatar world",
+    "free fire"
   ]
 }

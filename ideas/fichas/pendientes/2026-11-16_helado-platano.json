@@ -1,0 +1,19 @@
+{
+  "id": "2026-11-16_helado-platano",
+  "canal": "CasaClic Oficial",
+  "inspirado_en": "https://youtube.com/shorts/LtVLsoGkNsI (helado de 1 ingrediente, outlier ×53). Idea propia, sin copiar texto ni imágenes.",
+  "titulo": "Helado sano de 1 solo ingrediente 🍌 Sin azúcar añadido #Shorts",
+  "descripcion": "Helado cremoso hecho solo con plátano congelado. Sin azúcar añadido, sin nata y listo en 5 minutos.\n\n🎁 Recetario de 120 recetas + menú organizado de 21 días: https://hotm.io/n7G5jK\n\n🔔 Suscríbete a CasaClic para más ideas de cocina sana.",
+  "tags": ["helado de plátano", "helado sano", "postre saludable", "receta fácil", "1 ingrediente", "CasaClic"],
+  "categoria": "26",
+  "escenas": [
+    {"rotulo": "Helado de 1 ingrediente", "texto": "¿Helado cremoso con un solo ingrediente? Sí, y sin azúcar añadido.", "imagen": "banana ice cream"},
+    {"rotulo": "Paso 1", "texto": "Pela dos plátanos bien maduros y córtalos en rodajas.", "imagen": "sliced banana"},
+    {"rotulo": "Paso 2", "texto": "Mételos en el congelador unas tres horas, hasta que estén duros.", "imagen": "frozen banana slices"},
+    {"rotulo": "Paso 3", "texto": "Tritúralos con la batidora. Al principio parece arena, pero sigue un poco más.", "imagen": "food processor"},
+    {"rotulo": "¡Listo!", "texto": "Y de repente se vuelve cremoso, como un helado de verdad.", "imagen": "nice cream banana"},
+    {"rotulo": "Extra", "texto": "Si quieres, añade cacao puro o un poco de canela.", "imagen": "cocoa powder"}
+  ],
+  "rotulo_cierre": "Sígueme en CasaClic",
+  "cierre": "Guárdalo para el próximo antojo y sígueme para más recetas sanas y fáciles."
+}

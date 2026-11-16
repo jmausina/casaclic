@@ -71,6 +71,20 @@ def usd_a_eur():
         return None, None
 
 
+ES = set('de la que el en y los las por con para una del como tu tus esto este esta más sin pelo piel receta casera casero fácil cómo así tu perro gato ya hazlo nunca'.split())
+EN = set('the and with your this how to of for at stop make you is my at home try'.split())
+PT = set('não você cabelo para com que faz uma seu sua isso queda'.split())
+
+
+def idioma_titulo(t):
+    """Si YouTube no dice el idioma, se adivina por las palabras del título (es / en / pt)."""
+    w = re.findall(r"[a-záéíóúñãõç]+", t.lower())
+    puntos = {'es': sum(x in ES for x in w) + 2 * bool(re.search(r'[ñ¿¡]', t)), 'en': sum(x in EN for x in w),
+              'pt': sum(x in PT for x in w) + 2 * bool(re.search(r'[ãõç]|ção', t.lower()))}
+    mejor = max(puntos, key=puntos.get)
+    return mejor if puntos[mejor] > 0 else ''
+
+
 def segundos(iso):
     m = re.match(r'P(?:(\d+)D)?T?(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?', iso or '')
     if not m:
@@ -144,7 +158,10 @@ def main():
             dias = max(1.0, (datetime.now(timezone.utc) - pub).total_seconds() / 86400)
             c = canales.get(sn['channelId'], {})
             subs = None if c.get('statistics', {}).get('hiddenSubscriberCount') else int(c.get('statistics', {}).get('subscriberCount', 0) or 0)
-            lang = (sn.get('defaultAudioLanguage') or sn.get('defaultLanguage') or '').lower()
+            lang = (sn.get('defaultAudioLanguage') or sn.get('defaultLanguage') or '').lower() or idioma_titulo(sn['title'])
+            texto = (sn['title'] + ' ' + sn.get('description', '')[:300]).lower()
+            if any(x.lower() in texto for x in b.get('excluir', []) + cfg.get('excluir_siempre', [])):
+                continue
             nicho = b.get('nicho_rpm') or CATEGORIA_A_NICHO.get(sn.get('categoryId'))
             rpm_largo = RPM_USD.get(nicho)
             rpm = None if rpm_largo is None else ((rpm_largo * SHORT_MIN, rpm_largo * SHORT_MAX) if corto else (rpm_largo, rpm_largo))
