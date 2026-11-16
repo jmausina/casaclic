@@ -47,7 +47,7 @@
   {
    "rotulo": "1. El Mediterráneo",
    "imagen": [
-    "olive grove",
+    "olive tree",
     "olive trees"
    ],
    "frases": [
@@ -370,7 +370,7 @@
   {
    "rotulo": "Receta: bálsamo de labios",
    "imagen": [
-    "lip balm",
+    "shea butter",
     "beeswax"
    ],
    "frases": [
@@ -406,8 +406,8 @@
   {
    "rotulo": "La belleza en Egipto",
    "imagen": [
-    "ancient egypt cosmetics",
-    "egyptian cosmetic jar"
+    "egyptian cosmetic",
+    "kohl"
    ],
    "frases": [
     "Los egipcios daban mucha importancia al cuidado del cuerpo.",
@@ -430,8 +430,8 @@
   {
    "rotulo": "Cómo elegir un aceite",
    "imagen": [
-    "oils",
-    "cooking oils"
+    "olive oil bottle",
+    "argan oil"
    ],
    "frases": [
     "Si quieres probar alguno, elige siempre aceites puros y de buena calidad.",

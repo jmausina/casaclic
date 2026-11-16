@@ -2,9 +2,9 @@
 
 ## Cómo funciona
 1. **Domingo, 07:10 (Madrid):** el flujo `ideas-buscar.yml` busca en YouTube con los filtros de `ideas/config.json` y guarda `ideas/resultados/AAAA-MM-DD_ideas.{json,csv,md}`. Usa ~1.200 unidades del cupo de CasaClic (el que sobra antes de que se reinicie a las 9:00).
-2. **Domingo, 10:37:** tarea programada de Claude. Lee los resultados, los pasa a una hoja de Google, elige **4 ideas** y escribe 4 fichas en `ideas/fichas/pendientes/`: 2 sin fecha (se suben el domingo) y 2 con `"subir_desde": "<fecha del miércoles>"` (se suben solas el miércoles a las 11:20).
+2. **Domingo, 10:37:** tarea programada de Claude. Lee los resultados, los pasa a una hoja de Google, elige **4 ideas** y escribe 4 fichas en `ideas/fichas/pendientes/`: 2 sin fecha (se suben el domingo) y 2 con `"subir_desde": "<fecha del miércoles>"` (el flujo se lanza **todos los días a las 11:20** y sube lo que toque ese día).
    **Objetivo: 4 Shorts a la semana, de 1 minuto cada uno, + 1 vídeo largo a la semana para Belleza Ancestral.**
-   La 5.ª ficha es el **vídeo largo** (`"formato": "largo"`, horizontal 1280x720) con `"subir_desde": "<viernes>"`: se sube solo el viernes a las 11:20 y se publica a las 19:00.
+   La 5.ª ficha es el **vídeo largo** (`"formato": "largo"`, horizontal 1280x720) con `"subir_desde": "<viernes>"`: se sube solo ese día a las 11:20 y se publica a las 19:00.
 3. Al subir una ficha, el flujo `ideas-short.yml` fabrica el Short (voz Piper, fotos de Wikimedia, música propia) y lo sube. **Desde el 16/11 se publican solos** (decisión de Jose Miguel): cada ficha lleva `"privacidad": "public"` y `"hora_publicacion": "19:00"` → YouTube lo publica a las 19:00 de ese día (si ya ha pasado, al momento).
 
 ## Filtros (config.json)
