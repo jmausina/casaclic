@@ -7,6 +7,8 @@ on:
   # Miércoles 10:20 UTC (11:20 en invierno): sube las fichas que el domingo dejó para el miércoles.
   schedule:
     - cron: '20 10 * * 3'
+    # Viernes 10:20 UTC: vídeo largo semanal de Belleza Ancestral.
+    - cron: '20 10 * * 5'
   push:
     paths: ['ideas/fichas/pendientes/*.json']
   workflow_dispatch:
@@ -26,7 +28,7 @@ concurrency:
 jobs:
   shorts:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 75
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -36,7 +38,7 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg fonts-dejavu-core
-          pip install -q piper-tts pillow google-api-python-client google-auth
+          pip install -q piper-tts pillow numpy google-api-python-client google-auth
       - name: Fabricar y subir
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}

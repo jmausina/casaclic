@@ -105,6 +105,10 @@ def partir(d, texto, F, maxw):
 
 
 def fotograma(img_bytes, rotulo, subtitulo, canal, ruta, color):
+    """Vertical (Short, 720x1280) u horizontal (vídeo largo, 1280x720) según W y H."""
+    vertical = H > W
+    caja_y, caja_h = (250, 760) if vertical else (0, H)
+    maxw = W - 80
     base = Image.new('RGB', (W, H), color[0])
     if img_bytes:
         from io import BytesIO
@@ -112,49 +116,55 @@ def fotograma(img_bytes, rotulo, subtitulo, canal, ruta, color):
         fondo = im.copy(); r = max(W / fondo.width, H / fondo.height)
         fondo = fondo.resize((int(fondo.width * r) + 1, int(fondo.height * r) + 1)).filter(ImageFilter.GaussianBlur(25))
         base.paste(fondo, ((W - fondo.width) // 2, (H - fondo.height) // 2))
-        r = min(W / im.width, 760 / im.height); im = im.resize((int(im.width * r), int(im.height * r)))
-        base.paste(im, ((W - im.width) // 2, 250 + (760 - im.height) // 2))
+        r = min(W / im.width, caja_h / im.height); im = im.resize((int(im.width * r), int(im.height * r)))
+        base.paste(im, ((W - im.width) // 2, caja_y + (caja_h - im.height) // 2))
     d = ImageDraw.Draw(base, 'RGBA')
-    d.text((30, 40), canal, font=fuente(28), fill='white', stroke_width=2, stroke_fill=(0, 0, 0))
+    d.text((30, 30 if not vertical else 40), canal, font=fuente(28), fill='white', stroke_width=2, stroke_fill=(0, 0, 0))
     if rotulo:
-        F = fuente(52); y = 120
-        for l in partir(d, rotulo.upper(), F, 640)[:2]:
-            w = d.textlength(l, font=F); d.rounded_rectangle([(W - w) / 2 - 20, y - 6, (W + w) / 2 + 20, y + 64], 16, fill=color[0] + (235,))
-            d.text(((W - w) / 2, y), l, font=F, fill='white'); y += 76
+        F = fuente(52 if vertical else 40); y = 120 if vertical else 80
+        for l in partir(d, rotulo.upper(), F, maxw)[:2]:
+            w = d.textlength(l, font=F); d.rounded_rectangle([(W - w) / 2 - 20, y - 6, (W + w) / 2 + 20, y + F.size + 12], 16, fill=color[0] + (235,))
+            d.text(((W - w) / 2, y), l, font=F, fill='white'); y += F.size + 24
     if subtitulo:
-        F = fuente(38); lineas = partir(d, subtitulo, F, 640)[:4]; y = 1050 - 24 * (len(lineas) - 1)
+        F = fuente(38 if vertical else 34); lineas = partir(d, subtitulo, F, maxw)[:4 if vertical else 3]
+        y = (1050 - 24 * (len(lineas) - 1)) if vertical else (H - 40 - (F.size + 14) * len(lineas))
         for l in lineas:
-            w = d.textlength(l, font=F); d.rounded_rectangle([(W - w) / 2 - 14, y - 4, (W + w) / 2 + 14, y + 48], 10, fill=(0, 0, 0, 170))
-            d.text(((W - w) / 2, y), l, font=F, fill=color[1]); y += 54
+            w = d.textlength(l, font=F); d.rounded_rectangle([(W - w) / 2 - 14, y - 4, (W + w) / 2 + 14, y + F.size + 10], 10, fill=(0, 0, 0, 170))
+            d.text(((W - w) / 2, y), l, font=F, fill=color[1]); y += F.size + 16
     base.save(ruta)
 
 
 # ---------- Música propia (sintetizada, sin derechos) ----------
 def musica(ruta, secs, sr=44100, semilla=3):
-    random.seed(semilla); n = int(secs * sr); buf = [0.0] * n; beat = 60 / 96
+    import numpy as np
+    n = int(secs * sr); buf = np.zeros(n + sr * 4); beat = 60 / 96
     prog = [[57, 60, 64], [53, 57, 60], [48, 52, 55], [55, 59, 62]]
     hz = lambda m: 440 * 2 ** ((m - 69) / 12)
     def add(t0, dur, fr, amp, dec):
-        s0 = int(t0 * sr)
-        for i in range(int(dur * sr)):
-            j = s0 + i
-            if j >= n: break
-            t = i / sr; buf[j] += amp * math.exp(-t * dec) * min(1, t * 150) * math.sin(2 * math.pi * fr * t)
-    t, bar = 0.0, 0
+        t = np.arange(int(dur * sr)) / sr; s0 = int(t0 * sr)
+        buf[s0:s0 + len(t)] += amp * np.exp(-t * dec) * np.minimum(1, t * 150) * np.sin(2 * np.pi * fr * t)
+    t, bar = 0.0, (semilla % 4)
     while t < secs:
         ch = prog[bar % 4]
         add(t, beat * 4, hz(ch[0] - 24), 0.25, 1.0)
         for k in range(8): add(t + k * beat / 2, beat, hz(ch[k % 3] + 12), 0.06, 5)
         t += beat * 4; bar += 1
-    pk = max(1e-6, max(abs(x) for x in buf)); fade = int(2 * sr)
+    buf = buf[:n]; buf /= max(1e-6, np.abs(buf).max())
+    i = np.arange(n); env = np.minimum(1, np.minimum(i / (0.5 * sr), (n - i) / (2 * sr)))
     with wave.open(ruta, 'wb') as w:
         w.setnchannels(1); w.setsampwidth(2); w.setframerate(sr)
-        w.writeframes(b''.join(struct.pack('<h', int(x / pk * 0.6 * min(1, i / (0.5 * sr), (n - i) / fade) * 32767)) for i, x in enumerate(buf)))
+        w.writeframes((buf * env * 0.6 * 32767).astype('<i2').tobytes())
 
 
 # ---------- Montaje ----------
 def fabricar(ficha):
+    global W, H
     os.makedirs(TMP, exist_ok=True)
+    largo = ficha.get('formato') == 'largo'
+    W, H = (1280, 720) if largo else (720, 1280)
+    if 'secciones' in ficha:  # vídeo largo: una foto por sección, una frase por plano
+        ficha['escenas'] = [dict(texto=fr, rotulo=sec.get('rotulo') if j == 0 else None, imagen=sec.get('imagen') if j == 0 else None)
+                            for sec in ficha['secciones'] for j, fr in enumerate(sec['frases'])]
     canal = ficha['canal']; color = COLORES.get(canal, ((40, 40, 40), (255, 220, 120)))
     voz = preparar_voz(); usadas = set(); creditos = []; partes = []
     escenas = ficha['escenas'] + [dict(texto=ficha['cierre'], rotulo=ficha.get('rotulo_cierre', 'Suscríbete'), imagen=None)]
@@ -169,7 +179,7 @@ def fabricar(ficha):
         png = f'{TMP}/f{i}.png'; fotograma(img or ultima_img, e.get('rotulo'), e['texto'], canal, png, color)
         mp4 = f'{TMP}/p{i}.mp4'; fr = int(dur * 30)
         subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-loop', '1', '-i', png, '-i', wav, '-filter_complex',
-                        f"[0:v]scale=1440:2560,zoompan=z='min(zoom+0.0007,1.06)':d={fr}:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s={W}x{H}:fps=30,format=yuv420p[v];"
+                        f"[0:v]scale={W*2}:{H*2},zoompan=z='min(zoom+0.0007,1.06)':d={fr}:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s={W}x{H}:fps=30,format=yuv420p[v];"
                         f"[1:a]apad=pad_dur=0.35,aresample=44100[a]",
                         '-map', '[v]', '-map', '[a]', '-t', f'{dur:.2f}', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '26',
                         '-c:a', 'aac', '-b:a', '128k', '-ac', '1', mp4], check=True)
@@ -178,7 +188,7 @@ def fabricar(ficha):
     total = sum(d for _, d in partes); mus = f'{TMP}/m.wav'; musica(mus, total + 1)
     os.makedirs(f'{TMP}/final', exist_ok=True); final = f"{TMP}/final/{ficha.get('id', 'short')}.mp4"
     subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', lst, '-i', mus, '-filter_complex',
-                    '[1:a]volume=0.13[m];[0:a][m]amix=inputs=2:duration=first:dropout_transition=0[a]',
+                    f'[1:a]volume={0.08 if largo else 0.13}[m];[0:a][m]amix=inputs=2:duration=first:dropout_transition=0[a]',
                     '-map', '0:v', '-map', '[a]', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '128k', '-movflags', '+faststart', final], check=True)
     log(f'Vídeo: {final} · {total:.1f} s · {os.path.getsize(final)//1024} KB')
     return final, total, creditos
