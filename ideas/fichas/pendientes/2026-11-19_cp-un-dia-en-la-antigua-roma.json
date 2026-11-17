@@ -121,7 +121,7 @@
   {
    "rotulo": "Alquileres caros",
    "imagen": [
-    "insula",
+    "ostia antica ruins",
     "ostia antica"
    ],
    "frases": [
@@ -985,8 +985,8 @@
   {
    "rotulo": "Las quejas",
    "imagen": [
-    "roman street",
-    "pompeii street"
+    "pompeii street",
+    "via appia"
    ],
    "frases": [
     "Un poeta romano, Juvenal, se quejaba de que en Roma era imposible dormir.",
@@ -1148,6 +1148,18 @@
     "Muchas palabras que usamos a diario vienen del latín.",
     "Por ejemplo, salario viene de sal, y calendario de calendas, el primer día del mes.",
     "Cada vez que hablamos, llevamos un trocito de Roma con nosotros."
+   ]
+  },
+  {
+   "rotulo": "El calendario",
+   "imagen": [
+    "julius caesar bust",
+    "julius caesar"
+   ],
+   "frases": [
+    "Nuestro calendario también es romano.",
+    "Julio César lo reformó y le dio la forma que, con pocos cambios, seguimos usando.",
+    "Por eso los meses de julio y agosto llevan los nombres de Julio César y de Augusto."
    ]
   },
   {
