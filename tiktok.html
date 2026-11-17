@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Autorización de TikTok · CasaClic</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="index.html">CasaClic</a>
+    <nav><a href="privacidad.html">Privacidad</a><a href="terminos.html">Condiciones</a></nav>
+  </header>
+  <section>
+    <h1>Autorización de TikTok</h1>
+    <p id="msg">Esta página solo recibe la respuesta de TikTok cuando se autoriza la aplicación interna de CasaClic.</p>
+  </section>
+</div>
+<script>
+var q=new URLSearchParams(location.search),m=document.getElementById('msg');
+if(q.get('code')){m.textContent='Autorización recibida correctamente. Ya puedes cerrar esta página.';}
+else if(q.get('error')){m.textContent='TikTok no ha concedido el permiso: '+q.get('error');}
+</script>
+</body>
+</html>
