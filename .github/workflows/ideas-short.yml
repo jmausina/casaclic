@@ -47,7 +47,7 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg fonts-dejavu-core
-          pip install -q piper-tts pillow numpy google-api-python-client google-auth
+          pip install -q piper-tts pillow numpy google-api-python-client google-auth requests cryptography
       - name: Fabricar y subir
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
@@ -56,6 +56,8 @@ jobs:
           YT_CHOLLOS_REFRESH_TOKEN: ${{ secrets.YT_CHOLLOS_REFRESH_TOKEN }}
           YT_BELLEZA_REFRESH_TOKEN: ${{ secrets.YT_BELLEZA_REFRESH_TOKEN }}
           YT_CIENCIA_REFRESH_TOKEN: ${{ secrets.YT_CIENCIA_REFRESH_TOKEN }}
+          TT_CLIENT_KEY: ${{ secrets.TT_CLIENT_KEY }}
+          TT_CLIENT_SECRET: ${{ secrets.TT_CLIENT_SECRET }}
           DRY_RUN: ${{ github.event.inputs.dry_run || '0' }}
           FORZAR: ${{ github.event.inputs.forzar || '0' }}
           OUT_DIR: /tmp/ideas_short
@@ -78,7 +80,7 @@ jobs:
         run: |
           git config user.name "ideas-bot"
           git config user.email "ideas-bot@users.noreply.github.com"
-          git add -A ideas/fichas
+          git add -A ideas/fichas tiktok/token.enc
           git diff --cached --quiet && exit 0
           git commit -m "Ideas: Shorts fabricados $(TZ=Europe/Madrid date +%F)"
           for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && exit 0; sleep $((i*5)); done

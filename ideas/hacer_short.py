@@ -244,6 +244,18 @@ if __name__ == '__main__':
         log(f"Ficha {ruta_ficha}: toca el {ficha['subir_desde']}. Hoy no."); sys.exit(0)
     video, secs, cred = fabricar(ficha)
     vid = None if os.environ.get('DRY_RUN') == '1' else subir(video, ficha, cred)
+    # TikTok: los Shorts de CasaClic también van como borrador a @casaclic_oficial (Jose Miguel pulsa «Publicar»).
+    # Si TikTok falla, YouTube ya está subido y no se toca.
+    if vid and ficha['canal'] == 'CasaClic Oficial' and os.environ.get('TT_CLIENT_KEY'):
+        try:
+            sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'tiktok'))
+            import tiktok_api
+            tiktok_api.subir_borrador(video)
+            texto_tt = re.sub(r'\s*#Shorts', '', ficha['titulo']) + ' Recetario: enlace en el perfil 🎁 #recetasfaciles #comidasana #cocinasaludable'
+            gs = os.environ.get('GITHUB_STEP_SUMMARY')
+            if gs: open(gs, 'a').write(f"TikTok: borrador enviado a casaclic_oficial. Texto para publicar: {texto_tt}\n\n")
+        except BaseException as e:
+            log('AVISO TikTok:', repr(e))
     ficha['resultado'] = dict(video_id=vid, segundos=round(secs, 1), creditos=cred, fecha=time.strftime('%Y-%m-%d %H:%M'))
     os.makedirs('ideas/fichas/hechas', exist_ok=True)
     json.dump(ficha, open(os.path.join('ideas/fichas/hechas', os.path.basename(ruta_ficha)), 'w'), ensure_ascii=False, indent=1)

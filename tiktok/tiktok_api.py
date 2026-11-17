@@ -51,8 +51,10 @@ def acceso():
         sys.exit("Falta el permiso de TikTok (tiktok/token.enc). Hay que lanzar «TikTok - autorizar».")
     viejo = json.loads(_f().decrypt(open(TOKEN_FILE, "rb").read()))
     d = _token({"grant_type": "refresh_token", "refresh_token": viejo["refresh_token"]})
-    viejo.update({"refresh_token": d.get("refresh_token", viejo["refresh_token"]), "guardado": time.strftime("%Y-%m-%d")})
-    _guardar(viejo)
+    nuevo = d.get("refresh_token", viejo["refresh_token"])
+    if nuevo != viejo["refresh_token"]:  # solo se reescribe si TikTok lo cambia (evita choques entre robots)
+        viejo.update({"refresh_token": nuevo, "guardado": time.strftime("%Y-%m-%d")})
+        _guardar(viejo)
     return d["access_token"]
 
 
