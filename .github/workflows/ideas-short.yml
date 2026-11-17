@@ -16,6 +16,10 @@ on:
         description: '1 = fabricar sin subir'
         required: false
         default: '0'
+      solo:
+        description: 'Solo las fichas cuyo nombre contenga este texto (vacío = todas)'
+        required: false
+        default: ''
       forzar:
         description: '1 = fabricar también las fichas de días futuros (solo para revisar, con dry_run=1)'
         required: false
@@ -57,7 +61,10 @@ jobs:
           shopt -s nullglob
           fichas=(ideas/fichas/pendientes/*.json)
           [ ${#fichas[@]} -eq 0 ] && { echo "No hay fichas pendientes"; exit 0; }
-          for f in "${fichas[@]}"; do python3 ideas/hacer_short.py "$f"; done
+          for f in "${fichas[@]}"; do
+            if [ -n "${{ github.event.inputs.solo }}" ] && [[ "$f" != *"${{ github.event.inputs.solo }}"* ]]; then continue; fi
+            python3 ideas/hacer_short.py "$f"
+          done
       - name: Guardar el vídeo para revisarlo
         uses: actions/upload-artifact@v4
         with:
