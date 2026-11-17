@@ -69,15 +69,27 @@ def subir_borrador(path, at=None):
     if n > 64_000_000:
         sys.exit("El vídeo pasa de 64 MB; TikTok pide trocearlo y este robot no lo hace.")
     h = {"Authorization": "Bearer " + at, "Content-Type": "application/json; charset=UTF-8"}
+    # Trozos de 10 MB (TikTok: entre 5 y 64 MB; el último trozo se queda con el resto).
+    chunk = n if n <= 10_000_000 else 10_000_000
+    total = max(1, n // chunk)
     r = requests.post(f"{API}/post/publish/inbox/video/init/", headers=h, timeout=30,
-                      json={"source_info": {"source": "FILE_UPLOAD", "video_size": n, "chunk_size": n, "total_chunk_count": 1}}).json()
+                      json={"source_info": {"source": "FILE_UPLOAD", "video_size": n, "chunk_size": chunk, "total_chunk_count": total}}).json()
     if r.get("error", {}).get("code") != "ok":
         sys.exit("TikTok no aceptó el envío: " + json.dumps(r)[:400])
     pid, url = r["data"]["publish_id"], r["data"]["upload_url"]
-    up = requests.put(url, data=open(path, "rb").read(), timeout=300,
-                      headers={"Content-Type": "video/mp4", "Content-Length": str(n), "Content-Range": f"bytes 0-{n-1}/{n}"})
-    if up.status_code not in (200, 201):
-        sys.exit(f"Falló la subida a TikTok ({up.status_code}): {up.text[:300]}")
+    datos = open(path, "rb").read()
+    for i in range(total):
+        ini = i * chunk
+        fin = n - 1 if i == total - 1 else ini + chunk - 1
+        for intento in range(3):
+            up = requests.put(url, data=datos[ini:fin + 1], timeout=300,
+                              headers={"Content-Type": "video/mp4", "Content-Range": f"bytes {ini}-{fin}/{n}"})
+            if up.status_code in (200, 201, 206):
+                break
+            print(f"Trozo {i+1}/{total}: TikTok respondió {up.status_code}, reintento", intento + 1)
+            time.sleep(5 * (intento + 1))
+        else:
+            sys.exit(f"Falló la subida a TikTok ({up.status_code}): {up.text[:300]}")
     estado = "?"
     for espera in (5, 10, 15, 20, 30, 30, 30):
         time.sleep(espera)
