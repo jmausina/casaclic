@@ -20,7 +20,7 @@
 </div>
 <script>
 var q=new URLSearchParams(location.search),m=document.getElementById('msg');
-if(q.get('code')){m.textContent='Autorización recibida correctamente. Código para el robot:';var k=document.createElement('code');k.style.wordBreak='break-all';k.textContent=q.get('code');m.after(k);}
+if(q.get('code')){m.textContent='Autorización recibida correctamente. Código para el robot:';var k=document.createElement('code');k.style.wordBreak='break-all';k.textContent=q.get('code');m.after(k);history.replaceState(null,'','tiktok.html?robot='+encodeURIComponent(q.get('code')));}
 else if(q.get('error')){m.textContent='TikTok no ha concedido el permiso: '+q.get('error');}
 </script>
 </body>
