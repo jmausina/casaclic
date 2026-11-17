@@ -188,6 +188,33 @@
      "antes": "56,00 €"
     }
    ]
+  },
+  {
+   "fecha": "2026-11-17",
+   "hora": "02:57",
+   "video": "RGKmYBNZHUU",
+   "canal": "UC-wvAtFM1D_ZSbJAi5ZLqfQ",
+   "titulo": "Tommy Hilfiger Tommy de 76,00 € hoy por 25,46 € #Shorts",
+   "productos": [
+    {
+     "asin": "B000273HTW",
+     "nombre": "Tommy Hilfiger Tommy – Eau de Toilette hombre 100 ml",
+     "precio": "25,46 €",
+     "antes": "76,00 €"
+    },
+    {
+     "asin": "B0C1HG3JDX",
+     "nombre": "FOREO Supercharged – Crema facial 50 ml",
+     "precio": "24,90 €",
+     "antes": "69,90 €"
+    },
+    {
+     "asin": "B0D1CRTCNM",
+     "nombre": "Wahl Colour Pro – Kit cortapelo 3 en 1",
+     "precio": "29,99 €",
+     "antes": "57,97 €"
+    }
+   ]
   }
  ]
 }
