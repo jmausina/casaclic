@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
     inputs:
       code:
-        description: 'Dirección completa de tiktok.html?code=... (o solo el código)'
+        description: 'Dirección completa de tiktok.html?code=... (o la palabra enlace para sacar el enlace de autorización)'
         required: true
 
 permissions:
@@ -26,8 +26,10 @@ jobs:
           TT_CLIENT_KEY: ${{ secrets.TT_CLIENT_KEY }}
           TT_CLIENT_SECRET: ${{ secrets.TT_CLIENT_SECRET }}
           CODE: ${{ inputs.code }}
-        run: python tiktok/tiktok_api.py autorizar "$CODE"
+        run: |
+          if [ "$CODE" = "enlace" ]; then python tiktok/tiktok_api.py enlace; else python tiktok/tiktok_api.py autorizar "$CODE"; fi
       - name: Guardar el permiso cifrado
+        if: inputs.code != 'enlace'
         run: |
           git config user.name "casaclic-bot"
           git config user.email "casaclic-bot@users.noreply.github.com"

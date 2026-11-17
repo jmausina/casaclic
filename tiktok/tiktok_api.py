@@ -92,7 +92,12 @@ def subir_borrador(path, at=None):
 if __name__ == "__main__":
     # Uso: python tiktok/tiktok_api.py autorizar <código o dirección completa>
     #      python tiktok/tiktok_api.py subir <video.mp4>
-    if sys.argv[1] == "autorizar":
+    if sys.argv[1] == "enlace":
+        # La clave de cliente es pública (va en el propio enlace de TikTok); el secreto nunca se muestra.
+        from urllib.parse import urlencode
+        print("ENLACE: https://www.tiktok.com/v2/auth/authorize/?" + urlencode({"client_key": os.environ["TT_CLIENT_KEY"],
+              "scope": "user.info.basic,video.upload", "response_type": "code", "redirect_uri": REDIRECT, "state": "casaclic"}))
+    elif sys.argv[1] == "autorizar":
         at, scope = autorizar(sys.argv[2])
         print("Permiso guardado. Ámbitos:", scope, "· Cuenta:", cuenta(at).get("display_name"))
     elif sys.argv[1] == "subir":
