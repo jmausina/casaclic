@@ -69,8 +69,9 @@ def subir_borrador(path, at=None):
     if n > 64_000_000:
         sys.exit("El vídeo pasa de 64 MB; TikTok pide trocearlo y este robot no lo hace.")
     h = {"Authorization": "Bearer " + at, "Content-Type": "application/json; charset=UTF-8"}
-    # Trozos de 10 MB (TikTok: entre 5 y 64 MB; el último trozo se queda con el resto).
-    chunk = n if n <= 10_000_000 else 10_000_000
+    # Trozos de 8 MiB (TikTok: entre 5 y 64 MiB; el último trozo se queda con el resto;
+    # si solo hay 1 trozo, debe ser el vídeo entero).
+    chunk = n if n < 2 * 8_388_608 else 8_388_608
     total = max(1, n // chunk)
     r = requests.post(f"{API}/post/publish/inbox/video/init/", headers=h, timeout=30,
                       json={"source_info": {"source": "FILE_UPLOAD", "video_size": n, "chunk_size": chunk, "total_chunk_count": total}}).json()
