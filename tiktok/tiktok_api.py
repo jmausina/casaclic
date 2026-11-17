@@ -95,8 +95,9 @@ if __name__ == "__main__":
     if sys.argv[1] == "enlace":
         # La clave de cliente es pública (va en el propio enlace de TikTok); el secreto nunca se muestra.
         from urllib.parse import urlencode
-        print("ENLACE: https://www.tiktok.com/v2/auth/authorize/?" + urlencode({"client_key": os.environ["TT_CLIENT_KEY"],
-              "scope": "user.info.basic,video.upload", "response_type": "code", "redirect_uri": REDIRECT, "state": "casaclic"}))
+        u = "https://www.tiktok.com/v2/auth/authorize/?" + urlencode({"client_key": os.environ["TT_CLIENT_KEY"],
+              "scope": "user.info.basic,video.upload", "response_type": "code", "redirect_uri": REDIRECT, "state": "casaclic"})
+        print("ENLACE_B64:", base64.b64encode(u.encode()).decode())
     elif sys.argv[1] == "autorizar":
         at, scope = autorizar(sys.argv[2])
         print("Permiso guardado. Ámbitos:", scope, "· Cuenta:", cuenta(at).get("display_name"))
