@@ -149,4 +149,21 @@ if __name__=="__main__":
     priv=(sys.argv[2].strip() if len(sys.argv)>2 else "") or "programado"
     m=yt_meta(dia); print("Día",dia,"·",m["yt_title"])
     p=make_yt(dia); print("Vídeo generado:",p,os.path.getsize(p)//1024,"KB")
-    subir(p,m,priv)
+    if priv!="solo_tiktok":
+        subir(p,m,priv)
+    # TikTok: el mismo vídeo va como borrador a la bandeja de casaclic_oficial.
+    # Si TikTok falla, YouTube ya está subido y no se toca.
+    if os.environ.get("TT_CLIENT_KEY"):
+        try:
+            sys.path.insert(0,os.path.join(os.path.dirname(os.path.abspath(__file__)),"tiktok"))
+            import tiktok_api
+            tiktok_api.subir_borrador(p)
+            gs=os.environ.get("GITHUB_STEP_SUMMARY")
+            if gs:
+                with open(gs,"a") as f: f.write("\n### TikTok\n\nBorrador enviado a casaclic_oficial. Texto para publicar:\n\n"+m["yt_title"].replace(" #Shorts","")+" Recetario: enlace en el perfil 🎁 #recetasfaciles #comidasana #cocinasaludable #cocinacasera\n")
+        except SystemExit as e:
+            print("AVISO TikTok:",e)
+            if priv=="solo_tiktok": raise
+        except Exception as e:
+            print("AVISO TikTok:",repr(e))
+            if priv=="solo_tiktok": raise
