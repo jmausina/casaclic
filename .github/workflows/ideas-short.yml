@@ -8,6 +8,8 @@ on:
   schedule:
     # Todos los días a las 10:20 UTC (11:20 en invierno): sube las fichas que tocan ese día.
     - cron: '20 10 * * *'
+    # Repetición de seguridad (GitHub a veces retrasa o salta las ejecuciones programadas). Si ya se subió, no hace nada.
+    - cron: '47 14 * * *'
   push:
     paths: ['ideas/fichas/pendientes/*.json']
   workflow_dispatch:
