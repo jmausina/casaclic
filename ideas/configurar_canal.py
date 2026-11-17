@@ -12,5 +12,10 @@ if ch['snippet']['title'] != c['canal']:
     sys.exit(f"ERROR: el token es de «{ch['snippet']['title']}», no de «{c['canal']}».")
 b = ch['brandingSettings']; b.setdefault('channel', {})
 b['channel'].update(description=c['descripcion'], keywords=c['palabras_clave'], defaultLanguage='es', country='ES')
+if c.get('banner'):
+    from googleapiclient.http import MediaFileUpload
+    r = yt.channelBanners().insert(media_body=MediaFileUpload(c['banner'], mimetype='image/png')).execute()
+    b.setdefault('image', {})['bannerExternalUrl'] = r['url']
+    print('Banner subido')
 yt.channels().update(part='brandingSettings', body={'id': ch['id'], 'brandingSettings': b}).execute()
 print('Canal configurado:', ch['snippet']['title'])
