@@ -20,7 +20,7 @@
 </div>
 <script>
 var q=new URLSearchParams(location.search),m=document.getElementById('msg');
-if(q.get('code')){m.textContent='Autorización recibida correctamente. Ya puedes cerrar esta página.';}
+if(q.get('code')){m.innerHTML='Autorización recibida correctamente. Código para el robot:<br><code style="word-break:break-all">'+q.get('code').replace(/[<>\if(q.get('code')){m.textContent='Autorización recibida correctamente. Ya puedes cerrar esta página.';}"]/g,'')+'</code>';}
 else if(q.get('error')){m.textContent='TikTok no ha concedido el permiso: '+q.get('error');}
 </script>
 </body>
