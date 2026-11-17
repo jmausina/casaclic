@@ -34,9 +34,11 @@ def _token(body):
 
 def autorizar(code):
     """Canjea el código de la página tiktok.html y guarda el permiso cifrado."""
-    if "code=" in code:
+    code = code.strip()
+    if "?" in code:
         from urllib.parse import urlparse, parse_qs
-        code = parse_qs(urlparse(code).query).get("code", [""])[0]
+        q = parse_qs(urlparse(code).query)
+        code = (q.get("code") or q.get("robot") or [""])[0]
     d = _token({"code": code, "grant_type": "authorization_code", "redirect_uri": REDIRECT})
     _guardar({"refresh_token": d["refresh_token"], "open_id": d.get("open_id"), "scope": d.get("scope"),
               "guardado": time.strftime("%Y-%m-%d")})
