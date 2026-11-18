@@ -21,8 +21,8 @@
    "rotulo": "Pelo seco",
    "texto": "¿Pelo seco y sin brillo? Esta mascarilla se hace con dos cosas que tienes en la cocina.",
    "imagen": [
-    "dry hair",
-    "hair"
+    "hairbrush",
+    "comb"
    ]
   },
   {
@@ -113,10 +113,10 @@
  "rotulo_cierre": "Sígueme en Belleza Ancestral",
  "cierre": "Más recetas en el enlace de la descripción. Sígueme para más.",
  "resultado": {
-  "video_id": null,
-  "segundos": 53.2,
+  "video_id": "TZn41DRBy88",
+  "segundos": 53.1,
   "creditos": [
-   "Hair dryer in a bag in the hotel bathroom.jpg — Ser Amantio di Nicolao (CC0)",
+   "Hairbrush flat.JPG — en:User:Musical Linguist (CC BY-SA 3.0)",
    "Italian olive oil 2007.jpg — my friend (CC BY 2.5)",
    "Corn Starch mixture.jpg — Ayapici (CC BY-SA 3.0)",
    "Hahn 16cm Saucepan.jpg — Cooks &amp; Kitchens from Darlington, UK (CC BY 2.0)",
@@ -125,10 +125,10 @@
    "Blond hair going gray 01.jpg — Kritzolina (CC BY-SA 4.0)",
    "Towel rails radiator with hanger.jpg — MB SRL (CC BY 4.0)",
    "Indoor pool and shower of spa at Amantaka luxury Resort & Hotel in Luang Prabang Laos front view.jpg — Basile Morin (CC BY-SA 4.0)",
-   "Hairbrush flat.JPG — en:User:Musical Linguist (CC BY-SA 3.0)",
+   "Retractable hairbrush, Winschoten (2022) 02.jpg — Donald Trung Quoc Don (Chữ Hán: 徵國單) - Wikimedia Commons - © (CC BY-SA 4.0)",
    "Cornstarch mixed with water.jpg — Picasa author kalaya (CC BY-SA 3.0)",
    "Lun olive tree 1600 years.jpg — Palauenc05 (CC BY-SA 4.0)"
   ],
-  "fecha": "2026-11-16 17:07"
+  "fecha": "2026-11-18 18:53"
  }
 }
