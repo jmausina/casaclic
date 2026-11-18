@@ -215,6 +215,33 @@
      "antes": "57,97 €"
     }
    ]
+  },
+  {
+   "fecha": "2026-11-18",
+   "hora": "02:10",
+   "video": "jsyyv91K1r4",
+   "canal": "UC-wvAtFM1D_ZSbJAi5ZLqfQ",
+   "titulo": "BaByliss Smooth Finish 1200 de 59,90 € hoy por 26,90 € #Shorts",
+   "productos": [
+    {
+     "asin": "B0DDCHNPBR",
+     "nombre": "BaByliss Smooth Finish 1200 – Cepillo de aire caliente 4 en 1",
+     "precio": "26,90 €",
+     "antes": "59,90 €"
+    },
+    {
+     "asin": "B013GH0AE4",
+     "nombre": "Remington ColourCut – Cortapelos con 9 peines",
+     "precio": "15,99 €",
+     "antes": "29,99 €"
+    },
+    {
+     "asin": "B0DFMNQ9R9",
+     "nombre": "Eucerin Hyaluron-Filler + Longevity Epigenetic – Sérum antiedad 30 ml",
+     "precio": "27,78 €",
+     "antes": "52,90 €"
+    }
+   ]
   }
  ]
 }
