@@ -1440,7 +1440,8 @@
    "texto": "El desayuno, llamado ientaculum, era muy ligero.",
    "rotulo": "El desayuno",
    "imagen": [
-    "roman bread pompeii"
+    "bread loaf",
+    "roman bread"
    ]
   },
   {
@@ -1853,8 +1854,8 @@
    "texto": "Para que nadie engañara, había pesos y medidas oficiales.",
    "rotulo": "Pesos y medidas",
    "imagen": [
-    "roman steelyard",
-    "roman bronze weights"
+    "roman scale",
+    "roman weights"
    ]
   },
   {
@@ -2393,6 +2394,7 @@
    "texto": "El calendario romano estaba lleno de fiestas religiosas.",
    "rotulo": "Las fiestas",
    "imagen": [
+    "roman festival",
     "saturnalia"
    ]
   },
@@ -2716,7 +2718,8 @@
    "texto": "Antes de terminar, un detalle precioso: los grafitis.",
    "rotulo": "Grafitis",
    "imagen": [
-    "pompeii wall inscription"
+    "pompeii graffiti",
+    "graffiti pompeii"
    ]
   },
   {
@@ -2769,8 +2772,8 @@
    "texto": "Ostia, el puerto de Roma, nos enseña cómo eran las ínsulas, las tiendas y los almacenes.",
    "rotulo": "Ostia",
    "imagen": [
-    "ostia antica horrea",
-    "ostia antica insula"
+    "ostia antica",
+    "ostia"
    ]
   },
   {
@@ -2963,5 +2966,109 @@
    "rotulo": null,
    "imagen": null
   }
- ]
+ ],
+ "resultado": {
+  "video_id": "fAREniLFmK0",
+  "segundos": 1204.7,
+  "creditos": [
+   "Forum romanum 6k (5760x2097).jpg — BeBo86 (CC BY-SA 3.0)",
+   "Portal of a patrician house on Augustus Street in Pompeii by Luigi Bazzani.jpg — Luigi Bazzani (Public domain)",
+   "Sundial on the porch of St. Giles Church, Chesterton.jpg — DeFacto (CC BY-SA 4.0)",
+   "Sundial at St Mary's, Walton 1.jpg — Rodhullandemu (CC BY-SA 4.0)",
+   "Peters Square Sunrise Vatican Rome Sep19 R16 01827.jpg — Timothy A. Gonsalves (CC BY-SA 4.0)",
+   "Ostia Antica - R3 I03,1 Insula delle Trifore P1110182.jpg — Lalupa (CC BY-SA 4.0)",
+   "Insula in Ostia.jpg — Dennis G. Jarvis (CC BY-SA 2.0)",
+   "Campitelli - Insula romana 1907.JPG — user:Lalupa (Public domain)",
+   "Ruins of the Sepolcro di Cartilio Poplicola at Ostia Antica.jpg — Ethan Doyle White (CC BY-SA 4.0)",
+   "Mosaic at the Domus Romana 1.jpg — A.-K. D. (CC BY-SA 4.0)",
+   "Fresco of a snake (Pompeii).jpg — Bernard Gagnon (CC BY 4.0)",
+   "Roman toga-Curia.JPG — Ursus (Public domain)",
+   "Bust Roman 200 CE toga Glyptothek Munich 382.jpg — Unknown artistUnknown artist (Public domain)",
+   "The Bread Loaf School of English at the Bread Loaf Inn at Middlebury College’s Bread Loaf Mountain campus in Ripton, Vermont 01.jpg — Harrison Keely (CC BY 4.0)",
+   "Pieter Clasz - Still life with crab, fruit, salt cellar, berkemeyers and a china bowl with olives.jpg — Pieter Claesz (Public domain)",
+   "The remains of Numerius Popidius Priscus' bakery (Pompeii).jpg — Macmougins (CC BY-SA 4.0)",
+   "Roman aqueduct, romersk akvedukt.JPG — Goran_tek-en (CC BY-SA 4.0)",
+   "Thessaloniki Roman Fountain next to Bey Hammam.jpg — Ymblanter (CC BY-SA 4.0)",
+   "Aqueduct of Segovia 08.jpg — Bernard Gagnon (CC BY-SA 3.0)",
+   "Bardon Mill, Housesteads Roman Fort, The latrine - geograph.org.uk - 7851725.jpg — Michael Garlick (CC BY-SA 2.0)",
+   "Latrine Block at Housesteads Roman Fort - geograph.org.uk - 6747435.jpg — Sandy Gerrard (CC BY-SA 2.0)",
+   "Pompejanum, the Atrium, idealized replica of a Roman villa, Aschaffenburg, Germany (14185443908).jpg — Carole Raddato from FRANKFURT, Germany (CC BY-SA 2.0)",
+   "Mosaic at the Domus Romana 2.jpg — A.-K. D. (CC BY-SA 4.0)",
+   "Street houses Pompeii Italy.jpg — Jebulon (CC0)",
+   "Pompeii, Stepping stones at Via del Tempio d'Iside (48442377296).jpg — Gary Todd from Xinzheng, China (Public domain)",
+   "Shop in pompeii with faces of the gods.jpg — Commonists (CC BY-SA 4.0)",
+   "Roman blacksmith.jpg — Unknown authorUnknown author. The author of the image is not (Public domain)",
+   "Roman pavement mosaic, from E.H. Gombrich Art and illusion.jpg — Unknown authorUnknown author (Public domain)",
+   "6 Roman surgical instruments Wellcome L0009950.jpg — Desconocido (CC BY 4.0)",
+   "Fullonica of Vesonius Primus Floorplan Emil Presuhn, 1882.jpg — Emil Presuhn (Public domain)",
+   "Stone Relief in the Roman Forum, Rome, Italy.jpg — Julian Lupyan (CC0)",
+   "Roman pavement mosaic,2nd-1st century BCE.jpg — Oluttölkki (CC BY-SA 4.0)",
+   "Forum Romanum (14).jpg — Krzysztof Golik (CC BY-SA 4.0)",
+   "Rostra foro romano.JPG — sailko (CC BY 2.5)",
+   "Plaque Basilica Julia Forum romanum Rome Italy.jpg — Jebulon (CC0)",
+   "2024-10-12 Trajan's Market.jpg — Alexkom000 (CC BY 4.0)",
+   "Scale degree Roman numerals minor.png — Hyacinth (Public domain)",
+   "Willem Reuter - A Roman Market.jpg — Willem Reuter (Public domain)",
+   "Roman Coin Denominations.png — Trombonist04 (CC BY-SA 4.0)",
+   "Replica of roman wax writing tablet with stylus.jpg — Peter van der Sluijs (CC BY-SA 3.0)",
+   "Roman copper alloy stylus for writing on wooden tablets covered with wax. (FindID 258389).jpg — , Stuart Noon, 2009-06-01 18:21:46 (CC BY-SA 2.0)",
+   "Roman fresco with a Woman on a Balcony - Getty Villa Collection.jpg — Dave &amp; Margie Hill / Kleerup (CC BY-SA 2.0)",
+   "Portrait bust of a Roman woman (Boston MFA 99.jpg — Mark Landon (CC BY 4.0)",
+   "Thermopolium Herculaneum.jpg — Jebulon (CC0)",
+   "Thermopolium in Regio 5 Insula 1 Pompeii Prowalk.jpg — Mary Harrsch (CC BY-SA 4.0)",
+   "Olives au marche de Toulon p1040238.jpg — David Monniaux (CC BY-SA 3.0)",
+   "Garum Mosaik Pompeji.JPG — Claus Ableiter (CC BY-SA 3.0)",
+   "Black Pepper - Piper nigrum - Le Jardin du Roi - 01.jpg — NorbertNagel (CC BY-SA 4.0)",
+   "Roman Villa Densenzano layout.jpg — Goldwrite (CC0)",
+   "Baths of Caracalla 2.JPG — Pascal Reusch (CC BY-SA 3.0)",
+   "Roman Baths in Bath Spa, England - July 2006.jpg — Diliff (CC BY 2.5)",
+   "The Roman Baths.011 - Bath.jpg — Fernando Losada Rodríguez (CC BY-SA 4.0)",
+   "Hypocaust at Chedworth Roman Villa.jpg — Oldchien.rb (CC BY-SA 4.0)",
+   "Strigil LACMA M.80.203.94.jpg — Desconocido (Public domain)",
+   "Palaestra of the Lake, Delos, 224793.jpg — Zde (CC BY-SA 4.0)",
+   "Ephesus Celsus Library Façade.jpg — Benh LIEU SONG (CC BY-SA 3.0)",
+   "Roman Baths, Bath, Somerset 120.jpg — Simon Burchell (CC BY-SA 4.0)",
+   "Roman Baths, Bath, Somerset 155.jpg — Simon Burchell (CC BY-SA 4.0)",
+   "040227 tevere16CloacaMaxima.jpg — user:Lalupa (Public domain)",
+   "Colosseum in Rome-April 2007-1- copie 2B.jpg — Diliff (CC BY-SA 2.5)",
+   "Anonymous - Colosseum, Interior - B1974.12.1454 - Yale Center for British Art.jpg — anonymous (CC0)",
+   "Borghese gladiator mosaic scene.jpg — Unknown authorUnknown author (Public domain)",
+   "Colosseum hypogeum.JPG — Jouri de vylder (CC BY-SA 3.0)",
+   "Rome (IT), Circus Maximus -- 2013 -- 3354.jpg — Dietmar Rabich (CC BY-SA 4.0)",
+   "Mosaic of Chariot Race, Spectators Detail.jpg — TyB (CC BY 2.0)",
+   "Roman Theatre in Orange 2008.jpg — Benh LIEU SONG (Flickr) (CC BY-SA 2.0)",
+   "Festival du Premier Roman, Chambéry (2015).JPG — Florian Pépellin (CC BY-SA 3.0)",
+   "Triclinium - Archäologische Staatssammlung München.JPG — User:Mattes (Public domain)",
+   "Looking west along north wall of triclinium House of Paccius Alexander Pompeii IX 1,7.jpg — Mary Harrsch (CC BY-SA 4.0)",
+   "Roman Mosaic of fish & ducks, from the House of the Faun, Pompeii (48451686756).jpg — Gary Todd from Xinzheng, China (Public domain)",
+   "Dormouse in the rocks of Maïdo in Réunion.jpg — Parchaco (CC0)",
+   "Red lentils (1).jpg — Fumikas Sagisavas (CC0)",
+   "Thasian wine amphora GR 1864.10-7.34.jpg — Zunkir (CC BY-SA 4.0)",
+   "Roman Fresco Showing Drinkers at a Banquet (51358291980).jpg — Tyler Bell (CC BY 2.0)",
+   "Roman numeral dice (3793094532).jpg — James Bowe (CC BY 2.0)",
+   "Pompeii Temple-style Lararium at the House of the Faun.jpg — Mary Harrsch (CC BY-SA 4.0)",
+   "Pantheon (Rome), Dome interior.jpg — Wilfredor (CC0)",
+   "David Roberts (1796-1864) - Study for 'Rome, Sunset from the Convent of Sant' Onofrio on the Janiculum' - NG 2261 - National Galleries of Scotland.jpg — David Roberts (Public domain)",
+   "Leda and the swan, terracotta Roman oil lamp 1st century AD, Staatliche Antikensammlungen, Munich (8958396304).jpg — Unknown authorUnknown author (CC BY-SA 2.0)",
+   "Roman Road - geograph.org.uk - 4077715.jpg — Bob Harvey (CC BY-SA 2.0)",
+   "The Streets of Pompeii (15029626145).jpg — Carole Raddato from FRANKFURT, Germany (CC BY-SA 2.0)",
+   "Pieter van Laer Bentvueghels in a Roman Tavern.jpg — Pieter van Laer (Public domain)",
+   "Secret Cabinet Roman bronze bed, from Pompeii (48451832761).jpg — Gary Todd from Xinzheng, China (Public domain)",
+   "Pompeii graffiti 2.jpg — Wknight94 (CC BY-SA 3.0)",
+   "Star of David graffiti in Pompeii IMG 0107.JPG — Deror_avi (CC BY-SA 4.0)",
+   "Aerial image of Pompeii and Mount Vesuvius (view from the southeast).jpg — Carsten Steger (CC BY-SA 4.0)",
+   "Theater (Ostia Antica).jpg — Rabax63 (CC BY-SA 4.0)",
+   "Hacienda Los Lirios, Merida 2 2023.jpg — Bromoxido (CC BY-SA 4.0)",
+   "Roman Road - geograph.org.uk - 4312682.jpg — Keith Evans (CC BY-SA 2.0)",
+   "Via appia.jpg — Kleuske at Dutch Wikipedia (CC BY-SA 3.0)",
+   "Bridge Alcantara.JPG — Dantla from de.wikipedia (GFDL)",
+   "Pantheon (Rome) - Dome interior.jpg — Livioandronico2013 (CC BY-SA 4.0)",
+   "Photograph of Latin Inscription PR5 No. 558-559.jpg — Unknown authorUnknown author (CC0)",
+   "Bust of Julius Caesar.jpg — Wilfredor (CC0)",
+   "Roman forum zadar croatia.jpg — Palauenc05 (CC BY-SA 4.0)",
+   "David Roberts (1796-1864) - Ruins of the Roman Forum - OP212 - Wolverhampton Art Gallery.jpg — David Roberts (Public domain)",
+   "Colosseum at night - wide angle.JPG — Martin Falbisoner (CC BY-SA 3.0)"
+  ],
+  "fecha": "2026-11-19 18:54"
+ }
 }
