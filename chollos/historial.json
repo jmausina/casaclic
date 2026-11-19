@@ -242,6 +242,33 @@
      "antes": "52,90 €"
     }
    ]
+  },
+  {
+   "fecha": "2026-11-19",
+   "hora": "01:39",
+   "video": "bIRvnYwIQeQ",
+   "canal": "UC-wvAtFM1D_ZSbJAi5ZLqfQ",
+   "titulo": "Neutrogena Hydro Boost Fluido de 23,50 € hoy por 7,84 € #Shorts",
+   "productos": [
+    {
+     "asin": "B0D9NL89YN",
+     "nombre": "Neutrogena Hydro Boost Fluido Hidratante SPF 50",
+     "precio": "7,84 €",
+     "antes": "23,50 €"
+    },
+    {
+     "asin": "B09CF27CW5",
+     "nombre": "Diesel Bad – Eau de Toilette hombre 100 ml",
+     "precio": "36,74 €",
+     "antes": "92,00 €"
+    },
+    {
+     "asin": "B0DFCJHKPN",
+     "nombre": "Espejo de maquillaje Flamingueo con luz LED",
+     "precio": "59,95 €",
+     "antes": "149,00 €"
+    }
+   ]
   }
  ]
 }
