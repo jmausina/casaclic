@@ -9,7 +9,9 @@ from cryptography.fernet import Fernet
 
 API = "https://open.tiktokapis.com/v2"
 AQUI = os.path.dirname(os.path.abspath(__file__))
-TOKEN_FILE = os.path.join(AQUI, "token.enc")
+# Cuenta de TikTok: vacío o "casaclic" = casaclic_oficial (token.enc); otra, p. ej. "369jma" = token_369jma.enc
+CUENTA = (os.environ.get("TT_CUENTA") or "casaclic").strip().lower()
+TOKEN_FILE = os.path.join(AQUI, "token.enc" if CUENTA == "casaclic" else f"token_{CUENTA}.enc")
 REDIRECT = "https://jmausina.github.io/casaclic/tiktok.html"
 
 
@@ -40,6 +42,17 @@ def autorizar(code):
         q = parse_qs(urlparse(code).query)
         code = (q.get("code") or q.get("robot") or [""])[0]
     d = _token({"code": code, "grant_type": "authorization_code", "redirect_uri": REDIRECT})
+    # Seguridad: que no se guarde en este archivo una cuenta que ya es de otro robot.
+    import glob
+    for otro in glob.glob(os.path.join(AQUI, "token*.enc")):
+        if os.path.abspath(otro) == os.path.abspath(TOKEN_FILE):
+            continue
+        try:
+            if json.loads(_f().decrypt(open(otro, "rb").read())).get("open_id") == d.get("open_id"):
+                sys.exit(f"Esa cuenta de TikTok ya está guardada en {os.path.basename(otro)}. "
+                         "Cierra sesión en TikTok y entra con la cuenta correcta antes de autorizar.")
+        except Exception:
+            pass
     _guardar({"refresh_token": d["refresh_token"], "open_id": d.get("open_id"), "scope": d.get("scope"),
               "guardado": time.strftime("%Y-%m-%d")})
     return d["access_token"], d.get("scope")
@@ -48,7 +61,7 @@ def autorizar(code):
 def acceso():
     """Devuelve un access_token nuevo y guarda el refresh_token renovado."""
     if not os.path.exists(TOKEN_FILE):
-        sys.exit("Falta el permiso de TikTok (tiktok/token.enc). Hay que lanzar «TikTok - autorizar».")
+        sys.exit(f"Falta el permiso de TikTok ({os.path.basename(TOKEN_FILE)}). Hay que lanzar «TikTok - autorizar».")
     viejo = json.loads(_f().decrypt(open(TOKEN_FILE, "rb").read()))
     d = _token({"grant_type": "refresh_token", "refresh_token": viejo["refresh_token"]})
     nuevo = d.get("refresh_token", viejo["refresh_token"])
@@ -102,7 +115,7 @@ def subir_borrador(path, at=None):
             break
         if estado == "FAILED":
             sys.exit("TikTok falló al procesar el vídeo: " + json.dumps(s)[:400])
-    print(f"TIKTOK: borrador enviado a la bandeja de casaclic_oficial (estado {estado}, id {pid})")
+    print(f"TIKTOK: borrador enviado a la bandeja de {CUENTA} (estado {estado}, id {pid})")
     return pid
 
 

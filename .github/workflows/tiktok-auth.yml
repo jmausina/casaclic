@@ -1,9 +1,15 @@
-name: TikTok - autorizar CasaClic (solo a mano)
+name: TikTok - autorizar cuenta (solo a mano)
 
-# Canjea el código que TikTok deja en tiktok.html y guarda el permiso CIFRADO en tiktok/token.enc.
+# Canjea el código que TikTok deja en tiktok.html y guarda el permiso CIFRADO.
+# casaclic -> tiktok/token.enc · 369jma -> tiktok/token_369jma.enc
 on:
   workflow_dispatch:
     inputs:
+      cuenta:
+        description: 'Cuenta de TikTok que se autoriza'
+        type: choice
+        options: [casaclic, 369jma]
+        default: casaclic
       code:
         description: 'Dirección completa de tiktok.html?code=... (o la palabra enlace para sacar el enlace de autorización)'
         required: true
@@ -25,14 +31,18 @@ jobs:
         env:
           TT_CLIENT_KEY: ${{ secrets.TT_CLIENT_KEY }}
           TT_CLIENT_SECRET: ${{ secrets.TT_CLIENT_SECRET }}
+          TT_CUENTA: ${{ inputs.cuenta }}
           CODE: ${{ inputs.code }}
         run: |
           if [ "$CODE" = "enlace" ]; then python tiktok/tiktok_api.py enlace; else python tiktok/tiktok_api.py autorizar "$CODE"; fi
       - name: Guardar el permiso cifrado
         if: inputs.code != 'enlace'
+        env:
+          TT_CUENTA: ${{ inputs.cuenta }}
         run: |
           git config user.name "casaclic-bot"
           git config user.email "casaclic-bot@users.noreply.github.com"
-          git add tiktok/token.enc
-          git commit -m "TikTok: permiso de casaclic_oficial (cifrado)"
+          git add tiktok/token*.enc
+          git commit -m "TikTok: permiso de $TT_CUENTA (cifrado)"
+          git pull --rebase
           git push
