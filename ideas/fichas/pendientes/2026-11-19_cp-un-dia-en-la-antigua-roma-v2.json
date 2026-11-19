@@ -1440,8 +1440,7 @@
    "texto": "El desayuno, llamado ientaculum, era muy ligero.",
    "rotulo": "El desayuno",
    "imagen": [
-    "bread loaf",
-    "roman bread"
+    "roman bread pompeii"
    ]
   },
   {
@@ -1854,8 +1853,8 @@
    "texto": "Para que nadie engañara, había pesos y medidas oficiales.",
    "rotulo": "Pesos y medidas",
    "imagen": [
-    "roman scale",
-    "roman weights"
+    "roman steelyard",
+    "roman bronze weights"
    ]
   },
   {
@@ -2394,7 +2393,6 @@
    "texto": "El calendario romano estaba lleno de fiestas religiosas.",
    "rotulo": "Las fiestas",
    "imagen": [
-    "roman festival",
     "saturnalia"
    ]
   },
@@ -2718,8 +2716,7 @@
    "texto": "Antes de terminar, un detalle precioso: los grafitis.",
    "rotulo": "Grafitis",
    "imagen": [
-    "pompeii graffiti",
-    "graffiti pompeii"
+    "pompeii wall inscription"
    ]
   },
   {
@@ -2772,8 +2769,8 @@
    "texto": "Ostia, el puerto de Roma, nos enseña cómo eran las ínsulas, las tiendas y los almacenes.",
    "rotulo": "Ostia",
    "imagen": [
-    "ostia antica",
-    "ostia"
+    "ostia antica horrea",
+    "ostia antica insula"
    ]
   },
   {
