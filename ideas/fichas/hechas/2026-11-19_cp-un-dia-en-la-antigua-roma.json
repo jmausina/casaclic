@@ -121,7 +121,7 @@
   {
    "rotulo": "Alquileres caros",
    "imagen": [
-    "insula",
+    "ostia antica ruins",
     "ostia antica"
    ],
    "frases": [
@@ -985,8 +985,8 @@
   {
    "rotulo": "Las quejas",
    "imagen": [
-    "roman street",
-    "pompeii street"
+    "pompeii street",
+    "via appia"
    ],
    "frases": [
     "Un poeta romano, Juvenal, se quejaba de que en Roma era imposible dormir.",
@@ -1148,6 +1148,18 @@
     "Muchas palabras que usamos a diario vienen del latín.",
     "Por ejemplo, salario viene de sal, y calendario de calendas, el primer día del mes.",
     "Cada vez que hablamos, llevamos un trocito de Roma con nosotros."
+   ]
+  },
+  {
+   "rotulo": "El calendario",
+   "imagen": [
+    "julius caesar bust",
+    "julius caesar"
+   ],
+   "frases": [
+    "Nuestro calendario también es romano.",
+    "Julio César lo reformó y le dio la forma que, con pocos cambios, seguimos usando.",
+    "Por eso los meses de julio y agosto llevan los nombres de Julio César y de Augusto."
    ]
   },
   {
@@ -1338,7 +1350,7 @@
    "texto": "Vivir en Roma era caro, igual que hoy en muchas grandes ciudades.",
    "rotulo": "Alquileres caros",
    "imagen": [
-    "insula",
+    "ostia antica ruins",
     "ostia antica"
    ]
   },
@@ -2634,8 +2646,8 @@
    "texto": "Un poeta romano, Juvenal, se quejaba de que en Roma era imposible dormir.",
    "rotulo": "Las quejas",
    "imagen": [
-    "roman street",
-    "pompeii street"
+    "pompeii street",
+    "via appia"
    ]
   },
   {
@@ -2883,6 +2895,24 @@
    "imagen": null
   },
   {
+   "texto": "Nuestro calendario también es romano.",
+   "rotulo": "El calendario",
+   "imagen": [
+    "julius caesar bust",
+    "julius caesar"
+   ]
+  },
+  {
+   "texto": "Julio César lo reformó y le dio la forma que, con pocos cambios, seguimos usando.",
+   "rotulo": null,
+   "imagen": null
+  },
+  {
+   "texto": "Por eso los meses de julio y agosto llevan los nombres de Julio César y de Augusto.",
+   "rotulo": null,
+   "imagen": null
+  },
+  {
    "texto": "Si lo piensas, muchas cosas de su día se parecen al nuestro.",
    "rotulo": "Parecidos y diferencias",
    "imagen": [
@@ -2938,18 +2968,18 @@
   }
  ],
  "resultado": {
-  "video_id": null,
-  "segundos": 1195.3,
+  "video_id": "HJctC8sMhX4",
+  "segundos": 1204.0,
   "creditos": [
    "Forum romanum 6k (5760x2097).jpg — BeBo86 (CC BY-SA 3.0)",
-   "Portal of a patrician house on Augustus Street in Pompeii by Luigi Bazzani.jpg — Luigi Bazzani (Public domain)",
+   "Street houses Pompeii Italy.jpg — Jebulon (CC0)",
    "Sundial on the porch of St. Giles Church, Chesterton.jpg — DeFacto (CC BY-SA 4.0)",
    "Sundial at St Mary's, Walton 1.jpg — Rodhullandemu (CC BY-SA 4.0)",
    "Peters Square Sunrise Vatican Rome Sep19 R16 01827.jpg — Timothy A. Gonsalves (CC BY-SA 4.0)",
    "Ostia Antica - R3 I03,1 Insula delle Trifore P1110182.jpg — Lalupa (CC BY-SA 4.0)",
    "Insula in Ostia.jpg — Dennis G. Jarvis (CC BY-SA 2.0)",
    "Campitelli - Insula romana 1907.JPG — user:Lalupa (Public domain)",
-   "Insular Cortex Sub-regions.png — Yasmine Y. Fathy, Susanne E. HoogersHenk W. BerendseYsbrand  (CC BY 4.0)",
+   "Ruins of the Sepolcro di Cartilio Poplicola at Ostia Antica.jpg — Ethan Doyle White (CC BY-SA 4.0)",
    "Mosaic at the Domus Romana 1.jpg — A.-K. D. (CC BY-SA 4.0)",
    "Fresco of a snake (Pompeii).jpg — Bernard Gagnon (CC BY 4.0)",
    "Roman toga-Curia.JPG — Ursus (Public domain)",
@@ -2964,7 +2994,7 @@
    "Latrine Block at Housesteads Roman Fort - geograph.org.uk - 6747435.jpg — Sandy Gerrard (CC BY-SA 2.0)",
    "Pompejanum, the Atrium, idealized replica of a Roman villa, Aschaffenburg, Germany (14185443908).jpg — Carole Raddato from FRANKFURT, Germany (CC BY-SA 2.0)",
    "Mosaic at the Domus Romana 2.jpg — A.-K. D. (CC BY-SA 4.0)",
-   "Street houses Pompeii Italy.jpg — Jebulon (CC0)",
+   "Roman Road - geograph.org.uk - 4077715.jpg — Bob Harvey (CC BY-SA 2.0)",
    "Pompeii, Stepping stones at Via del Tempio d'Iside (48442377296).jpg — Gary Todd from Xinzheng, China (Public domain)",
    "Shop in pompeii with faces of the gods.jpg — Commonists (CC BY-SA 4.0)",
    "Roman blacksmith.jpg — Unknown authorUnknown author. The author of the image is not (Public domain)",
@@ -3020,8 +3050,8 @@
    "Pantheon (Rome), Dome interior.jpg — Wilfredor (CC0)",
    "David Roberts (1796-1864) - Study for 'Rome, Sunset from the Convent of Sant' Onofrio on the Janiculum' - NG 2261 - National Galleries of Scotland.jpg — David Roberts (Public domain)",
    "Leda and the swan, terracotta Roman oil lamp 1st century AD, Staatliche Antikensammlungen, Munich (8958396304).jpg — Unknown authorUnknown author (CC BY-SA 2.0)",
-   "Roman Road - geograph.org.uk - 4077715.jpg — Bob Harvey (CC BY-SA 2.0)",
-   "Upperline Street at Roman Street, New Orleans, December 2023 - 4.jpg — Infrogmation (CC BY-SA 4.0)",
+   "Roman Road - geograph.org.uk - 1975019.jpg — Oast House Archive (CC BY-SA 2.0)",
+   "Via appia.jpg — Kleuske at Dutch Wikipedia (CC BY-SA 3.0)",
    "Pieter van Laer Bentvueghels in a Roman Tavern.jpg — Pieter van Laer (Public domain)",
    "Secret Cabinet Roman bronze bed, from Pompeii (48451832761).jpg — Gary Todd from Xinzheng, China (Public domain)",
    "Pompeii graffiti 2.jpg — Wknight94 (CC BY-SA 3.0)",
@@ -3029,15 +3059,16 @@
    "Aerial image of Pompeii and Mount Vesuvius (view from the southeast).jpg — Carsten Steger (CC BY-SA 4.0)",
    "Theater (Ostia Antica).jpg — Rabax63 (CC BY-SA 4.0)",
    "Hacienda Los Lirios, Merida 2 2023.jpg — Bromoxido (CC BY-SA 4.0)",
-   "Roman Road - geograph.org.uk - 1975019.jpg — Oast House Archive (CC BY-SA 2.0)",
-   "Via appia.jpg — Kleuske at Dutch Wikipedia (CC BY-SA 3.0)",
+   "Roman Road - geograph.org.uk - 4312682.jpg — Keith Evans (CC BY-SA 2.0)",
+   "Via Appia antica - empedrado.jpg — Fernando de Gorocica (CC BY-SA 4.0)",
    "Bridge Alcantara.JPG — Dantla from de.wikipedia (GFDL)",
    "Pantheon (Rome) - Dome interior.jpg — Livioandronico2013 (CC BY-SA 4.0)",
    "Photograph of Latin Inscription PR5 No. 558-559.jpg — Unknown authorUnknown author (CC0)",
+   "Bust of Julius Caesar.jpg — Wilfredor (CC0)",
    "Roman forum zadar croatia.jpg — Palauenc05 (CC BY-SA 4.0)",
    "David Roberts (1796-1864) - Ruins of the Roman Forum - OP212 - Wolverhampton Art Gallery.jpg — David Roberts (Public domain)",
    "Colosseum at night - wide angle.JPG — Martin Falbisoner (CC BY-SA 3.0)"
   ],
-  "fecha": "2026-11-17 11:30"
+  "fecha": "2026-11-19 18:06"
  }
 }
