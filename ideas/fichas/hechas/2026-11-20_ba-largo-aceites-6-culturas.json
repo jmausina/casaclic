@@ -47,7 +47,7 @@
   {
    "rotulo": "1. El Mediterráneo",
    "imagen": [
-    "olive grove",
+    "olive tree",
     "olive trees"
    ],
    "frases": [
@@ -370,7 +370,7 @@
   {
    "rotulo": "Receta: bálsamo de labios",
    "imagen": [
-    "lip balm",
+    "shea butter",
     "beeswax"
    ],
    "frases": [
@@ -406,8 +406,8 @@
   {
    "rotulo": "La belleza en Egipto",
    "imagen": [
-    "ancient egypt cosmetics",
-    "egyptian cosmetic jar"
+    "egyptian cosmetic",
+    "kohl"
    ],
    "frases": [
     "Los egipcios daban mucha importancia al cuidado del cuerpo.",
@@ -430,8 +430,8 @@
   {
    "rotulo": "Cómo elegir un aceite",
    "imagen": [
-    "oils",
-    "cooking oils"
+    "olive oil bottle",
+    "argan oil"
    ],
    "frases": [
     "Si quieres probar alguno, elige siempre aceites puros y de buena calidad.",
@@ -531,7 +531,7 @@
    "texto": "Empezamos cerca de casa, en el Mediterráneo, la tierra del olivo.",
    "rotulo": "1. El Mediterráneo",
    "imagen": [
-    "olive grove",
+    "olive tree",
     "olive trees"
    ]
   },
@@ -1016,7 +1016,7 @@
    "texto": "Un bálsamo muy fácil: una cucharada de manteca de karité y una de aceite de oliva.",
    "rotulo": "Receta: bálsamo de labios",
    "imagen": [
-    "lip balm",
+    "shea butter",
     "beeswax"
    ]
   },
@@ -1070,8 +1070,8 @@
    "texto": "Los egipcios daban mucha importancia al cuidado del cuerpo.",
    "rotulo": "La belleza en Egipto",
    "imagen": [
-    "ancient egypt cosmetics",
-    "egyptian cosmetic jar"
+    "egyptian cosmetic",
+    "kohl"
    ]
   },
   {
@@ -1106,8 +1106,8 @@
    "texto": "Si quieres probar alguno, elige siempre aceites puros y de buena calidad.",
    "rotulo": "Cómo elegir un aceite",
    "imagen": [
-    "oils",
-    "cooking oils"
+    "olive oil bottle",
+    "argan oil"
    ]
   },
   {
@@ -1194,13 +1194,13 @@
   }
  ],
  "resultado": {
-  "video_id": null,
-  "segundos": 497.7,
+  "video_id": "TiFgMGY4smM",
+  "segundos": 497.6,
   "creditos": [
    "Sunflower oil bottles in Dnipro.jpg — Alex Blokha (CC BY-SA 4.0)",
    "Italian olive oil 2007.jpg — my friend (CC BY 2.5)",
-   "Cows in green field - nullamunjie olive grove.jpg — This file is published under the following Creative Commons  (GFDL 1.2)",
-   "1885A1621 Greek Amphora or Stamnos.jpg — Unknown authorUnknown author (CC0)",
+   "Lun olive tree 1600 years.jpg — Palauenc05 (CC BY-SA 4.0)",
+   "John Ruskin - Head of Athena, After a Greek Amphora - B1979.12.810 - Yale Center for British Art.jpg — John Ruskin (CC0)",
    "Strigil LACMA M.80.203.94.jpg — Desconocido (Public domain)",
    "Amphorae stacking.jpg — Ad Meskens (CC BY-SA 3.0)",
    "Olive oil bottle Bertolli Riserva Premium.jpg — Badagnani (talk) (CC BY 3.0)",
@@ -1226,17 +1226,17 @@
    "Shea butter tree 01.jpg — Azorbli (CC BY 4.0)",
    "Shea nuts@@-.jpg — Dorcas Queen (CC BY-SA 4.0)",
    "Shea butter 1.jpg — Amuzujoe (CC BY-SA 4.0)",
-   "Various colorful lip balm sticks (40821280864).jpg — Rawpixel Ltd (CC BY 2.0)",
    "Shea butter.jpg — Amuzujoe (CC BY-SA 4.0)",
+   "Shea butter 2024.jpg — Vision L1 (CC0)",
    "Ricinus communis (castor oil plant) at Bandlaguda 002.JPG — Adityamadhav83 (CC BY-SA 3.0)",
-   "AncientEgypt-LadyApplyingCosmetics-ROM.png — Keith Schengili-Roberts (CC BY-SA 3.0)",
+   "Egyptian cosmetic set.jpg — Metropolitan Museum of Art (CC0)",
    "Castor oil.jpg — Pete Markham from Loretto, USA (CC BY-SA 2.0)",
-   "Essential natural oils and skin care products.jpg — Kolobetsoo (CC BY-SA 4.0)",
+   "Bottle of olive oil.jpg — margenauer from Pixabay (CC0)",
    "Dropper bottle for chloroform, London, England, 1870-1900 Wellcome L0058166.jpg — Desconocido (CC BY 4.0)",
    "Allergy skin test (47966127018).jpg — NIAID (CC BY 2.0)",
    "World Map 1689.JPG — Gerard van Schagen (Public domain)",
    "Recipe book of Margaret Countess of Moray.jpg — Unoquha (CC0)"
   ],
-  "fecha": "2026-11-16 17:12"
+  "fecha": "2026-11-20 16:25"
  }
 }
