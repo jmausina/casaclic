@@ -1,0 +1,67 @@
+name: Free-369 Mascotas - vídeo para TikTok
+
+# Lunes, miércoles y viernes: vídeo de un producto de la tienda Free-369 como BORRADOR en TikTok (@369jma).
+# Jose Miguel abre el aviso de TikTok, pega el texto (sale en el resumen de esta ejecución) y pulsa «Publicar».
+on:
+  schedule:
+    - cron: '13 9 * * 1,3,5'    # 10:13 en España (invierno)
+    - cron: '41 13 * * 1,3,5'   # repetición de seguridad; si ya se envió hoy, no hace nada
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: '1 = fabricar sin enviar (para revisar)'
+        required: false
+        default: '0'
+      producto:
+        description: 'Producto concreto (handle de Shopify). Vacío = el siguiente de la lista'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: free369-tiktok
+  cancel-in-progress: false
+
+jobs:
+  video:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Instalar herramientas
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-dejavu-core
+          pip install -q piper-tts pillow numpy requests cryptography
+      - name: Fabricar y enviar a TikTok
+        env:
+          TT_CLIENT_KEY: ${{ secrets.TT_CLIENT_KEY }}
+          TT_CLIENT_SECRET: ${{ secrets.TT_CLIENT_SECRET }}
+          DRY_RUN: ${{ github.event.inputs.dry_run || '0' }}
+          PRODUCTO: ${{ github.event.inputs.producto || '' }}
+          MANUAL: ${{ github.event_name == 'workflow_dispatch' && '1' || '0' }}
+          OUT_DIR: /tmp/free369
+        run: python3 tiktok/free369_video.py
+      - name: Guardar el vídeo para revisarlo
+        uses: actions/upload-artifact@v4
+        with:
+          name: free369
+          path: |
+            /tmp/free369/final/*.mp4
+            /tmp/free369/f*.png
+          retention-days: 14
+          if-no-files-found: ignore
+      - name: Guardar turno y permiso
+        run: |
+          git config user.name "free369-bot"
+          git config user.email "free369-bot@users.noreply.github.com"
+          for f in tiktok/free369_estado.json tiktok/token_369jma.enc; do [ -f "$f" ] && git add "$f"; done
+          git diff --cached --quiet && exit 0
+          git commit -m "Free-369 TikTok: vídeo $(TZ=Europe/Madrid date +%F)"
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && exit 0; sleep $((i*5)); done
+          exit 1
