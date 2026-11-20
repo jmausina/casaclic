@@ -1,14 +1,14 @@
 name: TikTok - autorizar cuenta (solo a mano)
 
 # Canjea el código que TikTok deja en tiktok.html y guarda el permiso CIFRADO.
-# casaclic -> tiktok/token.enc · 369jma -> tiktok/token_369jma.enc
+# casaclic -> tiktok/token.enc · 369jma -> tiktok/token_369jma.enc · eab -> tiktok/token_eab.enc (Estudio Arte y Bisutería)
 on:
   workflow_dispatch:
     inputs:
       cuenta:
         description: 'Cuenta de TikTok que se autoriza'
         type: choice
-        options: [casaclic, 369jma]
+        options: [casaclic, 369jma, eab]
         default: casaclic
       code:
         description: 'Dirección completa de tiktok.html?code=... (o la palabra enlace para sacar el enlace de autorización)'
