@@ -1,79 +1,217 @@
 [
- {"handle": "vaso-limpiador-patas-perro", "nombre_corto": "Vaso limpiador de patas",
+ {
+  "handle": "vaso-limpiador-patas-perro",
+  "nombre_corto": "Vaso limpiador de patas",
   "gancho": "¿Barro por casa después del paseo?",
-  "frases": ["¿Tu perro vuelve del paseo con las patas llenas de barro?",
-             "Mete la pata en el vaso con un poco de agua y gíralo suavemente.",
-             "Las cerdas de silicona suave arrastran el barro sin hacerle daño.",
-             "Sécala con una toalla y listo. Sirve para perros y gatos, en tres tallas."],
-  "hashtags": "#perros #gatos #mascotas #trucosparaperros #perrosdetiktok"},
- {"handle": "alfombra-olfativa-plegable-para-perros", "nombre_corto": "Alfombra olfativa",
+  "frases": [
+   "¿Tu perro vuelve del paseo con las patas llenas de barro?",
+   "Mete la pata en el vaso con un poco de agua y gíralo suavemente.",
+   "Las cerdas de silicona suave arrastran el barro sin hacerle daño.",
+   "Sécala con una toalla y listo. Sirve para perros y gatos, en tres tallas."
+  ],
+  "hashtags": "#perros #gatos #mascotas #trucosparaperros #perrosdetiktok",
+  "fotos": [
+   0,
+   [
+    1,
+    0,
+    0.12,
+    0.6,
+    1
+   ],
+   [
+    4,
+    0,
+    0.12,
+    0.6,
+    1
+   ],
+   [
+    7,
+    0,
+    0.12,
+    0.6,
+    1
+   ]
+  ]
+ },
+ {
+  "handle": "alfombra-olfativa-plegable-para-perros",
+  "nombre_corto": "Alfombra olfativa",
   "gancho": "Cansa a tu perro sin salir de casa",
-  "frases": ["¿Día de lluvia y tu perro aburrido?",
-             "Esconde premios o pienso entre los pliegues de esta alfombra olfativa.",
-             "Tu perro los busca con el olfato, se entretiene y come más despacio.",
-             "Es de fieltro lavable y se pliega para guardarla en cualquier sitio."],
-  "hashtags": "#perros #mascotas #juegosparaperros #perrosdetiktok #enriquecimientoambiental"},
- {"handle": "alfombrilla-lamedora-de-silicona-con-ventosas", "nombre_corto": "Alfombrilla lamedora",
+  "frases": [
+   "¿Día de lluvia y tu perro aburrido?",
+   "Esconde premios o pienso entre los pliegues de esta alfombra olfativa.",
+   "Tu perro los busca con el olfato, se entretiene y come más despacio.",
+   "Es de fieltro lavable y se pliega para guardarla en cualquier sitio."
+  ],
+  "hashtags": "#perros #mascotas #juegosparaperros #perrosdetiktok #enriquecimientoambiental",
+  "fotos": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "handle": "alfombrilla-lamedora-de-silicona-con-ventosas",
+  "nombre_corto": "Alfombrilla lamedora",
   "gancho": "Baños y uñas sin dramas",
-  "frases": ["¿A tu mascota le da miedo el baño o que le corten las uñas?",
-             "Unta un poco de yogur o de paté en esta alfombrilla lamedora.",
-             "Pégala con las ventosas a la bañera o al azulejo. Mientras lame, tú trabajas tranquilo.",
-             "Es de silicona flexible y se puede lavar en el lavavajillas."],
-  "hashtags": "#perros #gatos #mascotas #bañoperro #perrosdetiktok"},
- {"handle": "rodillo-quitapelos-reutilizable-para-sofa-y-ropa", "nombre_corto": "Rodillo quitapelos",
+  "frases": [
+   "¿A tu mascota le da miedo el baño o que le corten las uñas?",
+   "Unta un poco de yogur o de paté en esta alfombrilla lamedora.",
+   "Pégala con las ventosas a la bañera o al azulejo. Mientras lame, tú trabajas tranquilo.",
+   "Es de silicona flexible y se puede lavar en el lavavajillas."
+  ],
+  "hashtags": "#perros #gatos #mascotas #bañoperro #perrosdetiktok",
+  "fotos": [
+   0,
+   1,
+   2,
+   4
+  ]
+ },
+ {
+  "handle": "rodillo-quitapelos-reutilizable-para-sofa-y-ropa",
+  "nombre_corto": "Rodillo quitapelos",
   "gancho": "El sofá sin pelos en dos pasadas",
-  "frases": ["¿Pelos de perro o de gato por todo el sofá?",
-             "Pasa este rodillo adelante y atrás, y el pelo se queda atrapado dentro.",
-             "Abres el depósito, lo vacías y vuelve a estar como nuevo.",
-             "Sin hojas adhesivas ni pilas. Para sofás, camas, cojines y ropa."],
-  "hashtags": "#perros #gatos #mascotas #limpiezadelhogar #trucosdelimpieza"},
- {"handle": "pack-paseo-seguro-arnes-reflectante-correa", "nombre_corto": "Pack Paseo Seguro",
+  "frases": [
+   "¿Pelos de perro o de gato por todo el sofá?",
+   "Pasa este rodillo adelante y atrás, y el pelo se queda atrapado dentro.",
+   "Abres el depósito, lo vacías y vuelve a estar como nuevo.",
+   "Sin hojas adhesivas ni pilas. Para sofás, camas, cojines y ropa."
+  ],
+  "hashtags": "#perros #gatos #mascotas #limpiezadelhogar #trucosdelimpieza",
+  "fotos": [
+   1,
+   2,
+   0,
+   1
+  ]
+ },
+ {
+  "handle": "pack-paseo-seguro-arnes-reflectante-correa",
+  "nombre_corto": "Pack Paseo Seguro",
   "gancho": "Paseos de tarde más seguros",
-  "frases": ["¿Tu perro tira de la correa y ya oscurece pronto?",
-             "Este arnés tipo chaleco reparte la presión en el pecho, no en el cuello.",
-             "Lleva tiras reflectantes para que se os vea mejor por la mañana y por la noche.",
-             "Incluye la correa a juego. Tallas para perros pequeños y gatos."],
-  "hashtags": "#perros #perrospequeños #paseoconperro #mascotas #perrosdetiktok"},
- {"handle": "toalla-microfibra-secado-rapido-perros", "nombre_corto": "Toalla de secado rápido",
+  "frases": [
+   "¿Tu perro tira de la correa y ya oscurece pronto?",
+   "Este arnés tipo chaleco reparte la presión en el pecho, no en el cuello.",
+   "Lleva tiras reflectantes para que se os vea mejor por la mañana y por la noche.",
+   "Incluye la correa a juego. Tallas para perros pequeños y gatos."
+  ],
+  "hashtags": "#perros #perrospequeños #paseoconperro #mascotas #perrosdetiktok",
+  "fotos": [
+   0,
+   5,
+   2,
+   4
+  ]
+ },
+ {
+  "handle": "toalla-microfibra-secado-rapido-perros",
+  "nombre_corto": "Toalla de secado rápido",
   "gancho": "Perro seco en un momento",
-  "frases": ["¿Paseo con lluvia y perro empapado?",
-             "Esta toalla de microfibra absorbe mucho más que una toalla normal.",
-             "Perfecta para la entrada de casa y para el coche. También limpia las patas.",
-             "Es lavable y reutilizable, y mide 35 por 75 centímetros."],
-  "hashtags": "#perros #gatos #mascotas #perrosdetiktok #invierno"},
- {"handle": "cepillo-autolimpiable-perros-gatos", "nombre_corto": "Cepillo autolimpiable",
+  "frases": [
+   "¿Paseo con lluvia y perro empapado?",
+   "Esta toalla de microfibra absorbe mucho más que una toalla normal.",
+   "Perfecta para la entrada de casa y para el coche. También limpia las patas.",
+   "Es lavable y reutilizable, y mide 35 por 75 centímetros."
+  ],
+  "hashtags": "#perros #gatos #mascotas #perrosdetiktok #invierno",
+  "fotos": [
+   1,
+   6,
+   8,
+   7
+  ]
+ },
+ {
+  "handle": "cepillo-autolimpiable-perros-gatos",
+  "nombre_corto": "Cepillo autolimpiable",
   "gancho": "Pulsas y el pelo sale de golpe",
-  "frases": ["Cepillas a tu perro o a tu gato y las púas atrapan el pelo muerto y los nudos.",
-             "Al terminar, aprietas el botón y las púas se esconden.",
-             "Todo el pelo cae de golpe, sin tocarlo.",
-             "Menos pelo en el sofá y en la ropa. Sin pilas ni cargador."],
-  "hashtags": "#perros #gatos #mascotas #cepilloparaperros #gatosdetiktok"},
- {"handle": "manta-autocalentable-perros-gatos", "nombre_corto": "Manta autocalentable",
+  "frases": [
+   "Cepillas a tu perro o a tu gato y las púas atrapan el pelo muerto y los nudos.",
+   "Al terminar, aprietas el botón y las púas se esconden.",
+   "Todo el pelo cae de golpe, sin tocarlo.",
+   "Menos pelo en el sofá y en la ropa. Sin pilas ni cargador."
+  ],
+  "hashtags": "#perros #gatos #mascotas #cepilloparaperros #gatosdetiktok",
+  "fotos": [
+   0,
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "handle": "manta-autocalentable-perros-gatos",
+  "nombre_corto": "Manta autocalentable",
   "gancho": "Calor sin enchufes ni pilas",
-  "frases": ["¿Tu mascota pasa frío en invierno?",
-             "Esta manta tiene una capa interior que le devuelve el calor de su propio cuerpo.",
-             "No lleva electricidad ni pilas, y tiene base antideslizante.",
-             "Sirve para la cama, el transportín, el sofá o el coche. Hay tres tamaños."],
-  "hashtags": "#perros #gatos #mascotas #invierno #gatosdetiktok"},
- {"handle": "cama-cueva-gatos-saco-dormir", "nombre_corto": "Cama cueva para gatos",
+  "frases": [
+   "¿Tu mascota pasa frío en invierno?",
+   "Esta manta tiene una capa interior que le devuelve el calor de su propio cuerpo.",
+   "No lleva electricidad ni pilas, y tiene base antideslizante.",
+   "Sirve para la cama, el transportín, el sofá o el coche. Hay tres tamaños."
+  ],
+  "hashtags": "#perros #gatos #mascotas #invierno #gatosdetiktok",
+  "fotos": [
+   1,
+   2,
+   4,
+   5
+  ]
+ },
+ {
+  "handle": "cama-cueva-gatos-saco-dormir",
+  "nombre_corto": "Cama cueva para gatos",
   "gancho": "El refugio favorito de tu gato",
-  "frases": ["A los gatos les encanta esconderse.",
-             "En esta cama cueva de felpa lo hacen calentitos y sin corrientes.",
-             "Es suave por dentro y por fuera, plegable y fácil de lavar.",
-             "También vale para perros muy pequeños. Hay dos tamaños."],
-  "hashtags": "#gatos #gatosdetiktok #mascotas #camaparagatos #invierno"},
- {"handle": "hamaca-ventana-gatos-ventosas", "nombre_corto": "Hamaca de ventana",
+  "frases": [
+   "A los gatos les encanta esconderse.",
+   "En esta cama cueva de felpa lo hacen calentitos y sin corrientes.",
+   "Es suave por dentro y por fuera, plegable y fácil de lavar.",
+   "También vale para perros muy pequeños. Hay dos tamaños."
+  ],
+  "hashtags": "#gatos #gatosdetiktok #mascotas #camaparagatos #invierno",
+  "fotos": [
+   4,
+   6,
+   7
+  ]
+ },
+ {
+  "handle": "hamaca-ventana-gatos-ventosas",
+  "nombre_corto": "Hamaca de ventana",
   "gancho": "Tu gato al sol y el sofá libre",
-  "frases": ["¿Tu gato busca el sol todo el día?",
-             "Esta hamaca se pega al cristal con doble ventosa, sin tornillos ni agujeros.",
-             "Tu gato mira por la ventana, toma el sol y deja libre el sofá.",
-             "Un consejo: limpia bien el cristal y comprueba que agarra antes de que suba."],
-  "hashtags": "#gatos #gatosdetiktok #mascotas #hamacaparagatos #gatoscuriosos"},
- {"handle": "rascador-plegable-gatos-cascabel", "nombre_corto": "Rascador plegable",
+  "frases": [
+   "¿Tu gato busca el sol todo el día?",
+   "Esta hamaca se pega al cristal con doble ventosa, sin tornillos ni agujeros.",
+   "Tu gato mira por la ventana, toma el sol y deja libre el sofá.",
+   "Un consejo: limpia bien el cristal y comprueba que agarra antes de que suba."
+  ],
+  "hashtags": "#gatos #gatosdetiktok #mascotas #hamacaparagatos #gatoscuriosos",
+  "fotos": [
+   0,
+   3,
+   7,
+   6
+  ]
+ },
+ {
+  "handle": "rascador-plegable-gatos-cascabel",
+  "nombre_corto": "Rascador plegable",
   "gancho": "Las uñas aquí, no en el sofá",
-  "frases": ["Tu gato necesita afilarse las uñas.",
-             "Con este rascador de cartón lo hace aquí y no en tus muebles.",
-             "Trae cascabel para jugar y hierba gatera para atraerlo.",
-             "Es plegable y cambia de forma para que no se aburra."],
-  "hashtags": "#gatos #gatosdetiktok #mascotas #rascador #regalosnavidad"}
+  "frases": [
+   "Tu gato necesita afilarse las uñas.",
+   "Con este rascador de cartón lo hace aquí y no en tus muebles.",
+   "Trae cascabel para jugar y hierba gatera para atraerlo.",
+   "Es plegable y cambia de forma para que no se aburra."
+  ],
+  "hashtags": "#gatos #gatosdetiktok #mascotas #rascador #regalosnavidad",
+  "fotos": [
+   2,
+   3,
+   4,
+   5
+  ]
+ }
 ]

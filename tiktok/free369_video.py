@@ -50,7 +50,7 @@ def producto(handle):
     p = json.loads(get(f'{TIENDA}/products/{handle}.json'))['product']
     precios = sorted(float(v['price']) for v in p['variants'])
     return dict(titulo=p['title'], precio=precios[0], varios=precios[0] != precios[-1],
-                imagenes=[i['src'] for i in p['images']][:6], url=f'{TIENDA}/products/{handle}')
+                imagenes=[i['src'] for i in p['images']], url=f'{TIENDA}/products/{handle}')
 
 
 # ---------- Voz y música ----------
@@ -174,10 +174,19 @@ def plano(png, wav, dur, mp4, zoom=True):
 def fabricar(g, p):
     os.makedirs(TMP, exist_ok=True)
     voz = preparar_voz()
+    # Fotos elegidas a mano en el guion (sin tablas de tallas ni textos en inglés); [n, x0, y0, x1, y1] = recorte.
     fotos = []
-    for u in p['imagenes']:
-        try: fotos.append(get(u))
-        except Exception as e: log('foto no disponible', u[:80], e)
+    for sel in g.get('fotos') or list(range(min(6, len(p['imagenes'])))):
+        n, rec = (sel, None) if isinstance(sel, int) else (sel[0], sel[1:])
+        if n >= len(p['imagenes']): continue
+        try:
+            b = get(p['imagenes'][n])
+            if rec:
+                im = Image.open(BytesIO(b)).convert('RGB'); w, h = im.size
+                im = im.crop((int(rec[0] * w), int(rec[1] * h), int(rec[2] * w), int(rec[3] * h)))
+                out = BytesIO(); im.save(out, 'JPEG', quality=92); b = out.getvalue()
+            fotos.append(b)
+        except Exception as e: log('foto no disponible', n, e)
     if not fotos:
         sys.exit('El producto no tiene fotos en la tienda.')
     desde = 'Desde ' if p['varios'] else ''
