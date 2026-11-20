@@ -269,6 +269,33 @@
      "antes": "149,00 €"
     }
    ]
+  },
+  {
+   "fecha": "2026-11-20",
+   "hora": "01:48",
+   "video": "-ieeo2GnxIM",
+   "canal": "UC-wvAtFM1D_ZSbJAi5ZLqfQ",
+   "titulo": "Neutrogena Hidratación Profunda de 24,95 € hoy por 10,99 € #Shorts",
+   "productos": [
+    {
+     "asin": "B00CD1ZEOQ",
+     "nombre": "Neutrogena Hidratación Profunda – Loción corporal, pack 2 x 750 ml",
+     "precio": "10,99 €",
+     "antes": "24,95 €"
+    },
+    {
+     "asin": "B08RZZVKNZ",
+     "nombre": "Olay Regenerist – Sérum facial reafirmante con niacinamida 50 ml",
+     "precio": "13,48 €",
+     "antes": "29,99 €"
+    },
+    {
+     "asin": "B07ZHKTQL3",
+     "nombre": "Olaplex Nº 7 – Aceite reparador para el pelo",
+     "precio": "14,25 €",
+     "antes": "29,50 €"
+    }
+   ]
   }
  ]
 }
