@@ -3,14 +3,19 @@ name: Estudio Arte y Bisutería - vídeo para TikTok
 # Fabrica un vídeo de bisutería y lo manda como BORRADOR a TikTok (@estudioarteybisuteria).
 # Jose Miguel abre el aviso de TikTok, pega el texto (sale en el resumen de esta ejecución) y pulsa «Publicar».
 # El vídeo se guarda en eab/videos/ y se ve en https://jmausina.github.io/casaclic/eab/videos/ (para publicarlo en Instagram).
-# dry_run=1 = no se manda a TikTok (pero el vídeo sí se guarda). De momento solo a mano.
+# Dos turnos al día (mañana y tarde), cada uno con repetición de seguridad. dry_run=1 = no se manda a TikTok (el vídeo sí se guarda).
 on:
+  schedule:
+    - cron: '37 8 * * *'    # 09:37 en España (invierno) · turno de mañana
+    - cron: '52 11 * * *'   # repetición de seguridad de la mañana
+    - cron: '7 17 * * *'    # 18:07 · turno de tarde
+    - cron: '22 19 * * *'   # repetición de seguridad de la tarde (si el turno ya está hecho, no hace nada)
   workflow_dispatch:
     inputs:
       video:
-        description: 'Vídeo (pulsera)'
+        description: 'Vídeo concreto (id de eab_guiones.json). Vacío = el siguiente de la lista'
         required: false
-        default: 'pulsera'
+        default: ''
       dry_run:
         description: '1 = fabricar sin enviar (para revisar)'
         required: false
@@ -41,7 +46,7 @@ jobs:
         env:
           TT_CLIENT_KEY: ${{ secrets.TT_CLIENT_KEY }}
           TT_CLIENT_SECRET: ${{ secrets.TT_CLIENT_SECRET }}
-          VIDEO: ${{ github.event.inputs.video || 'pulsera' }}
+          VIDEO: ${{ github.event.inputs.video || '' }}
           DRY_RUN: ${{ github.event.inputs.dry_run || '0' }}
           OUT_DIR: /tmp/eab
         run: python3 tiktok/eab_video.py
@@ -52,17 +57,15 @@ jobs:
           path: /tmp/eab/eab_*.mp4
           retention-days: 14
           if-no-files-found: ignore
-      - name: Guardar el vídeo (dirección pública para Instagram) y el permiso renovado
-        env:
-          VIDEO: ${{ github.event.inputs.video || 'pulsera' }}
+      - name: Guardar el vídeo (dirección pública para Instagram), el turno y el permiso
         run: |
           git config user.name "eab-bot"
           git config user.email "eab-bot@users.noreply.github.com"
           mkdir -p eab/videos
           cp /tmp/eab/eab_*.mp4 eab/videos/ 2>/dev/null || true
           git add eab/videos/*.mp4 2>/dev/null || true
-          [ -f tiktok/token_eab.enc ] && git add tiktok/token_eab.enc
+          for f in tiktok/token_eab.enc tiktok/eab_estado.json; do if [ -f "$f" ]; then git add "$f"; fi; done
           git diff --cached --quiet && exit 0
-          git commit -m "EAB: vídeo $VIDEO y permiso"
+          git commit -m "EAB: vídeo $(TZ=Europe/Madrid date +%F_%H%M)"
           for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && exit 0; sleep $((i*5)); done
           exit 1
