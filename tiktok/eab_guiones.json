@@ -1,0 +1,122 @@
+[
+  {"id": "pulsera", "texto": "El truco para que tu pulsera elástica no se rompa ✨ Guárdalo 📌 #bisuteria #pulseras #hechoamano #diy #manualidadesfaciles",
+   "escenas": [
+    ["gancho", "¿Tu pulsera elástica se rompe siempre?", "Hazlo así y no se romperá.", "¿Tu pulsera elástica se rompe siempre? Hazlo así y no se romperá."],
+    ["estirar", "1. Estira el hilo", "Antes de usarlo. Así no se da de sí.", "Primero, estira bien el hilo elástico antes de usarlo. Así no se da de sí después."],
+    ["cuentas", "2. Corta 25 cm", "Y mete las cuentas.", "Corta unos veinticinco centímetros y mete las cuentas."],
+    ["nudo", "3. Nudo de cirujano", "Pasa el hilo dos veces y aprieta fuerte.", "Haz un nudo de cirujano: como un nudo normal, pero pasando el hilo dos veces. Aprieta fuerte."],
+    ["pegamento", "4. Una gota de pegamento", "Y esconde el nudo dentro de una cuenta.", "Pon una gota de pegamento en el nudo y escóndelo dentro de una cuenta."],
+    ["final", "¡Lista para durar!", "Guárdalo y sígueme para más trucos.", "Guárdalo para tu próxima pulsera, y sígueme para más trucos."]]},
+
+  {"id": "herramientas", "texto": "Las 3 herramientas básicas para empezar en bisutería 💍 ¿Cuál te falta? #bisuteria #manualidades #hechoamano #bisuteriaartesanal #diy",
+   "escenas": [
+    ["joyas", "¿Quieres hacer tus propias joyas?", "Empieza con estas 3 herramientas.", "¿Quieres hacer tus propias joyas? Empieza con estas tres herramientas."],
+    ["alicate_redondo", "1. Alicate de punta redonda", "Para hacer argollas y curvas.", "Un alicate de punta redonda. Sirve para hacer argollas y curvas en el alambre."],
+    ["alicate_plano", "2. Alicate de punta plana", "Para sujetar, abrir y cerrar anillas.", "Un alicate de punta plana. Para sujetar, abrir y cerrar anillas."],
+    ["alicate_corte", "3. Alicate de corte", "Para cortar alambre y pines.", "Y un alicate de corte, para cortar alambre y pines."],
+    ["joyas", "¡Y a crear!", "Sígueme y te enseño a usarlos.", "Con esto ya puedes hacer pendientes, pulseras y collares. Sígueme y te enseño a usarlos."]]},
+
+  {"id": "anillas", "texto": "El error que casi todos cometemos al abrir anillas 😅 ¿Lo sabías? #bisuteria #pendientes #hechoamano #trucosdebisuteria #manualidades",
+   "escenas": [
+    ["anilla_mal", "Si abres las anillas así…", "Se deforman y ya no cierran bien.", "Si abres las anillas separando los lados hacia fuera, se deforman y ya no cierran bien."],
+    ["alicate_plano", "1. Usa dos alicates", "Uno a cada lado de la abertura.", "Cógela con dos alicates, uno a cada lado de la abertura."],
+    ["anilla_bien", "2. Gira, no separes", "Una mano hacia ti y otra hacia fuera.", "Gira una mano hacia ti y la otra hacia fuera, como si abrieras una puerta."],
+    ["anilla_cerrada", "3. Para cerrar, al revés", "Queda redonda y sin huecos.", "Para cerrarla, haz el mismo giro al revés. Queda redonda y sin huecos."],
+    ["pendiente", "¡Pendientes que duran!", "Sígueme para más trucos.", "Así tus pendientes duran mucho más. Sígueme para más trucos."]]},
+
+  {"id": "pendientes5", "texto": "Pendientes en 5 minutos con una sola cuenta 💎 Guárdalo 📌 #bisuteria #pendientes #hechoamano #diy #manualidadesfaciles",
+   "escenas": [
+    ["pendiente", "Pendientes en 5 minutos", "Solo necesitas una cuenta por pendiente.", "Vamos a hacer unos pendientes en cinco minutos, con una sola cuenta."],
+    ["pin", "1. Mete la cuenta en un pin", "Un pin de cabeza plana.", "Mete la cuenta en un pin de cabeza plana."],
+    ["alicate_corte", "2. Corta el pin", "Deja 1 cm por encima de la cuenta.", "Corta el pin dejando un centímetro por encima de la cuenta."],
+    ["alicate_redondo", "3. Dobla y haz una argolla", "Con el alicate de punta redonda.", "Dobla el pin en ángulo recto y haz una argolla con el alicate de punta redonda."],
+    ["pendiente", "4. Cuélgala del gancho", "¡Y repite para el otro!", "Abre un poco la argolla, cuélgala del gancho y ciérrala. Repite para el otro pendiente."]]},
+
+  {"id": "medir_muneca", "texto": "¿Cuánto debe medir tu pulsera? El truco para acertar siempre 📏 #bisuteria #pulseras #hechoamano #diy #trucosdebisuteria",
+   "escenas": [
+    ["cinta", "¿Cuánto debe medir tu pulsera?", "Así aciertas siempre.", "¿Cuánto debe medir tu pulsera? Así aciertas siempre."],
+    ["cinta", "1. Mide tu muñeca", "Con una cinta métrica, sin apretar.", "Mide tu muñeca con una cinta métrica, sin apretar."],
+    ["num:+1 a 2 cm", "2. Suma 1 o 2 cm", "Para que quede cómoda.", "Súmale uno o dos centímetros, para que quede cómoda."],
+    ["num:15 + 2 = 17", "Ejemplo", "Muñeca de 15 cm, pulsera de 17 cm.", "Por ejemplo: si tu muñeca mide quince centímetros, haz la pulsera de unos diecisiete."],
+    ["pulsera", "¡Medida perfecta!", "Sígueme para más trucos.", "Así queda perfecta. Sígueme para más trucos."]]},
+
+  {"id": "cuantas_cuentas", "texto": "¿Cuántas cuentas necesitas para una pulsera? Haz esta cuenta 🧮 #bisuteria #pulseras #cuentas #hechoamano #diy",
+   "escenas": [
+    ["cuentas_fila", "¿Cuántas cuentas necesito?", "Una cuenta muy fácil.", "¿Cuántas cuentas necesitas para una pulsera? Es una cuenta muy fácil."],
+    ["num:170 mm", "1. Pasa el largo a milímetros", "17 cm son 170 mm.", "Pasa el largo de la pulsera a milímetros. Diecisiete centímetros son ciento setenta milímetros."],
+    ["num:170 ÷ 6", "2. Divide entre el tamaño", "Cuentas de 6 mm.", "Divide entre el tamaño de la cuenta. Por ejemplo, cuentas de seis milímetros."],
+    ["num:≈ 28", "3. Resultado", "Unas 28 cuentas.", "Te salen unas veintiocho cuentas."],
+    ["pulsera", "¡Compra solo lo justo!", "Sígueme para más trucos.", "Así compras solo lo justo. Sígueme para más trucos."]]},
+
+  {"id": "tipos_hilo", "texto": "¿Qué hilo uso para cada joya? Guía rápida 🧵 Guárdala 📌 #bisuteria #hilos #hechoamano #diy #manualidades",
+   "escenas": [
+    ["hilos", "¿Qué hilo uso para cada joya?", "Guía rápida.", "¿Qué hilo uso para cada joya? Aquí tienes una guía rápida."],
+    ["pulsera", "Hilo elástico", "Pulseras sin cierre.", "Hilo elástico: para pulseras sin cierre, que se ponen estirando."],
+    ["collar", "Hilo de acero recubierto", "Collares con cierre y peso.", "Hilo de acero recubierto: para collares con cierre o con cuentas que pesan."],
+    ["hilos", "Hilo encerado o de nailon", "Nudos y macramé.", "Hilo encerado o de nailon: para nudos y macramé."],
+    ["anilla_cerrada", "Alambre", "Para dar forma: argollas y pendientes.", "Y alambre, para dar forma: argollas, ganchos y pendientes. Guárdalo y sígueme."]]},
+
+  {"id": "chafas", "texto": "Cómo cerrar un collar con chafas, paso a paso 🔒 #bisuteria #collares #hechoamano #diy #trucosdebisuteria",
+   "escenas": [
+    ["collar", "Cierra un collar como un profesional", "Con chafas.", "Te enseño a cerrar un collar como un profesional, con chafas."],
+    ["chafa", "1. Pasa el hilo por la chafa", "Y luego por la anilla del cierre.", "Pasa el hilo por la chafa y luego por la anilla del cierre."],
+    ["chafa", "2. Vuelve por la chafa", "El hilo hace una pequeña curva.", "Vuelve a pasar el hilo por la chafa, dejando una pequeña curva."],
+    ["alicate_plano", "3. Aplasta la chafa", "Con el alicate de punta plana.", "Aplasta la chafa con el alicate de punta plana."],
+    ["alicate_corte", "4. Corta lo que sobra", "¡Y listo!", "Corta el hilo que sobra y listo. Sígueme para más trucos."]]},
+
+  {"id": "largos_collar", "texto": "Los largos de collar y cómo se llaman 📿 ¿Cuál es tu favorito? #bisuteria #collares #hechoamano #diy #moda",
+   "escenas": [
+    ["collar", "¿Cuánto mide un collar?", "Los largos más usados.", "¿Cuánto mide un collar? Estos son los largos más usados, más o menos."],
+    ["num:≈ 40 cm", "Gargantilla", "Pegado al cuello.", "Gargantilla: unos cuarenta centímetros, pegado al cuello."],
+    ["num:≈ 45 cm", "Princesa", "Justo en la clavícula.", "Princesa: unos cuarenta y cinco, justo en la clavícula."],
+    ["num:≈ 55 cm", "Matiné", "Por encima del pecho.", "Matiné: unos cincuenta y cinco, por encima del pecho."],
+    ["num:≈ 80 cm", "Ópera", "Largo, se puede dar dos vueltas.", "Ópera: unos ochenta, tan largo que se puede dar dos vueltas. ¿Cuál es tu favorito?"]]},
+
+  {"id": "organizar", "texto": "Así organizo las cuentas para no perder tiempo buscando 🗂️ #bisuteria #organizacion #hechoamano #diy #manualidades",
+   "escenas": [
+    ["caja", "¿Pierdes tiempo buscando cuentas?", "Organízalas así.", "¿Pierdes tiempo buscando cuentas? Organízalas así."],
+    ["caja", "1. Caja con compartimentos", "Una cuenta distinta en cada hueco.", "Usa una caja con compartimentos, una cuenta distinta en cada hueco."],
+    ["cuentas_fila", "2. Ordena por color", "Y dentro, por tamaño.", "Ordénalas por color y, dentro de cada color, por tamaño."],
+    ["num:6 mm", "3. Pon una etiqueta", "Con el tamaño de la cuenta.", "Pon una etiqueta con el tamaño de la cuenta."],
+    ["check", "¡Todo a mano!", "Sígueme para más trucos.", "Así lo tienes todo a mano. Sígueme para más trucos."]]},
+
+  {"id": "cuidar", "texto": "3 trucos para que tu bisutería dure años ✨ Guárdalo 📌 #bisuteria #cuidados #hechoamano #trucos #joyas",
+   "escenas": [
+    ["joyas", "Que tu bisutería dure años", "3 trucos sencillos.", "Tres trucos sencillos para que tu bisutería dure años."],
+    ["agua_no", "1. Nada de agua ni perfume", "Quítatela antes de ducharte.", "Nada de agua ni perfume. Quítatela antes de ducharte y ponte el perfume antes."],
+    ["caja", "2. Guárdala por separado", "Así no se raya ni se enreda.", "Guárdala por separado, así no se raya ni se enreda."],
+    ["check", "3. Limpia con un paño seco", "Suave, después de usarla.", "Límpiala con un paño seco y suave después de usarla."],
+    ["pulsera", "¡Como nueva!", "Sígueme para más trucos.", "Así estará como nueva. Sígueme para más trucos."]]},
+
+  {"id": "colores", "texto": "La regla 60-30-10 para combinar colores en tus pulseras 🎨 #bisuteria #colores #hechoamano #diy #pulseras",
+   "escenas": [
+    ["paleta", "¿No sabes qué colores combinar?", "Usa la regla 60-30-10.", "¿No sabes qué colores combinar? Usa la regla sesenta, treinta, diez."],
+    ["num:60 %", "Un color principal", "La mayoría de las cuentas.", "Un color principal para la mayoría de las cuentas: el sesenta por ciento."],
+    ["num:30 %", "Un color que acompañe", "Un tono parecido o neutro.", "Un segundo color que acompañe: el treinta por ciento."],
+    ["num:10 %", "Un toque que destaque", "Dorado, plateado o un color vivo.", "Y un toque que destaque, por ejemplo dorado: el diez por ciento."],
+    ["pulsera", "¡Combinación perfecta!", "Sígueme para más ideas.", "Así siempre queda bonita. Sígueme para más ideas."]]},
+
+  {"id": "hilo_extra", "texto": "El error que arruina tus pulseras: cortar el hilo justo ✂️ #bisuteria #trucosdebisuteria #hechoamano #diy #manualidades",
+   "escenas": [
+    ["cruz", "El error más común", "Cortar el hilo justo.", "El error más común al empezar: cortar el hilo justo."],
+    ["tijeras", "Te quedas sin hilo para el nudo", "Y tienes que empezar otra vez.", "Si lo cortas justo, te quedas sin hilo para el nudo y tienes que empezar otra vez."],
+    ["num:+10 cm", "Deja siempre 10 cm de más", "Para trabajar cómoda.", "Deja siempre unos diez centímetros de más para trabajar cómoda."],
+    ["alicate_corte", "Corta lo que sobra al final", "Cuando el nudo esté hecho.", "Lo que sobra lo cortas al final, cuando el nudo ya esté hecho."],
+    ["check", "¡Error evitado!", "Sígueme para más trucos.", "Error evitado. Sígueme para más trucos."]]},
+
+  {"id": "cierres_pendiente", "texto": "Tipos de cierre de pendiente: ¿cuál te va mejor? 👂 #bisuteria #pendientes #hechoamano #diy #joyas",
+   "escenas": [
+    ["pendiente", "¿Qué cierre de pendiente elijo?", "Los 3 más usados.", "¿Qué cierre de pendiente elijo? Estos son los tres más usados."],
+    ["pendiente", "1. Gancho", "El más fácil de hacer.", "El gancho: el más fácil de hacer y de poner."],
+    ["pin", "2. De presión", "Con tope detrás. No se cae.", "El de presión, con un tope detrás. Es el que menos se cae."],
+    ["anilla_cerrada", "3. De clip", "Para orejas sin agujero.", "Y el de clip, para orejas sin agujero."],
+    ["check", "¿Cuál usas tú?", "Cuéntamelo en comentarios.", "¿Cuál usas tú? Cuéntamelo en los comentarios y sígueme para más."]]},
+
+  {"id": "inicial", "texto": "Idea de regalo: pulsera con la inicial 🎁 Fácil y muy personal #bisuteria #regalo #pulseras #hechoamano #diy",
+   "escenas": [
+    ["regalo", "Idea de regalo fácil", "Pulsera con la inicial.", "Una idea de regalo fácil y muy personal: una pulsera con la inicial."],
+    ["letras", "1. Busca cuentas de letras", "Se venden en sobres variados.", "Busca cuentas de letras. Se venden en sobres variados."],
+    ["cuentas_fila", "2. Pon la letra en el centro", "Y colores a cada lado.", "Pon la letra en el centro y cuentas de colores a cada lado."],
+    ["nudo", "3. Cierra con nudo de cirujano", "Como en el vídeo de la pulsera.", "Ciérrala con un nudo de cirujano, como en el vídeo de la pulsera elástica."],
+    ["regalo", "¡Regalo listo!", "Sígueme para más ideas.", "Regalo listo en diez minutos. Sígueme para más ideas."]]}
+]
