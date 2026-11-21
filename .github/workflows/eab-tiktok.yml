@@ -1,7 +1,7 @@
 name: Estudio Arte y Bisutería - vídeo para TikTok
 
 # Fabrica un vídeo de bisutería y lo manda como BORRADOR a TikTok (@estudioarteybisuteria).
-# Jose Miguel abre el aviso de TikTok, pega el texto (sale en el resumen de esta ejecución) y pulsa «Publicar».
+# Jose Miguel abre el aviso de TikTok, copia el texto de https://jmausina.github.io/casaclic/eab/textos.html y pulsa «Publicar».
 # El vídeo se guarda en eab/videos/ y se ve en https://jmausina.github.io/casaclic/eab/videos/ (para publicarlo en Instagram).
 # Dos turnos al día (mañana y tarde), cada uno con repetición de seguridad. dry_run=1 = no se manda a TikTok (el vídeo sí se guarda).
 on:
@@ -50,6 +50,8 @@ jobs:
           DRY_RUN: ${{ github.event.inputs.dry_run || '0' }}
           OUT_DIR: /tmp/eab
         run: python3 tiktok/eab_video.py
+      - name: Página de textos para copiar (eab/textos.html)
+        run: python3 tiktok/eab_textos.py
       - name: Guardar el vídeo para revisarlo
         uses: actions/upload-artifact@v4
         with:
@@ -64,7 +66,7 @@ jobs:
           mkdir -p eab/videos
           cp /tmp/eab/eab_*.mp4 eab/videos/ 2>/dev/null || true
           git add eab/videos/*.mp4 2>/dev/null || true
-          for f in tiktok/token_eab.enc tiktok/eab_estado.json; do if [ -f "$f" ]; then git add "$f"; fi; done
+          for f in tiktok/token_eab.enc tiktok/eab_estado.json eab/textos.html; do if [ -f "$f" ]; then git add "$f"; fi; done
           git diff --cached --quiet && exit 0
           git commit -m "EAB: vídeo $(TZ=Europe/Madrid date +%F_%H%M)"
           for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && exit 0; sleep $((i*5)); done
