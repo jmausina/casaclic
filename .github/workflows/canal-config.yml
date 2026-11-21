@@ -14,10 +14,16 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
-      - run: pip install -q google-api-python-client google-auth
+      - run: pip install -q google-api-python-client google-auth pillow
+      - name: Banner de EAB (se hace aquí)
+        if: github.event.inputs.ficha == 'ideas/canales/eab.json'
+        run: |
+          sudo apt-get install -y -qq fonts-dejavu-core
+          python3 ideas/canales/hacer_banner_eab.py
       - env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_CIENCIA_REFRESH_TOKEN: ${{ secrets.YT_CIENCIA_REFRESH_TOKEN }}
           YT_BELLEZA_REFRESH_TOKEN: ${{ secrets.YT_BELLEZA_REFRESH_TOKEN }}
+          YT_EAB_REFRESH_TOKEN: ${{ secrets.YT_EAB_REFRESH_TOKEN }}
         run: python3 ideas/configurar_canal.py "${{ github.event.inputs.ficha }}"
