@@ -1,0 +1,49 @@
+name: EAB - Short diario en YouTube
+
+# 1 Short al día en «Estudio Arte y Bisutería» (19:13 de Madrid, seguridad 21:37).
+# Usa el cupo compartido de YouTube: solo 1 subida al día.
+on:
+  schedule:
+    - cron: '13 18 * * *'
+    - cron: '37 20 * * *'
+  workflow_dispatch:
+    inputs:
+      video:
+        description: 'Id del vídeo (vacío = el que toque hoy)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: eab-youtube
+  cancel-in-progress: false
+
+jobs:
+  short:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -m pip install -q google-api-python-client google-auth
+      - name: Subir el Short
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_EAB_REFRESH_TOKEN: ${{ secrets.YT_EAB_REFRESH_TOKEN }}
+          VIDEO: ${{ github.event.inputs.video }}
+        run: python3 tiktok/eab_youtube.py
+      - name: Guardar el registro
+        run: |
+          if [ ! -f eab/youtube.json ]; then echo "Sin registro"; exit 0; fi
+          if [ -z "$(git status --porcelain -- eab/youtube.json)" ]; then echo "Sin cambios"; exit 0; fi
+          git config user.name "eab-bot"
+          git config user.email "eab-bot@users.noreply.github.com"
+          git add eab/youtube.json
+          git commit -m "EAB: Short de YouTube $(TZ=Europe/Madrid date +%F)"
+          for i in 1 2 3 4 5; do
+            git pull --rebase -q && git push -q && exit 0
+            sleep $((i*5))
+          done
+          echo "No se pudo guardar el registro"; exit 1
