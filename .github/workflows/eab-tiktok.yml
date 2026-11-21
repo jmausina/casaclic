@@ -2,7 +2,8 @@ name: Estudio Arte y Bisutería - vídeo para TikTok
 
 # Fabrica un vídeo de bisutería y lo manda como BORRADOR a TikTok (@estudioarteybisuteria).
 # Jose Miguel abre el aviso de TikTok, pega el texto (sale en el resumen de esta ejecución) y pulsa «Publicar».
-# De momento solo a mano; el horario fijo se pone cuando Jose Miguel lo apruebe.
+# El vídeo se guarda en eab/videos/ y se ve en https://jmausina.github.io/casaclic/eab/videos/ (para publicarlo en Instagram).
+# dry_run=1 = no se manda a TikTok (pero el vídeo sí se guarda). De momento solo a mano.
 on:
   workflow_dispatch:
     inputs:
@@ -51,12 +52,17 @@ jobs:
           path: /tmp/eab/eab_*.mp4
           retention-days: 14
           if-no-files-found: ignore
-      - name: Guardar el permiso renovado
+      - name: Guardar el vídeo (dirección pública para Instagram) y el permiso renovado
+        env:
+          VIDEO: ${{ github.event.inputs.video || 'pulsera' }}
         run: |
           git config user.name "eab-bot"
           git config user.email "eab-bot@users.noreply.github.com"
+          mkdir -p eab/videos
+          cp /tmp/eab/eab_*.mp4 eab/videos/ 2>/dev/null || true
+          git add eab/videos/*.mp4 2>/dev/null || true
           [ -f tiktok/token_eab.enc ] && git add tiktok/token_eab.enc
           git diff --cached --quiet && exit 0
-          git commit -m "EAB TikTok: permiso renovado"
+          git commit -m "EAB: vídeo $VIDEO y permiso"
           for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && exit 0; sleep $((i*5)); done
           exit 1
