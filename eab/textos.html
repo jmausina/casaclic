@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Textos TikTok · Estudio Arte y Bisutería</title>
+<style>
+body{font-family:system-ui,sans-serif;background:#f7f0e6;color:#4a2c40;margin:0;padding:16px}
+h1{font-size:22px;margin:4px 0 4px} .nota{font-size:15px;margin:0 0 16px}
+.caja{background:#fff;border:2px solid #c49a3c;border-radius:14px;padding:14px;margin-bottom:14px}
+.fecha{font-weight:bold;margin:0 0 8px} .texto{font-size:17px;line-height:1.4;margin:0 0 12px}
+button{background:#4a2c40;color:#fff;border:0;border-radius:10px;padding:12px 18px;font-size:17px;width:100%}
+</style></head><body>
+<h1>Textos para TikTok</h1>
+<p class="nota">El de arriba es el último vídeo. Pulsa «Copiar texto» y pégalo en el borrador de TikTok.</p>
+<div class="caja">
+<p class="fecha">20/11/2026 · tarde</p>
+<p class="texto" id="t0">El truco para que tu pulsera elástica no se rompa ✨ Guárdalo 📌 #bisuteria #pulseras #hechoamano #diy #manualidadesfaciles</p>
+<button onclick="copiar('t0', this)">Copiar texto</button>
+</div>
+<script>
+function copiar(id, b){navigator.clipboard.writeText(document.getElementById(id).innerText).then(function(){b.innerText='¡Copiado!';setTimeout(function(){b.innerText='Copiar texto'},2000)})}
+</script>
+</body></html>
