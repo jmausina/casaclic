@@ -19,6 +19,11 @@ on:
 permissions:
   contents: write
 
+# Si se lanzan dos a la vez (la programada llega tarde y otra a mano), esperan en fila.
+concurrency:
+  group: casaclic-youtube
+  cancel-in-progress: false
+
 jobs:
   subir:
     runs-on: ubuntu-latest
@@ -26,17 +31,30 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Comprobar si ya se subió el vídeo de hoy
+        id: hoy
+        run: |
+          git pull -q || true
+          HOY=$(TZ=Europe/Madrid date +%F)
+          if [ -z "${{ github.event.inputs.dia }}" ] && grep -q "^$HOY .*SUBIDO" registro.txt; then
+            echo "Ya hay un vídeo de CasaClic subido hoy ($HOY). No subo otro."
+            echo "hecho=1" >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: actions/setup-python@v5
+        if: steps.hoy.outputs.hecho != '1'
         with:
           python-version: "3.12"
 
       - name: Instalar herramientas
+        if: steps.hoy.outputs.hecho != '1'
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg fonts-dejavu-core
           pip install -q numpy scipy pillow requests google-api-python-client google-auth cryptography
 
       - name: Generar y subir el vídeo
+        if: steps.hoy.outputs.hecho != '1'
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
@@ -48,7 +66,7 @@ jobs:
           python casaclic_subir.py "${{ github.event.inputs.dia }}" "${{ github.event.inputs.privacidad }}" | tee salida.txt
 
       - name: Guardar registro (mantiene activa la tarea diaria)
-        if: always()
+        if: always() && steps.hoy.outputs.hecho != '1'
         run: |
           echo "$(TZ=Europe/Madrid date '+%Y-%m-%d %H:%M') $(grep SUBIDO salida.txt) $(grep -o 'TIKTOK: borrador enviado' salida.txt)" >> registro.txt
           git config user.name "casaclic-bot"
