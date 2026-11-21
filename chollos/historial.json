@@ -323,6 +323,33 @@
      "antes": "22,50 €"
     }
    ]
+  },
+  {
+   "fecha": "2026-11-22",
+   "hora": "00:32",
+   "video": "KM4CGDOh5gw",
+   "canal": "UC-wvAtFM1D_ZSbJAi5ZLqfQ",
+   "titulo": "Bourjois Butter Tint de 19,55 € hoy por 6,10 € #Shorts",
+   "productos": [
+    {
+     "asin": "B0FDWYTZDL",
+     "nombre": "Bourjois Butter Tint – Tinte labial 04 Rougemelt",
+     "precio": "6,10 €",
+     "antes": "19,55 €"
+    },
+    {
+     "asin": "B0DHW9RP48",
+     "nombre": "Calvin Klein Eternity Amber Essence 200 ml (hombre)",
+     "precio": "48,79 €",
+     "antes": "150,00 €"
+    },
+    {
+     "asin": "B01IFGMALM",
+     "nombre": "Neutrogena Fórmula Noruega crema de manos reparadora – pack 2 x 75 ml",
+     "precio": "5,00 €",
+     "antes": "11,76 €"
+    }
+   ]
   }
  ]
 }
