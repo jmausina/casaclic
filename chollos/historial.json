@@ -296,6 +296,33 @@
      "antes": "29,50 €"
     }
    ]
+  },
+  {
+   "fecha": "2026-11-21",
+   "hora": "01:06",
+   "video": "eQbMU-swGDs",
+   "canal": "UC-wvAtFM1D_ZSbJAi5ZLqfQ",
+   "titulo": "Oral-B Pro 3D White Clinical de 14,94 € hoy por 6,75 € #Shorts",
+   "productos": [
+    {
+     "asin": "B0FTTG6JNC",
+     "nombre": "Oral-B Pro 3D White Clinical – Pack 3 pastas blanqueantes 75 ml",
+     "precio": "6,75 €",
+     "antes": "14,94 €"
+    },
+    {
+     "asin": "B0F9X92FQH",
+     "nombre": "Braun Series 5 – Afeitadora eléctrica 52-B1200SI",
+     "precio": "59,99 €",
+     "antes": "129,99 €"
+    },
+    {
+     "asin": "B0G1NHVHPF",
+     "nombre": "CeraVe Fluido Protector Invisible SPF50 (50 ml)",
+     "precio": "10,55 €",
+     "antes": "22,50 €"
+    }
+   ]
   }
  ]
 }
