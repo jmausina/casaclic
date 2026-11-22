@@ -1,0 +1,18 @@
+{
+ "slug": "prueba-github",
+ "title": "Prueba del taller nuevo",
+ "thumb_text": "Prueba del taller",
+ "thumb_section": 0,
+ "yt_title": "Prueba del taller nuevo (no publicar)",
+ "description": "Vídeo de prueba del taller de GitHub. No se publica.",
+ "tags": ["prueba"],
+ "hashtags": ["#BellezaAncestral"],
+ "question": "¿Qué planta usas tú?",
+ "outro_next": "Pronto, un nuevo ritual.",
+ "hook": "Hoy hacemos una prueba corta del taller nuevo.",
+ "sections": [
+  {"title": "El romero", "paragraphs": ["El romero crece en toda la costa mediterránea.", "Sus ramas huelen a monte y a verano."], "queries": ["rosemary plant", "rosemary flowers"]},
+  {"title": "La lavanda", "paragraphs": ["La lavanda tiñe de morado los campos en julio.", "Su aroma es suave y tranquilo."], "queries": ["lavender field", "lavender flowers"]}
+ ],
+ "outro": "Gracias por acompañarme en esta prueba."
+}
