@@ -1,0 +1,83 @@
+name: Belleza Ancestral - serie de vídeos
+
+# Lo lanza el robot de Claude (tarea «Belleza Ancestral · robot de vídeos»).
+# Sube SIEMPRE en privado con el pase permanente de GitHub. Jose Miguel aprueba en su panel.
+on:
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: 'comprobar | fotos | fabricar | publicar'
+        required: true
+        default: 'comprobar'
+      slug:
+        description: 'Carpeta del trabajo en ba/trabajos/'
+        required: false
+        default: ''
+      subir:
+        description: '1 = subir a YouTube en privado; 0 = solo fabricar (prueba)'
+        required: false
+        default: '1'
+      video_id:
+        description: 'Solo para publicar'
+        required: false
+        default: ''
+      forzar:
+        description: '1 = subir aunque ya se subió antes'
+        required: false
+        default: '0'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ba-serie
+  cancel-in-progress: false
+
+jobs:
+  serie:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Instalar herramientas
+        if: inputs.modo == 'fotos' || inputs.modo == 'fabricar'
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-dejavu-core
+          pip install -q piper-tts imageio-ffmpeg pillow numpy google-api-python-client google-auth requests
+      - name: Instalar Google
+        if: inputs.modo == 'comprobar' || inputs.modo == 'publicar'
+        run: pip install -q google-api-python-client google-auth
+      - name: Trabajar
+        env:
+          MODO: ${{ inputs.modo }}
+          SLUG: ${{ inputs.slug }}
+          SUBIR: ${{ inputs.subir }}
+          VIDEO_ID: ${{ inputs.video_id }}
+          FORZAR: ${{ inputs.forzar }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_BELLEZA_REFRESH_TOKEN: ${{ secrets.YT_BELLEZA_REFRESH_TOKEN }}
+          BA_DIR: /tmp/ba
+        run: python3 ba/serie.py
+      - name: Guardar vídeo, miniatura y fotogramas para revisar
+        if: inputs.modo == 'fabricar'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ba-${{ inputs.slug }}
+          path: /tmp/ba_salida/
+          retention-days: 14
+          if-no-files-found: ignore
+      - name: Guardar resultado en el repositorio
+        if: inputs.modo == 'fotos' || inputs.modo == 'fabricar'
+        run: |
+          git config user.name "ba-bot"
+          git config user.email "ba-bot@users.noreply.github.com"
+          git add ba/trabajos
+          git diff --cached --quiet && exit 0
+          git commit -m "Belleza Ancestral: ${{ inputs.modo }} ${{ inputs.slug }} [skip ci]"
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && exit 0; sleep $((i*5)); done
+          exit 1
