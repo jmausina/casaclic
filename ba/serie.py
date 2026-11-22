@@ -101,6 +101,12 @@ def modo_fabricar(slug, spec, subir):
     if os.path.exists(fp):  # fotos ya revisadas: se usan tal cual
         NS["setup"]()
         fotos = json.load(open(fp))
+        # quitar.json = lista de títulos de fotos que no encajan (la escribe el robot al revisar la muestra)
+        qp = os.path.join(d, "quitar.json")
+        quitar = set(json.load(open(qp))) if os.path.exists(qp) else set()
+        if quitar:
+            fotos = {k: [f for f in v if f["title"] not in quitar] for k, v in fotos.items()}
+            log(f"Fotos quitadas tras la revisión: {len(quitar)}")
         job = NS["JOB"]
         imgs = {}
         for k, lista in fotos.items():
