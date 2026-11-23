@@ -248,6 +248,10 @@ if __name__ == '__main__':
     sys.path.insert(0, AQUI)
     import tiktok_api
     pid = tiktok_api.subir_borrador(video)
+    try:
+        import textos_guardar; textos_guardar.guardar('369jma', texto)
+    except Exception as e2:
+        log('AVISO textos:', e2)
     if not pedido:
         estado['siguiente'] = (estado['siguiente'] + 1) % len(guiones)
     estado['ultimo_envio'] = hoy

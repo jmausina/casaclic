@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Textos para TikTok</title>
+<style>
+body{font-family:system-ui,sans-serif;background:#f4f1ea;color:#2b2b2b;margin:0;padding:16px}
+h1{font-size:22px;margin:4px 0} .nota{font-size:15px;margin:0 0 14px}
+h2{font-size:19px;margin:22px 0 8px;padding:8px 12px;border-radius:10px;color:#fff}
+.c1{background:#2e7d32}.c2{background:#e65100}.c3{background:#4a2c40}
+.caja{background:#fff;border:2px solid #ccc;border-radius:14px;padding:14px;margin-bottom:12px}
+.fecha{font-weight:bold;margin:0 0 8px} .texto{font-size:17px;line-height:1.4;margin:0 0 12px;white-space:pre-wrap}
+button{background:#222;color:#fff;border:0;border-radius:10px;padding:12px 18px;font-size:17px;width:100%}
+</style></head><body>
+<h1>Textos para TikTok</h1>
+<p class="nota">Arriba de cada cuenta, el último vídeo. En TikTok cambia a esa cuenta, abre el borrador, pulsa «Copiar texto» aquí y pégalo.</p>
+<h2 class="c1">CasaClic · casaclic_oficial</h2><div id="casaclic">Cargando…</div>
+<h2 class="c2">Free-369 Mascotas · @369jma</h2><div id="m369">Cargando…</div>
+<h2 class="c3">Estudio Arte y Bisutería</h2><div id="eab">Cargando…</div>
+<script>
+var n=0;
+function fmt(f){return f.slice(8,10)+'/'+f.slice(5,7)+'/'+f.slice(0,4)+(f.length>10?' · '+f.slice(11):'')}
+function pinta(id,lista){
+  var d=document.getElementById(id);
+  if(!lista.length){d.innerHTML='<p>Todavía no hay textos.</p>';return}
+  d.innerHTML='';
+  lista.slice(0,6).forEach(function(x){
+    var k='t'+(n++),c=document.createElement('div');c.className='caja';
+    c.innerHTML='<p class="fecha"></p><p class="texto" id="'+k+'"></p><button>Copiar texto</button>';
+    c.querySelector('.fecha').textContent=fmt(x.fecha);
+    c.querySelector('.texto').textContent=x.texto;
+    c.querySelector('button').onclick=function(){var b=this;navigator.clipboard.writeText(x.texto).then(function(){b.textContent='¡Copiado!';setTimeout(function(){b.textContent='Copiar texto'},2000)})};
+    d.appendChild(c);
+  });
+}
+function json(u){return fetch(u+'?t='+Date.now()).then(function(r){return r.ok?r.json():[]}).catch(function(){return []})}
+json('tiktok/textos_casaclic.json').then(function(l){pinta('casaclic',l)});
+json('tiktok/textos_369jma.json').then(function(l){pinta('m369',l)});
+Promise.all([json('tiktok/eab_estado.json'),json('tiktok/eab_guiones.json')]).then(function(r){
+  var est=r[0]||{},g={};(r[1]||[]).forEach(function(x){g[x.id]=x});
+  var h=Object.entries(est.hechos||{}).sort().reverse();
+  pinta('eab',h.map(function(e){return {fecha:e[0].slice(0,10)+' '+(e[0].slice(-2)=='-m'?'mañana':'tarde'),texto:(g[e[1]]||{}).texto||''}}).map(function(x){x.fecha=x.fecha;return x}));
+});
+</script>
+</body></html>

@@ -158,6 +158,11 @@ if __name__=="__main__":
             sys.path.insert(0,os.path.join(os.path.dirname(os.path.abspath(__file__)),"tiktok"))
             import tiktok_api
             tiktok_api.subir_borrador(p)
+            texto_tt=m["yt_title"].replace(" #Shorts","")+" Recetario: enlace en el perfil 🎁 #recetasfaciles #comidasana #cocinasaludable #cocinacasera"
+            print("TEXTO PARA TIKTOK:",texto_tt)
+            try:
+                import textos_guardar; textos_guardar.guardar("casaclic",texto_tt)
+            except Exception as e2: print("AVISO textos:",e2)
             gs=os.environ.get("GITHUB_STEP_SUMMARY")
             if gs:
                 with open(gs,"a") as f: f.write("\n### TikTok\n\nBorrador enviado a casaclic_oficial. Texto para publicar:\n\n"+m["yt_title"].replace(" #Shorts","")+" Recetario: enlace en el perfil 🎁 #recetasfaciles #comidasana #cocinasaludable #cocinacasera\n")
