@@ -1,11 +1,16 @@
 {
- "siguiente": 1,
- "ultimo_envio": "2026-11-20",
+ "siguiente": 2,
+ "ultimo_envio": "2026-11-23",
  "historial": [
   {
    "fecha": "2026-11-20",
    "producto": "vaso-limpiador-patas-perro",
    "id": "v_inbox_file~v2.7710180205259933718"
+  },
+  {
+   "fecha": "2026-11-23",
+   "producto": "alfombra-olfativa-plegable-para-perros",
+   "id": "v_inbox_file~v2.7711315534428669974"
   }
  ]
 }
