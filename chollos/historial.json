@@ -377,6 +377,33 @@
      "antes": "12,50 €"
     }
    ]
+  },
+  {
+   "fecha": "2026-11-24",
+   "hora": "05:01",
+   "video": "x70Vua3H7Uk",
+   "canal": "UC-wvAtFM1D_ZSbJAi5ZLqfQ",
+   "titulo": "FOREO LUNA 3 de 239,00 € hoy por 59,90 € #Shorts",
+   "productos": [
+    {
+     "asin": "B07QC61JFR",
+     "nombre": "FOREO LUNA 3 – Cepillo facial sónico (piel mixta)",
+     "precio": "59,90 €",
+     "antes": "239,00 €"
+    },
+    {
+     "asin": "B0FKT988BZ",
+     "nombre": "Secador Cecotec IoniCare Dry&Keratin 1200 W",
+     "precio": "22,90 €",
+     "antes": "69,90 €"
+    },
+    {
+     "asin": "B07N7T9HXF",
+     "nombre": "Plancha de pelo Remington Shine Therapy S8550",
+     "precio": "29,99 €",
+     "antes": "70,99 €"
+    }
+   ]
   }
  ]
 }
