@@ -25,14 +25,14 @@ for vid in ids:
     it = yt.videos().list(part="status,snippet", id=vid).execute().get("items", [])
     if not it:
         print("NO ESTÁ en el canal:", vid); fallos += 1; continue
-    print("Vídeo:", vid, it[0]["snippet"]["title"])
+    print("Vídeo:", vid, it[0]["snippet"]["title"], "| estado leído:", it[0]["status"])
     if sint:
         st = it[0]["status"]
         if not st.get("containsSyntheticMedia"):
             st["containsSyntheticMedia"] = True
             try:
-                yt.videos().update(part="status", body={"id": vid, "status": st}).execute()
-                print("  Casilla de contenido sintético: marcada")
+                r = yt.videos().update(part="status", body={"id": vid, "status": st}).execute()
+                print("  Casilla de contenido sintético: marcada · respuesta:", r.get("status", {}).get("containsSyntheticMedia"))
             except Exception as e:
                 print("  AVISO sintético:", str(e)[:300]); fallos += 1
         else:
