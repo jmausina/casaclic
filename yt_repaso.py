@@ -86,6 +86,9 @@ def revisar_canal(clave):
             sn, st = v["snippet"], v["status"]
             if st.get("uploadStatus") not in ("processed", "uploaded"):
                 print(f"- {v['id']} · saltado (estado {st.get('uploadStatus')})"); continue
+            if st.get("privacyStatus") != "public":
+                linea = f"- {v['id']} · saltado (no es público: {st.get('privacyStatus')}) · {sn['title'][:60]}"
+                print(linea); resumen.append(linea); continue
             formato = "short" if segundos(v["contentDetails"]["duration"]) <= 180 else "largo"
             lista = LISTAS[(clave, formato)]
             edad_h = (ahora - dt.datetime.fromisoformat(sn["publishedAt"].replace("Z", "+00:00"))).total_seconds() / 3600
