@@ -1,0 +1,43 @@
+name: YouTube - extras a vídeos ya subidos
+
+# Mete vídeos ya subidos en una lista de reproducción y marca «contenido sintético».
+# Solo a mano. No sube vídeos (no gasta cupo de subidas; 50 unidades por cambio).
+on:
+  workflow_dispatch:
+    inputs:
+      canal:
+        description: 'casaclic, chollos, ba, ciencia o eab'
+        required: true
+      videos:
+        description: 'Ids de vídeo separados por comas'
+        required: true
+      lista:
+        description: 'Nombre de la lista (vacío = no tocar listas)'
+        required: false
+        default: ''
+      sintetico:
+        description: '1 = marcar contenido sintético'
+        required: false
+        default: '1'
+
+jobs:
+  extras:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -m pip install -q google-api-python-client google-auth
+      - name: Aplicar extras
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          YT_CHOLLOS_REFRESH_TOKEN: ${{ secrets.YT_CHOLLOS_REFRESH_TOKEN }}
+          YT_BELLEZA_REFRESH_TOKEN: ${{ secrets.YT_BELLEZA_REFRESH_TOKEN }}
+          YT_CIENCIA_REFRESH_TOKEN: ${{ secrets.YT_CIENCIA_REFRESH_TOKEN }}
+          YT_EAB_REFRESH_TOKEN: ${{ secrets.YT_EAB_REFRESH_TOKEN }}
+          CANAL: ${{ github.event.inputs.canal }}
+          VIDEOS: ${{ github.event.inputs.videos }}
+          LISTA: ${{ github.event.inputs.lista }}
+          SINTETICO: ${{ github.event.inputs.sintetico }}
+        run: python3 yt_extras_lote.py

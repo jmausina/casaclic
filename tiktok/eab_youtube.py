@@ -7,6 +7,8 @@ from zoneinfo import ZoneInfo
 from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import yt_extra
 
 CANAL = 'Estudio Arte y Bisutería'
 AFILIADO = 'https://go.hotmart.com/O101670451Q'
@@ -60,13 +62,16 @@ if len(ch) != 1 or ch[0]['snippet']['title'] != CANAL:
 
 body = {'snippet': {'title': titulo, 'description': desc, 'tags': tags, 'categoryId': '26',
                     'defaultLanguage': 'es', 'defaultAudioLanguage': 'es'},
-        'status': {'privacyStatus': 'public', 'selfDeclaredMadeForKids': False}}
+        'status': {'privacyStatus': 'public', 'selfDeclaredMadeForKids': False, **yt_extra.SINTETICO}}
+archivo = yt_extra.archivo_con_titulo(f'eab/videos/eab_{video}.mp4', titulo)
 req = yt.videos().insert(part='snippet,status', body=body,
-                         media_body=MediaFileUpload(f'eab/videos/eab_{video}.mp4', mimetype='video/mp4', resumable=True))
+                         media_body=MediaFileUpload(archivo, mimetype='video/mp4', resumable=True))
 r = None
 while r is None:
     _, r = req.next_chunk()
 vid = r['id']
+yt_extra.a_lista(yt, vid, 'Trucos de bisutería para empezar',
+                 'Trucos cortos de bisutería y manualidades para aprender desde casa.')
 subidos[HOY if HOY not in subidos else f'{HOY}-extra-{len(subidos)}'] = {'video': video, 'id': vid}
 reg['subidos'] = dict(sorted(subidos.items())[-90:])
 json.dump(reg, open(REG, 'w'), ensure_ascii=False, indent=1)
