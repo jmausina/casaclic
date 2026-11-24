@@ -1,6 +1,6 @@
 {
- "siguiente": 2,
- "ultimo_envio": "2026-11-23",
+ "siguiente": 3,
+ "ultimo_envio": "2026-11-24",
  "historial": [
   {
    "fecha": "2026-11-20",
@@ -11,6 +11,11 @@
    "fecha": "2026-11-23",
    "producto": "alfombra-olfativa-plegable-para-perros",
    "id": "v_inbox_file~v2.7711315534428669974"
+  },
+  {
+   "fecha": "2026-11-24",
+   "producto": "alfombrilla-lamedora-de-silicona-con-ventosas",
+   "id": "v_inbox_file~v2.7711539437624395798"
   }
  ]
 }
