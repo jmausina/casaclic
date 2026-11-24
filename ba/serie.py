@@ -8,6 +8,7 @@
 #   comprobar -> solo comprueba que el pase funciona y es del canal correcto.
 # Nunca borra vídeos. Nunca sube dos veces el mismo slug (salvo FORZAR=1).
 import json, os, sys, time, urllib.request
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 os.environ.setdefault("BA_DIR", "/tmp/ba")
@@ -151,6 +152,8 @@ def modo_fabricar(slug, spec, subir):
     desc = st["description"]
     if not desc.startswith(RECETARIO):
         desc = RECETARIO + "\n\n" + desc
+    import yt_extra
+    desc = yt_extra.primera_frase(spec.get("yt_title", spec["title"]), desc)
     while len(desc.encode("utf-8")) > 4900:
         desc = desc[:-50]
     yt = youtube()
@@ -158,7 +161,8 @@ def modo_fabricar(slug, spec, subir):
     body = {"snippet": {"title": spec.get("yt_title", spec["title"])[:100], "description": desc,
                         "tags": spec.get("tags", [])[:15], "categoryId": "26",
                         "defaultLanguage": "es", "defaultAudioLanguage": "es"},
-            "status": {"privacyStatus": "private", "selfDeclaredMadeForKids": False}}
+            "status": {"privacyStatus": "private", "selfDeclaredMadeForKids": False, **yt_extra.SINTETICO}}
+    video = yt_extra.archivo_con_titulo(video, body["snippet"]["title"])
     req = yt.videos().insert(part="snippet,status", body=body,
                              media_body=MediaFileUpload(video, mimetype="video/mp4", resumable=True, chunksize=8 * 1024 * 1024))
     resp = None
@@ -166,6 +170,8 @@ def modo_fabricar(slug, spec, subir):
         _, resp = req.next_chunk()
     vid = resp["id"]
     log(f"SUBIDO (privado): https://youtu.be/{vid}")
+    yt_extra.a_lista(yt, vid, "La vuelta al mundo de la belleza ancestral",
+                     "Rituales y recetas de belleza natural de distintas culturas del mundo.")
     mini = "no"
     try:
         yt.thumbnails().set(videoId=vid, media_body=MediaFileUpload(thumb, mimetype="image/jpeg")).execute()

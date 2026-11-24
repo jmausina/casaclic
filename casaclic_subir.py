@@ -22,14 +22,37 @@ TITULOS=["Comer sano puede ser fácil 🥗","Cocinar en pareja: recetas fáciles
 "Recetas caseras ricas en minutos ⏱️","Así se organiza un menú saludable 🍽️","Cocina sana sin complicarte la vida 🏠",
 "Platos llenos de color y sabor 🌈","Comida casera para toda la familia 👨‍👩‍👧","Cenas ligeras y deliciosas 🌙",
 "Desayunos sanos que dan energía ☀️","Cocinar con cariño: recetas fáciles 💚","Más sabor, menos esfuerzo 🍳",
-"Tu cocina, tu salud 🏡","120 recetas + menú de 21 días 🎁"]
+"Tu cocina, tu salud 🏡","120 recetas + menú de 21 días 🎁",
+"Comida sana casera para el día a día 🥘","Cómo comer mejor sin pasar horas en la cocina ⏳","Ideas de cena sana para hoy 🌙",
+"Menú sano de lunes a viernes 📅","Recetas sanas para principiantes 👶🍳","Cocina casera y saludable en 3 pasos ✅",
+"Qué comer esta semana: ideas sanas y fáciles 🗓️","Platos sanos con ingredientes de siempre 🧅","Comida sana que gusta a toda la familia 😋",
+"Ideas para comer sano en casa 🏠","Cocina saludable sin complicaciones 👌","Desayuno sano y rápido para empezar el día ☕",
+"Comer rico y sano es posible 💪","Recetas fáciles para cuidarte cada día 💚","Organiza tus comidas y ahorra tiempo ⏱️",
+"Platos de cuchara caseros y sanos 🥣","Cena ligera en pocos minutos 🌙","Comida casera de verdad 🍲",
+"Ideas de tupper sano para el trabajo 🥡","Cocinar sano un día cualquiera 🍽️","Recetas sanas con verduras de temporada 🥕",
+"Menús sanos para toda la familia 👨‍👩‍👧‍👦","Cocina sana y sencilla 🍳","Así preparo una comida sana en casa 🏡",
+"Ideas de almuerzo sano y fácil 🥗","Comer sano sin dietas raras 🙌","Recetas caseras para comer mejor 🍅",
+"Cocina saludable para gente con prisa 🏃","Planifica tu semana de comidas sanas 📝","Platos ricos, sanos y caseros 😍",
+"Comida sana para el invierno 🧣","Recetas fáciles para cenar sano 🌜","Cocina en casa y come mejor 🏠",
+"Ideas sanas para la cena de hoy 🍽️","Menú saludable sin complicarte 📋","La cocina casera también es sana 💚",
+"Recetas de siempre en versión sana 🥘","Comer bien en casa cada día 🍴","Desayunos caseros y saludables 🍓",
+"Cocina sana para toda la semana 🗓️","Ideas fáciles de comida casera 💡","Platos sanos que se hacen solos 🍲",
+"Comida sana casera: ideas para hoy 🥗","Cuídate comiendo rico y casero 💚","Recetas sanas paso a paso 👣",
+"Tu menú sano de la semana 📅"]
+DESCS=["Ideas fáciles para cocinar platos sanos, sabrosos y llenos de color, pensados para la vida real.",
+"Comida sana casera sin complicaciones: ingredientes de siempre y pasos sencillos.",
+"Inspiración para organizar tus comidas de la semana y comer mejor en casa.",
+"Platos caseros y saludables para toda la familia, sin pasar horas en la cocina.",
+"Pequeñas ideas para cuidarte cada día con comida rica y casera.",
+"Cocina sana y sencilla para el día a día: desayunos, comidas y cenas."]
 TAGS=["recetas fáciles","comida sana","cocina saludable","cocina casera","CasaClic"]
 
 def yt_meta(dia):
     t=TITULOS[(dia-1)%len(TITULOS)]
-    d=("🏠 CasaClic: tu cocina, tu salud, a un clic.\n\nIdeas fáciles para cocinar platos sanos, sabrosos y llenos de color, pensados para la vida real.\n\n"
+    frase=t.rstrip(" "+"".join(c for c in t if ord(c)>0x2000)).rstrip()
+    d=(frase+". "+DESCS[(dia-1)%len(DESCS)]+"\n\n"
        "🎁 Recetario de 120 recetas + menú organizado de 21 días: https://hotm.io/n7G5jK\n\n"
-       "🔔 Suscríbete para más ideas de cocina saludable.\n\nVídeos de stock: Pexels. Música original de CasaClic.\n\n#Shorts #recetasfaciles #comidasana #cocinasaludable #cocinacasera")
+       "🏠 CasaClic: tu cocina, tu salud, a un clic.\n🔔 Suscríbete para más ideas de cocina saludable.\n\nVídeos de stock: Pexels. Música original de CasaClic.\n\n#Shorts #recetasfaciles #comidasana #cocinasaludable #cocinacasera")
     return {"yt_title":t+" #Shorts","yt_description":d}
 
 def _ov(lines,path,cta=False):
@@ -129,13 +152,16 @@ def subir(path,meta,privacidad="public"):
         else:
             status["privacyStatus"]="private"; status["publishAt"]=cuando.astimezone(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
             print("Programado para:",cuando.strftime("%d/%m/%Y %H:%M"),"(hora de España)")
-    body={"snippet":{"title":meta["yt_title"],"description":meta["yt_description"],"tags":TAGS,"categoryId":"26","defaultLanguage":"es"},
+    body={"snippet":{"title":meta["yt_title"],"description":meta["yt_description"],"tags":TAGS,"categoryId":"26","defaultLanguage":"es","defaultAudioLanguage":"es"},
           "status":status}
+    import yt_extra
+    path=yt_extra.archivo_con_titulo(path,meta["yt_title"])
     req=yt.videos().insert(part="snippet,status",body=body,media_body=MediaFileUpload(path,mimetype="video/mp4",chunksize=-1,resumable=True))
     resp=None
     while resp is None:
         _,resp=req.next_chunk()
     vid=resp["id"]
+    yt_extra.a_lista(yt,vid,"Recetas sanas y caseras","Ideas de comida sana casera para el día a día.")
     st=resp["status"]; vis=st["privacyStatus"]+(f", se publica {st['publishAt']} UTC" if st.get("publishAt") else "")
     print(f"SUBIDO: https://youtu.be/{vid}  (visibilidad: {vis})")
     gs=os.environ.get("GITHUB_STEP_SUMMARY")

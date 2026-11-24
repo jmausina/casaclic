@@ -7,6 +7,8 @@
 # DRY_RUN=1 → no sube nada.
 import json, os, sys, re, math, random, struct, wave, shutil, subprocess, time, urllib.request, urllib.parse
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import yt_extra
 
 W, H = 720, 1280
 FB = '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'
@@ -164,6 +166,42 @@ def musica(ruta, secs, sr=44100, semilla=3):
         w.writeframes((buf * env * 0.6 * 32767).astype('<i2').tobytes())
 
 
+PRIMERA_IMG = []  # primera foto del vídeo (para la miniatura de los largos)
+LISTAS = {('Belleza Ancestral', 'short'): 'Recetas de belleza natural en 1 minuto',
+          ('Belleza Ancestral', 'largo'): 'La vuelta al mundo de la belleza ancestral',
+          ('CasaClic Oficial', 'short'): 'Recetas sanas y caseras',
+          ('Ciencia y Porqués', 'largo'): 'Historia y ciencia explicadas',
+          ('Ciencia y Porqués', 'short'): 'Ciencia en 1 minuto'}
+
+
+def miniatura(ficha, canal, color, ruta):
+    """Miniatura 1280x720: foto del vídeo, franja de color y título grande (pocas palabras, mucho contraste)."""
+    import io
+    if PRIMERA_IMG:
+        im = Image.open(io.BytesIO(PRIMERA_IMG[0])).convert('RGB')
+        r = max(1280 / im.width, 720 / im.height); im = im.resize((int(im.width * r) + 1, int(im.height * r) + 1))
+        x, y = (im.width - 1280) // 2, (im.height - 720) // 2; im = im.crop((x, y, x + 1280, y + 720))
+    else:
+        im = Image.new('RGB', (1280, 720), color[0])
+    d = ImageDraw.Draw(im, 'RGBA')
+    d.rectangle((0, 0, 720, 720), fill=color[0] + (228,))
+    texto = ficha.get('miniatura_texto') or yt_extra.limpia_titulo(ficha['titulo']).split(':')[0]
+    for tam in (92, 84, 76, 68, 60, 54):
+        f = fuente(tam); lineas, ln = [], ''
+        for pal in texto.upper().split():
+            prueba = (ln + ' ' + pal).strip()
+            if d.textlength(prueba, font=f) + 8 <= 630: ln = prueba
+            else: lineas.append(ln); ln = pal
+        lineas.append(ln)
+        if len(lineas) <= 4 and all(d.textlength(x, font=f) + 8 <= 630 for x in lineas): break
+    yy = 360 - len(lineas) * (f.size + 14) // 2
+    for ln in lineas:
+        d.text((48, yy), ln, font=f, fill=color[1], stroke_width=4, stroke_fill=(0, 0, 0)); yy += f.size + 14
+    d.text((48, 650), canal.upper(), font=fuente(30), fill=(255, 255, 255))
+    im.save(ruta, quality=90)
+    return ruta
+
+
 # ---------- Montaje ----------
 def fabricar(ficha):
     global W, H
@@ -184,6 +222,7 @@ def fabricar(ficha):
             img, cred = buscar_imagen(e['imagen'], usadas)
             if cred: creditos.append(cred)
             if img: ultima_img = img
+            if img and not PRIMERA_IMG: PRIMERA_IMG.append(img)
         png = f'{TMP}/f{i}.png'; fotograma(img or ultima_img, e.get('rotulo'), e['texto'], canal, png, color)
         mp4 = f'{TMP}/p{i}.mp4'; fr = int(dur * 30)
         subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-loop', '1', '-i', png, '-i', wav, '-filter_complex',
@@ -216,11 +255,11 @@ def subir(ruta, ficha, creditos):
     nombre = yt.channels().list(part='snippet', mine=True).execute()['items'][0]['snippet']['title']
     if nombre.strip().lower() != ficha['canal'].strip().lower():
         raise SystemExit(f"ERROR: el token es de «{nombre}», no de «{ficha['canal']}». No se sube nada.")
-    desc = ficha['descripcion'] + '\n\nImágenes de Wikimedia Commons:\n' + '\n'.join('• ' + c for c in creditos) + \
+    desc = yt_extra.primera_frase(ficha['titulo'], ficha['descripcion']) + '\n\nImágenes de Wikimedia Commons:\n' + '\n'.join('• ' + c for c in creditos) + \
         '\n\nVoz generada por ordenador. Música original.\n\n#Shorts'
     body = {'snippet': {'title': ficha['titulo'][:100], 'description': desc[:4900], 'tags': ficha.get('tags', [])[:15],
                         'categoryId': ficha.get('categoria', '26'), 'defaultLanguage': 'es', 'defaultAudioLanguage': 'es'},
-            'status': {'privacyStatus': ficha.get('privacidad', 'private'), 'selfDeclaredMadeForKids': False}}
+            'status': {'privacyStatus': ficha.get('privacidad', 'private'), 'selfDeclaredMadeForKids': False, **yt_extra.SINTETICO}}
     hora = ficha.get('hora_publicacion')  # p. ej. "19:00" (hora de España): se sube en privado y YouTube lo publica solo a esa hora
     if ficha.get('privacidad') == 'public' and hora:
         import datetime as dt
@@ -230,9 +269,21 @@ def subir(ruta, ficha, creditos):
         if cuando - ahora > dt.timedelta(minutes=20):
             body['status'].update(privacyStatus='private', publishAt=cuando.astimezone(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'))
             log('Se publicará solo a las', hora)
+    ruta = yt_extra.archivo_con_titulo(ruta, ficha['titulo'])
     req = yt.videos().insert(part='snippet,status', body=body, media_body=MediaFileUpload(ruta, mimetype='video/mp4', resumable=True))
     resp = None
     while resp is None: _, resp = req.next_chunk()
+    formato = 'largo' if ficha.get('formato') == 'largo' else 'short'
+    if formato == 'largo':
+        try:
+            mini = miniatura(ficha, ficha['canal'], COLORES.get(ficha['canal'], ((40, 40, 40), (255, 220, 120))), f'{TMP}/miniatura.jpg')
+            yt.thumbnails().set(videoId=resp['id'], media_body=MediaFileUpload(mini, mimetype='image/jpeg')).execute()
+            log('Miniatura puesta')
+        except Exception as e:
+            log('AVISO miniatura:', str(e)[:300])
+    lista = ficha.get('lista') or LISTAS.get((ficha['canal'], formato))
+    if lista:
+        yt_extra.a_lista(yt, resp['id'], lista)
     log(f"SUBIDO ({ficha.get('privacidad', 'private')}): https://youtube.com/shorts/{resp['id']}  ({nombre})")
     return resp['id']
 

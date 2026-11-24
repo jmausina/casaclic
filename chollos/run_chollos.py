@@ -224,6 +224,32 @@ def subir(tok, ruta, titulo, descripcion, tags):
     return json.loads(raw)['id']
 
 
+def a_lista(tok, vid, nombre):
+    """Mete el Short en la lista del canal (la crea si no existe). Si falla, solo avisa."""
+    try:
+        h = {'Authorization': f'Bearer {tok}', 'Content-Type': 'application/json; charset=UTF-8'}
+        api = 'https://www.googleapis.com/youtube/v3/'
+        st, _, raw = http_json(api + 'playlists?part=snippet&mine=true&maxResults=50', headers=h)
+        lista = next((i['id'] for i in json.loads(raw).get('items', [])
+                      if i['snippet']['title'].strip().lower() == nombre.lower()), None) if st == 200 else None
+        if not lista:
+            st, _, raw = http_json(api + 'playlists?part=snippet,status', json.dumps({
+                'snippet': {'title': nombre, 'description': 'Los mejores chollos de belleza de Amazon, cada día.',
+                            'defaultLanguage': 'es'}, 'status': {'privacyStatus': 'public'}}).encode(), h, 'POST')
+            if st != 200:
+                raise RuntimeError(f'no se pudo crear la lista ({st}): {raw[:200]!r}')
+            lista = json.loads(raw)['id']
+        for intento in range(4):  # 409 pasajero justo después de crear la lista
+            st, _, raw = http_json(api + 'playlistItems?part=snippet', json.dumps({'snippet': {
+                'playlistId': lista, 'resourceId': {'kind': 'youtube#video', 'videoId': vid}}}).encode(), h, 'POST')
+            if st != 409:
+                break
+            time.sleep(5 * (intento + 1))
+        log('Lista:', 'añadido' if st == 200 else f'fallo {st} {raw[:200]!r}')
+    except Exception as e:
+        log('AVISO lista:', e)
+
+
 # ---------- Principal ----------
 def main():
     toca_por_horario()
@@ -268,7 +294,7 @@ def main():
         titulo = f"{len(elegidas)} chollos de belleza en Amazon hoy #Shorts"
     numeros = ['1⃣', '2⃣', '3⃣']
     lineas = [f"{numeros[i]} {o['nombre']} → {o['precio']} (antes {o['antes']})" for i, o in enumerate(elegidas)]
-    descripcion = ('Chollos de belleza en Amazon hoy 💄\n\n' + '\n'.join(lineas) +
+    descripcion = (titulo.replace(' #Shorts', '') + ' 💄 Chollos de belleza en Amazon hoy.\n\n' + '\n'.join(lineas) +
                    '\n\n👉 Los enlaces y nuevas ofertas cada día, gratis en nuestro canal de Telegram: https://t.me/ChollosBellezaES'
                    '\n\nComo Afiliado de Amazon, obtenemos ingresos por las compras adscritas que cumplen los requisitos aplicables. Los precios pueden cambiar en cualquier momento.'
                    '\n#chollos #belleza #ofertas #amazon #skincare #chollosamazon #shorts')
@@ -281,8 +307,11 @@ def main():
 
     tok = token_acceso()
     canal = comprobar_canal(tok)
-    vid = subir(tok, video, titulo, descripcion, tags)
+    sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    import yt_extra
+    vid = subir(tok, yt_extra.archivo_con_titulo(video, titulo), titulo, descripcion, tags)
     log('SUBIDO: https://youtube.com/shorts/' + vid)
+    a_lista(tok, vid, 'Chollos de belleza en Amazon')
 
     hist.setdefault('dias', []).append({
         'fecha': hoy.isoformat(), 'hora': ahora.strftime('%H:%M'), 'video': vid, 'canal': canal, 'titulo': titulo,

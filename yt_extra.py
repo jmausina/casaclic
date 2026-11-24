@@ -71,8 +71,16 @@ def a_lista(yt, video_id, nombre, descripcion=""):
         elif yt.playlistItems().list(part="id", playlistId=lista, videoId=video_id).execute().get("items"):
             print(f"Ya estaba en la lista «{nombre}»")
             return lista
-        yt.playlistItems().insert(part="snippet", body={"snippet": {
-            "playlistId": lista, "resourceId": {"kind": "youtube#video", "videoId": video_id}}}).execute()
+        import time
+        for intento in range(4):  # justo después de crear la lista YouTube a veces da 409 pasajero
+            try:
+                yt.playlistItems().insert(part="snippet", body={"snippet": {
+                    "playlistId": lista, "resourceId": {"kind": "youtube#video", "videoId": video_id}}}).execute()
+                break
+            except Exception as e:
+                if intento == 3 or "409" not in str(e)[:40] and "SERVICE_UNAVAILABLE" not in str(e):
+                    raise
+                time.sleep(5 * (intento + 1))
         print(f"Añadido a la lista «{nombre}»")
         return lista
     except Exception as e:
