@@ -1,0 +1,57 @@
+name: YouTube - repaso de vídeos antiguos
+
+# Revisa todos los vídeos de los canales y, en modo aplicar, arregla lo que falte
+# (lista, casilla de IA, no-niños, idioma, primera frase). Solo a mano.
+on:
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: 'revisar (solo mira) o aplicar'
+        required: true
+        default: 'revisar'
+      presupuesto:
+        description: 'Cupo máximo a gastar en modo aplicar (cada cambio = 50)'
+        required: false
+        default: '3000'
+      canales:
+        description: 'eab,chollos,casaclic,ba,ciencia (vacío = todos)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: yt-repaso
+  cancel-in-progress: false
+
+jobs:
+  repaso:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -m pip install -q google-api-python-client google-auth
+      - name: Repaso
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          YT_CHOLLOS_REFRESH_TOKEN: ${{ secrets.YT_CHOLLOS_REFRESH_TOKEN }}
+          YT_BELLEZA_REFRESH_TOKEN: ${{ secrets.YT_BELLEZA_REFRESH_TOKEN }}
+          YT_CIENCIA_REFRESH_TOKEN: ${{ secrets.YT_CIENCIA_REFRESH_TOKEN }}
+          YT_EAB_REFRESH_TOKEN: ${{ secrets.YT_EAB_REFRESH_TOKEN }}
+          MODO: ${{ github.event.inputs.modo }}
+          PRESUPUESTO: ${{ github.event.inputs.presupuesto }}
+          CANALES: ${{ github.event.inputs.canales }}
+        run: python3 yt_repaso.py
+      - name: Guardar lo hecho
+        if: github.event.inputs.modo == 'aplicar'
+        run: |
+          if [ -z "$(git status --porcelain -- yt_repaso_hecho.json)" ]; then echo "Sin cambios"; exit 0; fi
+          git config user.name "yt-repaso-bot"
+          git config user.email "yt-repaso-bot@users.noreply.github.com"
+          git add yt_repaso_hecho.json
+          git commit -m "Repaso YouTube: vídeos hechos"
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && exit 0; sleep $((i*5)); done
+          exit 1
