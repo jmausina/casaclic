@@ -1,6 +1,6 @@
 {
- "siguiente": 3,
- "ultimo_envio": "2026-11-24",
+ "siguiente": 4,
+ "ultimo_envio": "2026-11-25",
  "historial": [
   {
    "fecha": "2026-11-20",
@@ -16,6 +16,11 @@
    "fecha": "2026-11-24",
    "producto": "alfombrilla-lamedora-de-silicona-con-ventosas",
    "id": "v_inbox_file~v2.7711539437624395798"
+  },
+  {
+   "fecha": "2026-11-25",
+   "producto": "rodillo-quitapelos-reutilizable-para-sofa-y-ropa",
+   "id": "v_inbox_file~v2.7712057829179459606"
   }
  ]
 }
