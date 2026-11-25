@@ -404,6 +404,33 @@
      "antes": "70,99 €"
     }
    ]
+  },
+  {
+   "fecha": "2026-11-25",
+   "hora": "03:43",
+   "video": "9_7Nxay4Vi8",
+   "canal": "UC-wvAtFM1D_ZSbJAi5ZLqfQ",
+   "titulo": "Davidoff Cool Water Eau de Toilette de 123,00 € hoy por 27,94 € #Shorts",
+   "productos": [
+    {
+     "asin": "B0FRF637DS",
+     "nombre": "Davidoff Cool Water Eau de Toilette 200 ml",
+     "precio": "27,94 €",
+     "antes": "123,00 €"
+    },
+    {
+     "asin": "B094S8333N",
+     "nombre": "BOSS In Motion Eau de Toilette 100 ml",
+     "precio": "24,90 €",
+     "antes": "95,00 €"
+    },
+    {
+     "asin": "B0976Y9RLG",
+     "nombre": "Olay Retinol 24 Crema de Noche 50 ml",
+     "precio": "14,99 €",
+     "antes": "37,99 €"
+    }
+   ]
   }
  ]
 }
