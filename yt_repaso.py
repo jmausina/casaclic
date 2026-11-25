@@ -67,9 +67,10 @@ def unir_duplicadas(yt, canal):
             dentro |= {i["contentDetails"]["videoId"] for i in r["items"]}; pt = r.get("nextPageToken")
             if not pt: break
         for dup in ps[1:]:
+            sn = dup["snippet"]
             if MODO != "aplicar": print(f"  DUPLICADA: «{nom}» {dup['id']}"); continue
             if gastar(50):
-                sn = dup["snippet"]
+                pass
                 yt.playlists().update(part="snippet,status", body={"id": dup["id"], "snippet": {
                     "title": sn["title"] + " (duplicada)", "description": sn.get("description", "")},
                     "status": {"privacyStatus": "private"}}).execute()
