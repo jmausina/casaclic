@@ -311,7 +311,7 @@ def main():
     import yt_extra
     vid = subir(tok, yt_extra.archivo_con_titulo(video, titulo), titulo, descripcion, tags)
     log('SUBIDO: https://youtube.com/shorts/' + vid)
-    a_lista(tok, vid, 'Chollos de belleza en Amazon')
+    # a_lista(tok, vid, 'Chollos de belleza en Amazon')  # el permiso de Chollos solo deja subir (25/11): sin listas
 
     hist.setdefault('dias', []).append({
         'fecha': hoy.isoformat(), 'hora': ahora.strftime('%H:%M'), 'video': vid, 'canal': canal, 'titulo': titulo,
