@@ -49,12 +49,12 @@ def archivo_con_titulo(ruta, titulo):
         return ruta
 
 
-def a_lista(yt, video_id, nombre, descripcion=""):
+def a_lista(yt, video_id, nombre, descripcion="", lista_id=None):
     """Añade el vídeo a la lista «nombre» del canal. Cupo: 1 + 50 (+50 si hay que crearla)."""
     try:
-        lista = None
+        lista = lista_id
         pt = None
-        while True:
+        while not lista:
             r = yt.playlists().list(part="snippet", mine=True, maxResults=50, pageToken=pt).execute()
             for it in r.get("items", []):
                 if it["snippet"]["title"].strip().lower() == nombre.strip().lower():

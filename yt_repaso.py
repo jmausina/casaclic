@@ -46,6 +46,46 @@ def gastar(n):
     return True
 
 
+def unir_duplicadas(yt, canal):
+    """Si hay dos listas con el mismo nombre: la más nueva pasa a privada («duplicada») y sus vídeos se copian a la buena."""
+    todas, pt = [], None
+    while True:
+        r = yt.playlists().list(part="snippet,status,contentDetails", mine=True, maxResults=50, pageToken=pt).execute()
+        todas += r["items"]; pt = r.get("nextPageToken")
+        if not pt: break
+    por_nombre = {}
+    for p in todas:
+        if "(duplicada)" not in p["snippet"]["title"]:
+            por_nombre.setdefault(p["snippet"]["title"].strip().lower(), []).append(p)
+    for nom, ps in por_nombre.items():
+        if len(ps) < 2: continue
+        ps.sort(key=lambda p: p["snippet"]["publishedAt"])
+        buena = ps[0]
+        dentro, pt = set(), None
+        while True:
+            r = yt.playlistItems().list(part="contentDetails", playlistId=buena["id"], maxResults=50, pageToken=pt).execute()
+            dentro |= {i["contentDetails"]["videoId"] for i in r["items"]}; pt = r.get("nextPageToken")
+            if not pt: break
+        for dup in ps[1:]:
+            if MODO != "aplicar": print(f"  DUPLICADA: «{nom}» {dup['id']}"); continue
+            if gastar(50):
+                sn = dup["snippet"]
+                yt.playlists().update(part="snippet,status", body={"id": dup["id"], "snippet": {
+                    "title": sn["title"] + " (duplicada)", "description": sn.get("description", "")},
+                    "status": {"privacyStatus": "private"}}).execute()
+                print(f"  Lista duplicada «{nom}» {dup['id']} → privada")
+            pt, movidos = None, 0
+            while True:
+                r = yt.playlistItems().list(part="contentDetails", playlistId=dup["id"], maxResults=50, pageToken=pt).execute()
+                for i in r["items"]:
+                    vid = i["contentDetails"]["videoId"]
+                    if vid not in dentro and gastar(50):
+                        yt_extra.a_lista(yt, vid, sn["title"], lista_id=buena["id"]); dentro.add(vid); movidos += 1
+                pt = r.get("nextPageToken")
+                if not pt: break
+            print(f"  Pasados a la lista buena: {movidos} (faltan los que no cupieron)")
+
+
 def revisar_canal(clave):
     var, nombre = CANALES[clave]
     if not os.environ.get(var):
@@ -79,6 +119,7 @@ def revisar_canal(clave):
             pt = r.get("nextPageToken")
             if not pt: break
         en_lista[nom] = dentro
+    unir_duplicadas(yt, nombre)
     ahora = dt.datetime.now(dt.timezone.utc)
     print(f"\n## {nombre}: {len(ids)} vídeos")
     for k in range(0, len(ids), 50):
@@ -127,7 +168,7 @@ def revisar_canal(clave):
                         hecho.append("sin cupo")
                 if "lista" in falta:
                     if gastar(51 if lista.lower() in listas else 101):
-                        pid = yt_extra.a_lista(yt, v["id"], lista)
+                        pid = yt_extra.a_lista(yt, v["id"], lista, lista_id=listas.get(lista.lower()))
                         if pid:
                             listas[lista.lower()] = pid; en_lista.setdefault(lista, set()).add(v["id"]); hecho.append("lista")
                         else:
