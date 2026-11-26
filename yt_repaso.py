@@ -55,11 +55,11 @@ def unir_duplicadas(yt, canal):
         if not pt: break
     por_nombre = {}
     for p in todas:
-        if "(duplicada)" not in p["snippet"]["title"]:
-            por_nombre.setdefault(p["snippet"]["title"].strip().lower(), []).append(p)
+        base = p["snippet"]["title"].replace(" (duplicada)", "").strip().lower()
+        por_nombre.setdefault(base, []).append(p)
     for nom, ps in por_nombre.items():
         if len(ps) < 2: continue
-        ps.sort(key=lambda p: p["snippet"]["publishedAt"])
+        ps.sort(key=lambda p: ("(duplicada)" in p["snippet"]["title"], p["snippet"]["publishedAt"]))
         buena = ps[0]
         dentro, pt = set(), None
         while True:
@@ -69,8 +69,7 @@ def unir_duplicadas(yt, canal):
         for dup in ps[1:]:
             sn = dup["snippet"]
             if MODO != "aplicar": print(f"  DUPLICADA: «{nom}» {dup['id']}"); continue
-            if gastar(50):
-                pass
+            if "(duplicada)" not in sn["title"] and gastar(50):
                 yt.playlists().update(part="snippet,status", body={"id": dup["id"], "snippet": {
                     "title": sn["title"] + " (duplicada)", "description": sn.get("description", "")},
                     "status": {"privacyStatus": "private"}}).execute()
