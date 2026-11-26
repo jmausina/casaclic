@@ -431,6 +431,33 @@
      "antes": "37,99 €"
     }
    ]
+  },
+  {
+   "fecha": "2026-11-26",
+   "hora": "02:54",
+   "video": "EsYbh7LW7oM",
+   "canal": "UC-wvAtFM1D_ZSbJAi5ZLqfQ",
+   "titulo": "Escada Magnetism Eau de Parfum 75 ml de 114,00 € hoy por 22,78 € #Shorts",
+   "productos": [
+    {
+     "asin": "B083TXY188",
+     "nombre": "Escada Magnetism Eau de Parfum 75 ml",
+     "precio": "22,78 €",
+     "antes": "114,00 €"
+    },
+    {
+     "asin": "B0CZXK8L2F",
+     "nombre": "Olay Super Sérum Vitamina C + Niacinamida 30 ml",
+     "precio": "14,95 €",
+     "antes": "34,99 €"
+    },
+    {
+     "asin": "B009P0V9UQ",
+     "nombre": "Eucerin DermoCapillaire Champú Urea 5% 250 ml",
+     "precio": "6,55 €",
+     "antes": "14,00 €"
+    }
+   ]
   }
  ]
 }
