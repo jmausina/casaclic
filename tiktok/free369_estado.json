@@ -1,6 +1,6 @@
 {
- "siguiente": 4,
- "ultimo_envio": "2026-11-25",
+ "siguiente": 5,
+ "ultimo_envio": "2026-11-27",
  "historial": [
   {
    "fecha": "2026-11-20",
@@ -21,6 +21,11 @@
    "fecha": "2026-11-25",
    "producto": "rodillo-quitapelos-reutilizable-para-sofa-y-ropa",
    "id": "v_inbox_file~v2.7712057829179459606"
+  },
+  {
+   "fecha": "2026-11-27",
+   "producto": "pack-paseo-seguro-arnes-reflectante-correa",
+   "id": "v_inbox_file~v2.7712799886940375062"
   }
  ]
 }
