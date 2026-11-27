@@ -1,10 +1,10 @@
 {
  "privacidad": "public",
- "hora_publicacion": "19:00",
+ "hora_publicacion": "22:00",
  "categoria": "26",
  "id": "2026-11-22_cc-pizzetas-pan-integral",
  "canal": "CasaClic Oficial",
- "subir_desde": "2026-11-28",
+ "subir_desde": "2026-11-27",
  "inspirado_en": "https://youtube.com/shorts/9KK8zNX5fQc (Pizzetas con pan de molde, outlier ×114). Versión propia, sana y casera.",
  "titulo": "Pizzetas caseras con pan integral y verduras en 10 minutos 🍕 #Shorts",
  "descripcion": "Pizzetas caseras con pan integral, tomate y verduras: una cena sana, fácil y rápida.\n\n🎁 Recetario de 120 recetas + menú organizado de 21 días: https://hotm.io/n7G5jK\n\n🔔 Suscríbete a CasaClic para más ideas de cocina sana.",
@@ -104,16 +104,16 @@
   {
    "texto": "Y cada uno puede preparar la suya a su gusto, con sus ingredientes favoritos.",
    "imagen": [
-    "vegetables",
-    "fresh vegetables"
+    "pizza slice",
+    "homemade pizza"
    ]
   }
  ],
  "rotulo_cierre": "Sígueme en CasaClic",
  "cierre": "¿Con qué verduras las harías tú? Guárdalo y sígueme para más recetas.",
  "resultado": {
-  "video_id": null,
-  "segundos": 64.5,
+  "video_id": "GQkSTDcAdyE",
+  "segundos": 64.4,
   "creditos": [
    "Vegetarian Pizza.jpg — Petar Milošević (CC BY-SA 4.0)",
    "Vegan no-knead whole wheat bread loaf, September 2010.jpg — Veganbaking.net (CC BY-SA 2.0)",
@@ -126,8 +126,8 @@
    "Air fryer interior.jpg — Samay9211 (CC BY-SA 4.0)",
    "Toast-2.jpg — Rainer Z ... (CC BY-SA 3.0)",
    "Liat Portal for Foodie Disorder - Israeli weekday family dinner feast.jpg — HaJunkiyada (CC BY-SA 4.0)",
-   "Child working selling vegetables in downtown Maracaibo.jpg — Wilfredor (CC0)"
+   "Pizza slice with arugula in Bosnia and Herzegovina (2025)-bs.jpg — Bosancica by MK (CC BY-SA 4.0)"
   ],
-  "fecha": "2026-11-27 18:21"
+  "fecha": "2026-11-27 18:30"
  }
 }

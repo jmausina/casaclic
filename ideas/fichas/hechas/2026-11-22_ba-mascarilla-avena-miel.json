@@ -1,10 +1,10 @@
 {
  "privacidad": "public",
- "hora_publicacion": "19:00",
+ "hora_publicacion": "22:00",
  "categoria": "26",
  "id": "2026-11-22_ba-mascarilla-avena-miel",
  "canal": "Belleza Ancestral",
- "subir_desde": "2026-11-28",
+ "subir_desde": "2026-11-27",
  "inspirado_en": "https://youtube.com/shorts/J9g0y-SSaFo (mascarilla casera para la piel, outlier ×520). Idea propia.",
  "titulo": "Mascarilla casera de avena y miel para la piel 🍯 #Shorts",
  "descripcion": "📖 Recetario de Belleza Ancestral (40 recetas): https://go.hotmart.com/M108343227O\n\nUna mascarilla casera y sencilla con avena y miel, dos ingredientes de la despensa.",
@@ -67,8 +67,8 @@
   {
    "texto": "Déjala actuar unos diez o quince minutos, mientras descansas tranquilamente.",
    "imagen": [
-    "armchair",
-    "reading book"
+    "teacup",
+    "cup of tea"
    ]
   },
   {
@@ -98,23 +98,23 @@
    "rotulo": "Consejo",
    "texto": "Antes, haz una prueba en una zona pequeña del brazo, por si tu piel es sensible.",
    "imagen": [
-    "forearm",
-    "arm"
+    "hands",
+    "human hands"
    ]
   },
   {
    "texto": "Prepárala siempre en el momento y úsala una o dos veces por semana, como mucho.",
    "imagen": [
     "rolled oats",
-    "oat flakes"
+    "oatmeal"
    ]
   }
  ],
  "rotulo_cierre": "Sígueme en Belleza Ancestral",
  "cierre": "Más recetas en el enlace de la descripción. Sígueme para más.",
  "resultado": {
-  "video_id": null,
-  "segundos": 63.1,
+  "video_id": "A8fhkYUA9fw",
+  "segundos": 62.5,
   "creditos": [
    "Rolled oats 2.jpg — Yonygg (CC BY-SA 4.0)",
    "Three French monofloral honey jars.jpg — Hayden Soloviev (CC BY 4.0)",
@@ -122,13 +122,13 @@
    "Honey Spoon (Axel Anklam) 1.jpg — Gerd Fahrenhorst (CC BY 4.0)",
    "Cooked oatmeal in bowl 3.jpg — Bodhi Peace (CC BY-SA 4.0)",
    "Chimps Washing Faces (16835847854).jpg — Eric Kilby from Somerville, MA, USA (CC BY-SA 2.0)",
-   "Armchair MET DT8323.jpg — Creator:Gustave Herter (CC0)",
+   "Teacup and saucer.jpg — Unknown artistUnknown artist (CC0)",
    "Water tap round sink.jpg — Dr. Chinchu C. (CC BY-SA 4.0)",
    "Towel rails radiator with hanger.jpg — MB SRL (CC BY 4.0)",
    "Field with mixed intercropping of oat and rye.jpg — W.carter (CC0)",
-   "Ambigram tattoo No religion (forearm).jpg — Basile Morin (photo &amp; ambigram) (CC BY-SA 4.0)",
+   "Pupil washes hands during COVID-19 pandemic in Ghana.jpg — Amuzujoe (CC BY-SA 4.0)",
    "Rolled oats under a microscope.jpg — Gustamons (CC0)"
   ],
-  "fecha": "2026-11-27 18:17"
+  "fecha": "2026-11-27 18:29"
  }
 }
