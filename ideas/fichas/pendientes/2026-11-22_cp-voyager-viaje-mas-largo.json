@@ -1,0 +1,1050 @@
+{
+ "id": "2026-11-22_cp-voyager-viaje-mas-largo",
+ "canal": "Ciencia y Porqués",
+ "formato": "largo",
+ "subir_desde": "2026-12-03",
+ "privacidad": "public",
+ "hora_publicacion": "19:00",
+ "categoria": "27",
+ "inspirado_en": "Tema: «NASA Just Confirmed Voyager 1 Found Something Impossible» (Proof, 5,3 M visitas, outlier ×2928: https://youtu.be/FO65j14ekyg). Solo el tema (las sondas Voyager). Guion propio en español escrito desde cero, sin el tono sensacionalista; nada traducido.",
+ "titulo": "Las Voyager: el viaje más largo de la humanidad, de 1977 al espacio interestelar",
+ "descripcion": "En 1977 salieron de la Tierra dos pequeñas sondas, la Voyager 1 y la Voyager 2. Visitaron Júpiter, Saturno, Urano y Neptuno, descubrieron volcanes en Io, los anillos finos de Júpiter y los géiseres de Tritón, y llevan a bordo el famoso disco de oro. Hoy están más allá de la burbuja del Sol, en el espacio interestelar, y todavía envían datos.\n\nUn documental tranquilo sobre su historia: por qué se lanzaron justo entonces, qué vieron, la foto del «punto azul pálido», cómo se habla con ellas (también desde Robledo de Chavela, en Madrid) y qué será de ellas.\n\nImágenes: Wikimedia Commons (créditos abajo). Voz generada por ordenador.\n\n🔔 Suscríbete a Ciencia y Porqués: un documental nuevo cada semana.",
+ "tags": [
+  "Voyager",
+  "Voyager 1",
+  "Voyager 2",
+  "NASA",
+  "espacio interestelar",
+  "sistema solar",
+  "disco de oro",
+  "punto azul pálido",
+  "documental de ciencia",
+  "astronomía",
+  "documental en español"
+ ],
+ "secciones": [
+  {
+   "rotulo": "Las Voyager",
+   "imagen": [
+    "voyager spacecraft",
+    "voyager probe"
+   ],
+   "frases": [
+    "Ahora mismo, mientras ves este vídeo, dos máquinas construidas en los años setenta siguen viajando por el espacio.",
+    "Son las sondas Voyager 1 y Voyager 2, y son los objetos fabricados por el ser humano que más lejos han llegado.",
+    "Salieron de la Tierra en 1977, y casi medio siglo después todavía envían datos.",
+    "Hoy vamos a contar su viaje, de principio a fin."
+   ]
+  },
+  {
+   "rotulo": "Lo que veremos",
+   "imagen": [
+    "voyager spacecraft",
+    "jupiter"
+   ],
+   "frases": [
+    "Veremos por qué se lanzaron justo en esos años, y no en otros.",
+    "Pasaremos por Júpiter, Saturno, Urano y Neptuno, y por lo que descubrieron allí.",
+    "Hablaremos del disco de oro que llevan a bordo y de una famosa foto de la Tierra.",
+    "Y terminaremos en el lugar donde están hoy, más allá de la burbuja del Sol."
+   ]
+  },
+  {
+   "rotulo": "Dos gemelas",
+   "imagen": [
+    "voyager spacecraft",
+    "voyager model"
+   ],
+   "frases": [
+    "Las dos sondas son prácticamente iguales, como dos gemelas.",
+    "Se construyeron en el Laboratorio de Propulsión a Chorro, en California.",
+    "La diferencia está en el camino que siguió cada una por el sistema solar."
+   ]
+  },
+  {
+   "rotulo": "Una oportunidad rara",
+   "imagen": [
+    "solar system",
+    "planets solar system"
+   ],
+   "frases": [
+    "En los años sesenta, un estudiante de doctorado que trabajaba en verano en el Laboratorio de Propulsión a Chorro de la NASA, Gary Flandro, hizo unos cálculos curiosos.",
+    "Descubrió que a finales de los setenta los planetas exteriores iban a quedar colocados en una posición muy especial.",
+    "Júpiter, Saturno, Urano y Neptuno estarían alineados de forma que una sola nave podría visitarlos uno tras otro.",
+    "Esa colocación solo se repite, más o menos, cada ciento setenta y cinco años."
+   ]
+  },
+  {
+   "rotulo": "El truco de la gravedad",
+   "imagen": [
+    "jupiter",
+    "gravity assist"
+   ],
+   "frases": [
+    "La clave era una técnica llamada asistencia gravitatoria.",
+    "Cuando una nave pasa cerca de un planeta, la gravedad de ese planeta la desvía y puede darle un impulso.",
+    "Es como si la nave tomara prestada un poco de la energía del planeta en su movimiento alrededor del Sol.",
+    "Con ese impulso, el viaje a los planetas lejanos se acortaba muchos años."
+   ]
+  },
+  {
+   "rotulo": "Sin ese impulso",
+   "imagen": [
+    "neptune",
+    "solar system"
+   ],
+   "frases": [
+    "Sin la ayuda de los planetas, llegar a Neptuno habría llevado unos treinta años.",
+    "Con ella, la Voyager 2 lo consiguió en doce.",
+    "Era una oportunidad que no volvería a darse en mucho tiempo."
+   ]
+  },
+  {
+   "rotulo": "Un plan más pequeño",
+   "imagen": [
+    "jet propulsion laboratory",
+    "jpl pasadena"
+   ],
+   "frases": [
+    "Al principio se soñó con un gran recorrido por todos los planetas exteriores, con varias naves.",
+    "Pero era muy caro, y el proyecto se recortó.",
+    "Al final se aprobaron dos sondas más modestas, pensadas sobre todo para Júpiter y Saturno.",
+    "Aun así, los ingenieros dejaron abierta la puerta para que una de ellas pudiera seguir más lejos."
+   ]
+  },
+  {
+   "rotulo": "Cómo es una Voyager",
+   "imagen": [
+    "voyager spacecraft",
+    "voyager model"
+   ],
+   "frases": [
+    "Cada sonda pesaba unos ochocientos kilos al despegar, más o menos como un coche pequeño.",
+    "Lo que más llama la atención es su gran antena blanca, de unos tres metros y medio de diámetro.",
+    "De su cuerpo salen varios brazos largos con instrumentos, cámaras y sensores.",
+    "Todo pensado para funcionar solo, muy lejos, durante muchos años."
+   ]
+  },
+  {
+   "rotulo": "Los instrumentos",
+   "imagen": [
+    "voyager spacecraft",
+    "scientific instruments"
+   ],
+   "frases": [
+    "Cada nave lleva unos diez instrumentos científicos.",
+    "Hay cámaras, sensores de partículas, detectores de campos magnéticos y receptores de ondas de radio.",
+    "Algunos sirven para ver los planetas y otros para notar lo que no se ve."
+   ]
+  },
+  {
+   "rotulo": "Energía sin Sol",
+   "imagen": [
+    "radioisotope thermoelectric generator",
+    "rtg"
+   ],
+   "frases": [
+    "Lejos del Sol, los paneles solares no sirven: la luz es demasiado débil.",
+    "Por eso las Voyager llevan generadores que funcionan con el calor de un material radiactivo, el plutonio doscientos treinta y ocho.",
+    "Ese calor se convierte en electricidad sin piezas que se muevan.",
+    "Al principio daban unos cuatrocientos setenta vatios, y cada año pierden unos pocos."
+   ]
+  },
+  {
+   "rotulo": "Ordenadores de otra época",
+   "imagen": [
+    "computer memory",
+    "magnetic core memory"
+   ],
+   "frases": [
+    "Los ordenadores de las Voyager tienen muchísima menos memoria que cualquier móvil actual.",
+    "Se suele decir que, entre todos, rondan los setenta kilobytes.",
+    "Durante años guardaban los datos en una grabadora de cinta, antes de enviarlos a la Tierra.",
+    "Y aun así, con esos medios, han hecho algunos de los descubrimientos más importantes de la historia de la astronomía."
+   ]
+  },
+  {
+   "rotulo": "Programar desde lejos",
+   "imagen": [
+    "computer code",
+    "punched card"
+   ],
+   "frases": [
+    "Una gran ventaja es que los programas de las sondas se pueden cambiar desde la Tierra.",
+    "Los ingenieros envían instrucciones nuevas por radio.",
+    "Gracias a eso, las Voyager han aprendido trucos que nadie había previsto en 1977."
+   ]
+  },
+  {
+   "rotulo": "El despegue",
+   "imagen": [
+    "titan iiie",
+    "titan iii centaur"
+   ],
+   "frases": [
+    "Curiosamente, la primera en despegar fue la Voyager 2, el veinte de agosto de 1977.",
+    "La Voyager 1 salió unos días después, el cinco de septiembre, desde Cabo Cañaveral, en Florida.",
+    "Se llama Voyager 1 porque iba por un camino más rápido y llegaría antes a Júpiter.",
+    "Las dos viajaron en cohetes Titan con una etapa superior Centaur."
+   ]
+  },
+  {
+   "rotulo": "Primeros sustos",
+   "imagen": [
+    "voyager 2",
+    "voyager launch"
+   ],
+   "frases": [
+    "Los primeros meses no fueron tranquilos.",
+    "La Voyager 2 tuvo problemas con uno de sus receptores de radio, que falló en 1978.",
+    "Desde entonces se comunica con un receptor de reserva, que además tiene sus propias manías.",
+    "Los ingenieros aprendieron a convivir con esos fallos, algo que harían muchas veces en las décadas siguientes."
+   ]
+  },
+  {
+   "rotulo": "Hacia Júpiter",
+   "imagen": [
+    "jupiter",
+    "jupiter planet"
+   ],
+   "frases": [
+    "El viaje hasta Júpiter duró menos de dos años.",
+    "La Voyager 1 pasó por su punto más cercano en marzo de 1979, y la Voyager 2 en julio de ese mismo año.",
+    "Júpiter es el planeta más grande del sistema solar: dentro cabrían más de mil Tierras.",
+    "Y lo que las sondas vieron allí cambió lo que sabíamos de él."
+   ]
+  },
+  {
+   "rotulo": "Fotos en color",
+   "imagen": [
+    "jupiter",
+    "jupiter clouds"
+   ],
+   "frases": [
+    "Las cámaras de las Voyager hacían fotos en blanco y negro con distintos filtros de color.",
+    "Al juntar esas fotos en la Tierra se obtenían las imágenes en color.",
+    "Así nacieron algunas de las fotos de Júpiter más famosas de la historia."
+   ]
+  },
+  {
+   "rotulo": "La Gran Mancha Roja",
+   "imagen": [
+    "great red spot",
+    "jupiter great red spot"
+   ],
+   "frases": [
+    "Las cámaras grabaron de cerca la Gran Mancha Roja, una tormenta gigantesca más grande que la Tierra.",
+    "Al juntar muchas fotos seguidas, se pudo ver cómo giraba y cómo se movían las nubes a su alrededor.",
+    "También se vieron bandas de nubes, remolinos y corrientes que se cruzaban.",
+    "La atmósfera de Júpiter resultó ser mucho más movida y compleja de lo que se pensaba."
+   ]
+  },
+  {
+   "rotulo": "Un anillo en Júpiter",
+   "imagen": [
+    "jupiter rings",
+    "jupiter ring"
+   ],
+   "frases": [
+    "Hasta entonces se creía que solo Saturno tenía anillos.",
+    "Pero la Voyager 1 descubrió que Júpiter también tiene un anillo, muy fino y oscuro.",
+    "Es tan tenue que desde la Tierra no se había podido ver.",
+    "Hoy sabemos que los cuatro planetas gigantes tienen anillos, aunque los de Saturno son los más espectaculares."
+   ]
+  },
+  {
+   "rotulo": "Io, la luna volcánica",
+   "imagen": [
+    "io moon",
+    "io jupiter"
+   ],
+   "frases": [
+    "La gran sorpresa de Júpiter fue una de sus lunas, Io.",
+    "Al estudiar una foto, la ingeniera Linda Morabito vio una especie de nube saliendo del borde de la luna.",
+    "Era el penacho de un volcán en plena erupción.",
+    "Por primera vez se veían volcanes activos en un mundo distinto de la Tierra."
+   ]
+  },
+  {
+   "rotulo": "Por qué Io tiene volcanes",
+   "imagen": [
+    "io volcano",
+    "io moon"
+   ],
+   "frases": [
+    "Io es más o menos del tamaño de nuestra Luna, así que debería estar fría y apagada.",
+    "Pero la enorme gravedad de Júpiter, y la de otras lunas vecinas, la estiran y la aprietan sin parar.",
+    "Ese estiramiento calienta su interior, como cuando doblas un alambre una y otra vez y se calienta.",
+    "Hoy se considera el lugar con más actividad volcánica de todo el sistema solar."
+   ]
+  },
+  {
+   "rotulo": "Europa, la luna de hielo",
+   "imagen": [
+    "europa moon",
+    "europa jupiter"
+   ],
+   "frases": [
+    "Otra luna, Europa, apareció cubierta de hielo y cruzada por largas grietas.",
+    "Su superficie era muy lisa, con muy pocos cráteres, señal de que es joven y cambia con el tiempo.",
+    "Más tarde, otras misiones apoyaron la idea de que bajo ese hielo hay un océano de agua líquida.",
+    "Por eso Europa es hoy uno de los lugares más interesantes para buscar condiciones parecidas a las de la vida."
+   ]
+  },
+  {
+   "rotulo": "Ganímedes y Calisto",
+   "imagen": [
+    "ganymede moon",
+    "callisto moon"
+   ],
+   "frases": [
+    "Las sondas también fotografiaron las otras dos grandes lunas de Júpiter, Ganímedes y Calisto.",
+    "Ganímedes es la luna más grande del sistema solar, mayor incluso que Mercurio.",
+    "Calisto, en cambio, está llena de cráteres, como una superficie muy antigua."
+   ]
+  },
+  {
+   "rotulo": "Rumbo a Saturno",
+   "imagen": [
+    "saturn",
+    "saturn planet"
+   ],
+   "frases": [
+    "Con el impulso de Júpiter, las dos naves siguieron hacia Saturno.",
+    "La Voyager 1 llegó en noviembre de 1980, y la Voyager 2 en agosto de 1981.",
+    "Saturno es el planeta de los anillos, y las sondas los vieron como nunca antes.",
+    "Lo que parecían unos pocos anillos anchos resultó ser algo mucho más complicado."
+   ]
+  },
+  {
+   "rotulo": "Los anillos de Saturno",
+   "imagen": [
+    "saturn rings",
+    "rings of saturn"
+   ],
+   "frases": [
+    "De cerca, los anillos estaban formados por cientos y cientos de anillos más finos, como los surcos de un disco.",
+    "Están hechos de trozos de hielo y roca, desde granos de polvo hasta bloques del tamaño de una casa.",
+    "En algunas zonas aparecieron unas manchas oscuras con forma de radios de rueda, que nadie esperaba.",
+    "Y uno de los anillos exteriores, el anillo F, parecía trenzado."
+   ]
+  },
+  {
+   "rotulo": "Un planeta ligero",
+   "imagen": [
+    "saturn",
+    "saturn planet"
+   ],
+   "frases": [
+    "Saturno es enorme, pero está hecho sobre todo de hidrógeno y helio.",
+    "Su densidad media es tan baja que es menor que la del agua.",
+    "Las Voyager estudiaron también sus nubes, sus vientos y su campo magnético."
+   ]
+  },
+  {
+   "rotulo": "Las lunas pastoras",
+   "imagen": [
+    "prometheus moon",
+    "pandora moon"
+   ],
+   "frases": [
+    "Ese anillo trenzado tenía una explicación.",
+    "A cada lado del anillo F orbitan dos lunas pequeñas, Prometeo y Pandora.",
+    "Con su gravedad, mantienen las partículas del anillo en su sitio, como perros pastores con un rebaño.",
+    "Por eso se las llama lunas pastoras."
+   ]
+  },
+  {
+   "rotulo": "Encélado",
+   "imagen": [
+    "enceladus moon",
+    "enceladus"
+   ],
+   "frases": [
+    "Otra luna de Saturno, Encélado, apareció muy blanca y brillante.",
+    "Su superficie reflejaba casi toda la luz, como nieve recién caída.",
+    "Años después, la sonda Cassini descubrió que expulsa chorros de agua desde su polo sur."
+   ]
+  },
+  {
+   "rotulo": "Titán, una decisión difícil",
+   "imagen": [
+    "titan moon",
+    "titan saturn"
+   ],
+   "frases": [
+    "Saturno tiene una luna enorme, Titán, más grande que el planeta Mercurio.",
+    "Los científicos querían verla de cerca a toda costa, porque se sabía que tenía atmósfera.",
+    "Pero para acercarse a Titán, la Voyager 1 tenía que pasar por debajo de Saturno.",
+    "Esa maniobra la lanzaría fuera del plano de los planetas, y ya no podría visitar ninguno más."
+   ]
+  },
+  {
+   "rotulo": "Lo que se vio en Titán",
+   "imagen": [
+    "titan atmosphere",
+    "titan haze"
+   ],
+   "frases": [
+    "La Voyager 1 se acercó a Titán en noviembre de 1980.",
+    "Descubrió que su atmósfera es muy densa y está formada sobre todo por nitrógeno, como la nuestra.",
+    "Pero una neblina anaranjada impedía ver la superficie.",
+    "Habría que esperar hasta 2005, con la sonda Huygens, para ver por fin el suelo de Titán."
+   ]
+  },
+  {
+   "rotulo": "Un mundo con química",
+   "imagen": [
+    "titan moon",
+    "titan haze"
+   ],
+   "frases": [
+    "En esa neblina de Titán hay metano y otras sustancias con carbono.",
+    "Por eso a muchos científicos les recordó a cómo pudo ser la Tierra muy primitiva.",
+    "Hoy se sabe que Titán tiene lagos y mares, pero no de agua, sino de metano y etano."
+   ]
+  },
+  {
+   "rotulo": "La Voyager 1 se despide",
+   "imagen": [
+    "voyager 1",
+    "voyager spacecraft"
+   ],
+   "frases": [
+    "Después de Titán, la Voyager 1 salió disparada hacia arriba, lejos del plano de los planetas.",
+    "Su misión planetaria había terminado.",
+    "Desde entonces viaja hacia las afueras del sistema solar, a unos diecisiete kilómetros por segundo.",
+    "Es decir, más de sesenta mil kilómetros por hora."
+   ]
+  },
+  {
+   "rotulo": "La Voyager 2 sigue",
+   "imagen": [
+    "voyager 2",
+    "uranus"
+   ],
+   "frases": [
+    "La Voyager 2, en cambio, no tuvo que pasar por Titán.",
+    "Gracias a la alineación de los planetas, pudo usar Saturno para lanzarse hacia Urano.",
+    "La NASA aprobó continuar la misión, y los ingenieros prepararon la nave para un viaje mucho más largo.",
+    "Nadie había llegado nunca tan lejos."
+   ]
+  },
+  {
+   "rotulo": "Hacia Urano",
+   "imagen": [
+    "uranus",
+    "uranus planet"
+   ],
+   "frases": [
+    "La Voyager 2 llegó a Urano en enero de 1986, casi nueve años después de despegar.",
+    "Sigue siendo la única nave que ha visitado este planeta.",
+    "A esa distancia, la luz del Sol es muy débil, y las fotos necesitaban mucho tiempo de exposición.",
+    "Los ingenieros tuvieron que cambiar a distancia los programas de la sonda para que las imágenes no salieran movidas."
+   ]
+  },
+  {
+   "rotulo": "Un planeta tranquilo",
+   "imagen": [
+    "uranus",
+    "uranus planet"
+   ],
+   "frases": [
+    "En las fotos, Urano parecía una bola azul verdosa, casi sin detalles.",
+    "Su color se debe al metano de su atmósfera, que absorbe la luz roja.",
+    "Pero los instrumentos encontraron mucho más de lo que mostraban las cámaras."
+   ]
+  },
+  {
+   "rotulo": "Un planeta tumbado",
+   "imagen": [
+    "uranus",
+    "uranus rings"
+   ],
+   "frases": [
+    "Urano tiene algo único: gira tumbado de lado.",
+    "Su eje está tan inclinado que, durante parte de su órbita, uno de sus polos apunta casi directamente al Sol.",
+    "Se cree que un gran choque en el pasado lejano pudo inclinarlo así, aunque no se sabe con certeza.",
+    "La Voyager 2 estudió su campo magnético, que también resultó estar muy torcido."
+   ]
+  },
+  {
+   "rotulo": "Las lunas de Urano",
+   "imagen": [
+    "miranda moon",
+    "miranda uranus"
+   ],
+   "frases": [
+    "La sonda descubrió varias lunas nuevas alrededor de Urano.",
+    "Y fotografió de cerca una de las más extrañas del sistema solar: Miranda.",
+    "Su superficie parece un rompecabezas, con zonas muy distintas pegadas unas a otras.",
+    "Tiene acantilados enormes, entre los más altos que se conocen."
+   ]
+  },
+  {
+   "rotulo": "Los anillos de Urano",
+   "imagen": [
+    "uranus rings",
+    "uranus"
+   ],
+   "frases": [
+    "Los anillos de Urano ya se habían descubierto desde la Tierra en 1977.",
+    "La Voyager 2 los fotografió de cerca y encontró alguno más.",
+    "Son estrechos y oscuros, muy distintos de los de Saturno."
+   ]
+  },
+  {
+   "rotulo": "Hacia Neptuno",
+   "imagen": [
+    "neptune",
+    "neptune planet"
+   ],
+   "frases": [
+    "Después de Urano, todavía quedaba un último planeta: Neptuno.",
+    "La Voyager 2 llegó en agosto de 1989, doce años después de salir de la Tierra.",
+    "También es la única nave que lo ha visitado.",
+    "Las fotos mostraron un planeta de un azul intenso, con nubes blancas muy altas."
+   ]
+  },
+  {
+   "rotulo": "Un planeta descubierto con cálculos",
+   "imagen": [
+    "neptune",
+    "urbain le verrier"
+   ],
+   "frases": [
+    "Neptuno es el único planeta que se encontró primero con matemáticas.",
+    "En el siglo diecinueve se calculó dónde debía estar, por cómo tiraba de Urano.",
+    "Y en 1846 se observó por fin, muy cerca del lugar previsto."
+   ]
+  },
+  {
+   "rotulo": "Vientos de récord",
+   "imagen": [
+    "neptune great dark spot",
+    "neptune clouds"
+   ],
+   "frases": [
+    "En Neptuno se vio una gran mancha oscura, una tormenta del tamaño de la Tierra.",
+    "Y se midieron los vientos más rápidos del sistema solar, de más de dos mil kilómetros por hora.",
+    "Es sorprendente, porque Neptuno está tan lejos que recibe muy poca energía del Sol.",
+    "Todavía se estudia de dónde saca la fuerza para esos vientos."
+   ]
+  },
+  {
+   "rotulo": "Tritón y sus géiseres",
+   "imagen": [
+    "triton moon",
+    "triton neptune"
+   ],
+   "frases": [
+    "La última gran visita fue a Tritón, la mayor luna de Neptuno.",
+    "Es uno de los lugares más fríos que se han medido en el sistema solar, a unos doscientos treinta y cinco grados bajo cero.",
+    "Aun así, la sonda vio unas columnas oscuras que salían de su superficie, como géiseres.",
+    "Tritón además gira alrededor de Neptuno en sentido contrario, lo que hace pensar que pudo ser capturado."
+   ]
+  },
+  {
+   "rotulo": "Fin del gran recorrido",
+   "imagen": [
+    "neptune",
+    "voyager 2"
+   ],
+   "frases": [
+    "Con Neptuno terminó el gran viaje por los planetas.",
+    "En doce años, las dos Voyager habían visitado cuatro planetas gigantes y decenas de lunas.",
+    "Habían descubierto anillos, volcanes, lunas nuevas y tormentas gigantes.",
+    "Pero su historia no había terminado: empezaba una segunda misión."
+   ]
+  },
+  {
+   "rotulo": "Un vistazo atrás",
+   "imagen": [
+    "solar system",
+    "planets"
+   ],
+   "frases": [
+    "Para hacernos una idea, la Voyager 2 tardó doce años en llegar a Neptuno.",
+    "En ese tiempo recorrió miles de millones de kilómetros sin ningún tipo de reparación.",
+    "Todo funcionó a distancia, con órdenes enviadas desde la Tierra."
+   ]
+  },
+  {
+   "rotulo": "El disco de oro",
+   "imagen": [
+    "voyager golden record",
+    "golden record"
+   ],
+   "frases": [
+    "Antes de seguir, hay que hablar de algo muy especial que llevan las dos sondas.",
+    "Cada una tiene, sujeto a su costado, un disco de cobre bañado en oro.",
+    "Es un mensaje por si algún día alguien, en algún lugar, encuentra la nave.",
+    "La idea fue de un grupo dirigido por el astrónomo Carl Sagan."
+   ]
+  },
+  {
+   "rotulo": "Qué hay en el disco",
+   "imagen": [
+    "voyager golden record",
+    "golden record cover"
+   ],
+   "frases": [
+    "El disco guarda más de cien imágenes codificadas sobre la Tierra y la vida en ella.",
+    "También tiene saludos en cincuenta y cinco idiomas, sonidos de la naturaleza y unos noventa minutos de música.",
+    "Hay música de muchas culturas: desde Bach y Beethoven hasta canciones populares de distintos países y un rock and roll de Chuck Berry.",
+    "Hay también sonidos de la vida diaria, como pasos, risas, el viento o el latido de un corazón."
+   ]
+  },
+  {
+   "rotulo": "Las instrucciones",
+   "imagen": [
+    "voyager golden record cover",
+    "pulsar map"
+   ],
+   "frases": [
+    "La tapa del disco lleva grabadas unas instrucciones con dibujos.",
+    "Explican cómo poner el disco y a qué velocidad.",
+    "Incluyen un mapa que sitúa al Sol respecto a unas estrellas especiales, los púlsares.",
+    "Es casi imposible que alguien lo encuentre, pero el disco dice mucho de quiénes somos y de cómo queremos que nos vean."
+   ]
+  },
+  {
+   "rotulo": "Un mensaje para el futuro",
+   "imagen": [
+    "voyager golden record",
+    "golden record"
+   ],
+   "frases": [
+    "El disco también incluye un mensaje escrito del entonces presidente de Estados Unidos, Jimmy Carter.",
+    "Y saludos del secretario general de las Naciones Unidas de aquella época.",
+    "Es, a la vez, un mensaje para otras civilizaciones y una cápsula del tiempo para nosotros mismos."
+   ]
+  },
+  {
+   "rotulo": "Un punto azul pálido",
+   "imagen": [
+    "pale blue dot",
+    "earth from space"
+   ],
+   "frases": [
+    "En febrero de 1990, la Voyager 1 estaba a unos seis mil millones de kilómetros de casa.",
+    "Carl Sagan propuso girar sus cámaras una última vez para fotografiar los planetas desde allí.",
+    "En una de esas fotos, la Tierra aparece como un puntito diminuto, más pequeño que un píxel, dentro de un rayo de luz.",
+    "Esa imagen se conoce como el punto azul pálido."
+   ]
+  },
+  {
+   "rotulo": "Lo que nos enseña la foto",
+   "imagen": [
+    "pale blue dot",
+    "carl sagan"
+   ],
+   "frases": [
+    "Sagan escribió después que todo lo que conocemos, todas las personas que han vivido, están en ese puntito.",
+    "La foto no tenía un gran valor científico, pero sí un enorme valor humano.",
+    "Nos recuerda lo pequeños que somos y lo frágil que es nuestro planeta.",
+    "Poco después, las cámaras de la Voyager 1 se apagaron para siempre, para ahorrar energía."
+   ]
+  },
+  {
+   "rotulo": "El retrato de familia",
+   "imagen": [
+    "solar system",
+    "planets"
+   ],
+   "frases": [
+    "Aquella foto de la Tierra fue parte de un retrato de familia del sistema solar.",
+    "La Voyager 1 tomó decenas de imágenes de varios planetas desde fuera.",
+    "Fue la primera vez que vimos nuestro vecindario desde tan lejos."
+   ]
+  },
+  {
+   "rotulo": "La segunda misión",
+   "imagen": [
+    "heliosphere",
+    "solar wind"
+   ],
+   "frases": [
+    "Desde 1990, la misión cambió de nombre y de objetivo: pasó a ser la Misión Interestelar Voyager.",
+    "El nuevo reto era llegar al borde de la región que domina el Sol.",
+    "Porque el Sol no solo da luz: también lanza sin parar un chorro de partículas, el viento solar.",
+    "Ese viento forma alrededor de los planetas una especie de burbuja gigante."
+   ]
+  },
+  {
+   "rotulo": "La burbuja del Sol",
+   "imagen": [
+    "heliosphere",
+    "heliopause"
+   ],
+   "frases": [
+    "Esa burbuja se llama heliosfera.",
+    "Dentro de ella manda el viento solar; fuera, empieza el espacio entre las estrellas, el medio interestelar.",
+    "Nadie sabía exactamente dónde estaba el borde de la burbuja.",
+    "Las Voyager iban a ser las primeras en averiguarlo."
+   ]
+  },
+  {
+   "rotulo": "Una burbuja en movimiento",
+   "imagen": [
+    "heliosphere",
+    "solar wind"
+   ],
+   "frases": [
+    "La heliosfera no es fija: crece y se encoge según la actividad del Sol.",
+    "El Sol tiene ciclos de unos once años, con épocas más activas y otras más tranquilas.",
+    "Eso hacía todavía más difícil saber cuándo llegarían las sondas al borde."
+   ]
+  },
+  {
+   "rotulo": "El choque de terminación",
+   "imagen": [
+    "termination shock",
+    "solar wind"
+   ],
+   "frases": [
+    "Antes del borde, hay una zona donde el viento solar frena de golpe, al chocar con lo que hay fuera.",
+    "Se llama choque de terminación.",
+    "La Voyager 1 lo cruzó en diciembre de 2004, y la Voyager 2 en 2007.",
+    "Más allá, el viento solar se volvía más lento, más denso y más caliente."
+   ]
+  },
+  {
+   "rotulo": "Más allá del Sol",
+   "imagen": [
+    "heliopause",
+    "interstellar space"
+   ],
+   "frases": [
+    "El veinticinco de agosto de 2012, la Voyager 1 cruzó por fin el borde de la burbuja, la heliopausa.",
+    "Estaba a unos ciento veintiún veces la distancia entre la Tierra y el Sol.",
+    "Se convirtió así en el primer objeto humano en llegar al espacio interestelar.",
+    "Al principio hubo dudas, y los científicos tardaron meses en confirmarlo."
+   ]
+  },
+  {
+   "rotulo": "Cómo lo supieron",
+   "imagen": [
+    "interstellar space",
+    "voyager 1"
+   ],
+   "frases": [
+    "La Voyager 1 tenía estropeado el instrumento que mide directamente el viento solar.",
+    "Así que los científicos usaron una pista indirecta: el sonido del plasma que la rodeaba.",
+    "Una erupción del Sol hizo vibrar ese gas, y la sonda captó la vibración con otro instrumento.",
+    "Por el tono de esa vibración se supo que el gas era mucho más denso: era el de fuera de la burbuja."
+   ]
+  },
+  {
+   "rotulo": "La Voyager 2 también",
+   "imagen": [
+    "voyager 2",
+    "interstellar space"
+   ],
+   "frases": [
+    "La Voyager 2 cruzó la heliopausa en noviembre de 2018.",
+    "Lo hizo por otro lado de la burbuja, y a una distancia parecida.",
+    "Esta vez, su instrumento de plasma sí funcionaba, y midió el cambio directamente.",
+    "Por primera vez teníamos dos medidas desde dos puntos distintos del borde del sistema solar."
+   ]
+  },
+  {
+   "rotulo": "Hablar a tanta distancia",
+   "imagen": [
+    "deep space network",
+    "deep space antenna"
+   ],
+   "frases": [
+    "¿Cómo se habla con una nave tan lejana?",
+    "Con la Red de Espacio Profundo de la NASA, unas antenas gigantes repartidas en tres lugares del planeta.",
+    "Están en California, en Australia, cerca de Canberra, y en España.",
+    "Así, mientras la Tierra gira, siempre hay alguna antena mirando hacia las sondas."
+   ]
+  },
+  {
+   "rotulo": "España y las Voyager",
+   "imagen": [
+    "madrid deep space communications complex",
+    "robledo de chavela"
+   ],
+   "frases": [
+    "La estación española está en Robledo de Chavela, cerca de Madrid.",
+    "Desde allí se han seguido muchas misiones históricas, incluidas las Voyager.",
+    "Sus antenas más grandes miden unos setenta metros de diámetro.",
+    "Es uno de los pocos lugares de la Tierra capaces de escuchar señales tan débiles."
+   ]
+  },
+  {
+   "rotulo": "Cuando el plan sale bien",
+   "imagen": [
+    "parabolic antenna",
+    "deep space network"
+   ],
+   "frases": [
+    "Durante el paso por los planetas, las antenas de los tres países trabajaron sin descanso.",
+    "Cada foto tardaba horas en llegar completa.",
+    "Y cada imagen nueva se recibía en el laboratorio con una enorme expectación."
+   ]
+  },
+  {
+   "rotulo": "Solo desde Australia",
+   "imagen": [
+    "canberra deep space communication complex",
+    "tidbinbilla"
+   ],
+   "frases": [
+    "Hay un detalle curioso con la Voyager 2.",
+    "Al pasar por Neptuno, salió desviada hacia el sur, por debajo del plano de los planetas.",
+    "Desde el hemisferio norte no se la puede ver bien.",
+    "Por eso, hoy solo la antena de Australia puede enviarle órdenes."
+   ]
+  },
+  {
+   "rotulo": "Una señal finísima",
+   "imagen": [
+    "radio telescope",
+    "parabolic antenna"
+   ],
+   "frases": [
+    "El transmisor de cada Voyager tiene una potencia de unos veintitrés vatios, como una bombilla pequeña.",
+    "Cuando su señal llega a la Tierra, después de recorrer miles de millones de kilómetros, es increíblemente débil.",
+    "Por eso hacen falta antenas gigantes y receptores muy sensibles.",
+    "Y los datos llegan muy despacio, mucho más despacio que cualquier conexión de casa."
+   ]
+  },
+  {
+   "rotulo": "A casi un día luz",
+   "imagen": [
+    "voyager 1",
+    "milky way"
+   ],
+   "frases": [
+    "Hoy, a finales de 2026, la Voyager 1 está a más de veinticinco mil millones de kilómetros de nosotros.",
+    "La luz, que es lo más rápido que existe, tarda casi un día entero en llegar desde allí.",
+    "Si los ingenieros envían una orden, tienen que esperar casi dos días para saber si ha funcionado.",
+    "La Voyager 2 está algo más cerca, a unos veintiún mil millones de kilómetros."
+   ]
+  },
+  {
+   "rotulo": "El paso de Pioneer",
+   "imagen": [
+    "pioneer 10",
+    "pioneer spacecraft"
+   ],
+   "frases": [
+    "Antes de las Voyager, otras dos sondas, las Pioneer 10 y 11, ya habían viajado hacia los planetas exteriores.",
+    "Pero la Voyager 1 iba más rápido, y en febrero de 1998 adelantó a la Pioneer 10.",
+    "Desde entonces es el objeto humano más lejano.",
+    "Las Pioneer dejaron de comunicarse hace años, mientras que las Voyager siguen hablando."
+   ]
+  },
+  {
+   "rotulo": "Vivir con averías",
+   "imagen": [
+    "voyager spacecraft",
+    "engineers"
+   ],
+   "frases": [
+    "Una máquina de casi cincuenta años tiene achaques, y las Voyager no son una excepción.",
+    "A lo largo de los años han tenido fallos de memoria, de propulsores y de instrumentos.",
+    "Cada vez, un pequeño equipo de ingenieros ha buscado soluciones con planos y manuales de los años setenta.",
+    "Algunos de esos manuales los escribieron personas que ya se han jubilado."
+   ]
+  },
+  {
+   "rotulo": "El susto de 2023",
+   "imagen": [
+    "voyager 2",
+    "antenna"
+   ],
+   "frases": [
+    "En julio de 2023, una orden equivocada hizo que la antena de la Voyager 2 dejara de apuntar a la Tierra.",
+    "Fue un desvío de solo dos grados, pero suficiente para perder el contacto.",
+    "Los ingenieros enviaron una orden con mucha potencia desde Australia, como quien grita para que le oigan.",
+    "La sonda la recibió, volvió a apuntar a casa y todo se arregló."
+   ]
+  },
+  {
+   "rotulo": "Los propulsores",
+   "imagen": [
+    "rocket thruster",
+    "spacecraft thruster"
+   ],
+   "frases": [
+    "Las Voyager tienen pequeños propulsores para orientarse y mantener la antena mirando a la Tierra.",
+    "Con los años, los tubos del combustible se van atascando poco a poco.",
+    "Los ingenieros han tenido que ir cambiando de propulsores para que las sondas sigan bien orientadas."
+   ]
+  },
+  {
+   "rotulo": "Los mensajes sin sentido",
+   "imagen": [
+    "voyager 1",
+    "computer chip"
+   ],
+   "frases": [
+    "En noviembre de 2023, la Voyager 1 empezó a enviar datos que no tenían sentido.",
+    "Tras meses de investigación, el equipo descubrió que un chip de memoria de uno de sus ordenadores había fallado.",
+    "No se podía cambiar la pieza, así que reorganizaron el programa para que evitara la parte rota.",
+    "En 2024 la sonda volvió a enviar datos científicos útiles."
+   ]
+  },
+  {
+   "rotulo": "Ahorrar energía",
+   "imagen": [
+    "radioisotope thermoelectric generator",
+    "plutonium"
+   ],
+   "frases": [
+    "Cada año los generadores dan un poco menos de electricidad.",
+    "Para que las sondas sigan vivas, los ingenieros van apagando calefactores e instrumentos, uno a uno.",
+    "En los últimos años se han apagado varios instrumentos científicos en las dos naves.",
+    "Es como ir apagando las luces de una casa para que la última bombilla dure más."
+   ]
+  },
+  {
+   "rotulo": "El frío del espacio",
+   "imagen": [
+    "voyager spacecraft",
+    "outer space"
+   ],
+   "frases": [
+    "Apagar calefactores tiene un riesgo: el frío.",
+    "Algunas piezas, como los tubos del combustible de los propulsores, podrían congelarse.",
+    "El equipo tiene que calcular con mucho cuidado qué se puede apagar sin dañar nada.",
+    "Cada decisión se piensa durante semanas."
+   ]
+  },
+  {
+   "rotulo": "Ed Stone",
+   "imagen": [
+    "edward stone",
+    "voyager scientist"
+   ],
+   "frases": [
+    "Durante cincuenta años, el científico principal de la misión fue Edward Stone.",
+    "Empezó en 1972, antes del lanzamiento, y se retiró de ese puesto en 2022.",
+    "Fue la cara visible de las Voyager en cada descubrimiento.",
+    "Murió en 2024, y muchos le recuerdan como el hombre que nos enseñó los planetas exteriores."
+   ]
+  },
+  {
+   "rotulo": "Qué se mide hoy",
+   "imagen": [
+    "cosmic rays",
+    "magnetic field"
+   ],
+   "frases": [
+    "Ahora que están fuera de la burbuja del Sol, las sondas miden cosas que nadie había medido allí.",
+    "Por ejemplo, los rayos cósmicos, partículas muy rápidas que llegan de otras partes de la galaxia.",
+    "También estudian el campo magnético y el gas del espacio entre las estrellas.",
+    "Son datos únicos, porque no hay ninguna otra nave en esa zona."
+   ]
+  },
+  {
+   "rotulo": "Lo que hemos aprendido",
+   "imagen": [
+    "interstellar space",
+    "heliosphere"
+   ],
+   "frases": [
+    "Gracias a las Voyager sabemos que la burbuja del Sol tiene un borde bien marcado.",
+    "Y que el espacio entre las estrellas no está vacío: hay gas, polvo y campos magnéticos.",
+    "Son pistas para entender cómo protege el Sol a los planetas de las partículas que vienen de fuera."
+   ]
+  },
+  {
+   "rotulo": "Cuánto les queda",
+   "imagen": [
+    "voyager spacecraft",
+    "night sky"
+   ],
+   "frases": [
+    "Los ingenieros calculan que las Voyager podrán seguir funcionando, con muy pocos instrumentos, unos pocos años más.",
+    "Algún día, en la próxima década, ya no habrá energía suficiente para enviar señales.",
+    "Ese día, las sondas se quedarán en silencio.",
+    "Pero no se detendrán: seguirán viajando."
+   ]
+  },
+  {
+   "rotulo": "La nube de Oort",
+   "imagen": [
+    "oort cloud",
+    "comet"
+   ],
+   "frases": [
+    "Más allá de los planetas, muy lejos, se cree que existe una enorme nube de cometas helados: la nube de Oort.",
+    "Nadie la ha visto directamente, pero explicaría de dónde vienen algunos cometas.",
+    "Las Voyager tardarán unos trescientos años en llegar a su borde interior.",
+    "Y decenas de miles de años en atravesarla."
+   ]
+  },
+  {
+   "rotulo": "Otras estrellas",
+   "imagen": [
+    "star field",
+    "stars"
+   ],
+   "frases": [
+    "Dentro de unos cuarenta mil años, la Voyager 1 pasará relativamente cerca de una estrella pequeña de la constelación de la Jirafa.",
+    "Aun así, pasará a más de un año luz y medio de ella: una distancia enorme.",
+    "La Voyager 2 pasará a una distancia parecida de otra estrella, llamada Ross 248.",
+    "Ninguna de las dos se acercará de verdad a ningún sol."
+   ]
+  },
+  {
+   "rotulo": "Mensajeras para siempre",
+   "imagen": [
+    "milky way",
+    "galaxy"
+   ],
+   "frases": [
+    "Las Voyager seguirán dando vueltas alrededor del centro de nuestra galaxia, la Vía Láctea, durante muchísimo tiempo.",
+    "Probablemente durarán más que muchas de las cosas que hemos construido aquí en la Tierra.",
+    "Y con ellas viajará el disco de oro, con nuestra música, nuestras voces y nuestras imágenes.",
+    "Una carta lanzada al mar más grande que existe."
+   ]
+  },
+  {
+   "rotulo": "Por qué importan",
+   "imagen": [
+    "voyager spacecraft",
+    "pale blue dot"
+   ],
+   "frases": [
+    "Las Voyager nos enseñaron que los planetas y las lunas son mundos muy distintos entre sí, llenos de sorpresas.",
+    "Nos mostraron volcanes donde esperábamos rocas frías y océanos escondidos bajo el hielo.",
+    "Y nos dieron una foto de la Tierra que todavía nos hace pensar.",
+    "Todo eso, con unos ordenadores más simples que una calculadora moderna."
+   ]
+  },
+  {
+   "rotulo": "La gran lección",
+   "imagen": [
+    "engineers",
+    "control room"
+   ],
+   "frases": [
+    "Hay otra lección, más humana.",
+    "Detrás de las sondas ha habido generaciones de ingenieros y científicos que han cuidado de ellas.",
+    "Algunos empezaron a trabajar en la misión de jóvenes y se jubilaron con ella todavía en marcha.",
+    "Es un ejemplo de paciencia, ingenio y trabajo en equipo."
+   ]
+  },
+  {
+   "rotulo": "Para terminar",
+   "imagen": [
+    "voyager spacecraft",
+    "stars"
+   ],
+   "frases": [
+    "En 1977, dos pequeñas naves salieron de la Tierra para visitar dos planetas.",
+    "Visitaron cuatro, cruzaron el borde del sistema solar y siguen enviando noticias casi cincuenta años después.",
+    "La próxima vez que mires al cielo de noche, piensa que, en algún lugar ahí arriba, siguen viajando.",
+    "Y que llevan con ellas un pequeño saludo de todos nosotros."
+   ]
+  }
+ ],
+ "rotulo_cierre": "Suscríbete a Ciencia y Porqués",
+ "cierre": "Gracias por acompañarme. Suscríbete para un nuevo porqué cada semana."
+}
