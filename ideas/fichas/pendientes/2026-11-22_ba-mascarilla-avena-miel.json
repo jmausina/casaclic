@@ -67,8 +67,8 @@
   {
    "texto": "Déjala actuar unos diez o quince minutos, mientras descansas tranquilamente.",
    "imagen": [
-    "armchair",
-    "reading book"
+    "teacup",
+    "cup of tea"
    ]
   },
   {
@@ -98,15 +98,15 @@
    "rotulo": "Consejo",
    "texto": "Antes, haz una prueba en una zona pequeña del brazo, por si tu piel es sensible.",
    "imagen": [
-    "forearm",
-    "arm"
+    "hands",
+    "human hands"
    ]
   },
   {
    "texto": "Prepárala siempre en el momento y úsala una o dos veces por semana, como mucho.",
    "imagen": [
     "rolled oats",
-    "oat flakes"
+    "oatmeal"
    ]
   }
  ],
