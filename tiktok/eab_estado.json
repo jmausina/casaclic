@@ -1,5 +1,5 @@
 {
- "siguiente": 12,
+ "siguiente": 13,
  "hechos": {
   "2026-11-20-t": "pulsera",
   "2026-11-22-m": "herramientas",
@@ -12,6 +12,7 @@
   "2026-11-25-t": "largos_collar",
   "2026-11-26-m": "organizar",
   "2026-11-26-t": "cuidar",
-  "2026-11-27-m": "colores"
+  "2026-11-27-m": "colores",
+  "2026-11-27-t": "hilo_extra"
  }
 }
