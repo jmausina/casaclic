@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recetario de Belleza Ancestral · Edición Regalo</title>
+<meta name="description" content="Un regalo bonito y diferente por 9,97 €: 40 recetas de belleza natural de 8 culturas, con tarjeta regalo para imprimir. Llega a tu correo en cuanto pagas.">
+<meta name="theme-color" content="#22304F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --noche:#22304F; --lino:#EDEEE8; --tinta:#18202E; --azafran:#D9A21B;
+  --salvia:#5F7F6A; --kraft:#B98F5E; --kraft-claro:#D8BC93; --blanco:#FBFBF8;
+  --serif:"Fraunces", Georgia, "Times New Roman", serif;
+  --sans:"Source Sans 3", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--lino);color:var(--tinta);font:400 1.0625rem/1.6 var(--sans);overflow-x:hidden;-webkit-tap-highlight-color:rgba(217,162,27,.25);touch-action:manipulation}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--azafran);outline-offset:3px;border-radius:4px}
+.saltar{position:absolute;left:-999px;top:0;background:var(--azafran);color:var(--tinta);padding:.6rem 1rem;z-index:10}
+.saltar:focus{left:1rem;top:1rem}
+.envoltura{max-width:68rem;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.6rem,3.4vw,2.25rem);margin-bottom:1rem;scroll-margin-top:1rem}
+p{margin:0 0 1rem;text-wrap:pretty}
+.boton{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:3.25rem;padding:.85rem 1.6rem;border-radius:999px;background:var(--azafran);color:var(--tinta);font:600 1.125rem/1 var(--sans);text-decoration:none;transition:background-color .15s ease, transform .15s ease}
+.boton:hover{background:#E8B532}
+.boton:active{transform:translateY(1px)}
+.nota-pago{font-size:.9375rem;opacity:.85;margin-top:.75rem}
+
+/* Portada */
+.portada{background:var(--noche);color:var(--blanco);padding:3rem 0 3.5rem}
+.portada .envoltura{display:grid;gap:2.5rem;align-items:center}
+@media (min-width:860px){.portada .envoltura{grid-template-columns:1.1fr .9fr}}
+.portada h1{font-size:clamp(2.1rem,5.6vw,3.6rem);font-weight:400;letter-spacing:-.01em;margin-bottom:1.25rem}
+.portada .entrada{font-size:1.1875rem;max-width:34rem;opacity:.92}
+.precio{display:flex;align-items:baseline;gap:.75rem;margin:1.5rem 0 1.25rem}
+.precio strong{font-family:var(--serif);font-size:2.5rem;font-weight:600;font-variant-numeric:tabular-nums}
+.precio span{opacity:.8}
+
+/* Tarjeta regalo (lo memorable) */
+.colgante{position:relative;display:flex;flex-direction:column;align-items:center}
+.hilo{width:2px;height:3.5rem;background:repeating-linear-gradient(to bottom,var(--kraft-claro) 0 6px,transparent 6px 9px)}
+.tarjeta{position:relative;width:min(20rem,86vw);background:var(--kraft);color:var(--tinta);padding:2.75rem 1.75rem 1.75rem;border-radius:6px 6px 14px 14px;clip-path:polygon(18% 0,82% 0,100% 14%,100% 100%,0 100%,0 14%);box-shadow:0 18px 40px rgba(0,0,0,.28);transform:rotate(-3deg);transform-origin:50% 0}
+.tarjeta::before{content:"";position:absolute;top:1rem;left:50%;width:1.1rem;height:1.1rem;margin-left:-.55rem;border-radius:50%;background:var(--noche);box-shadow:inset 0 0 0 3px var(--kraft-claro)}
+.tarjeta .para{font-family:var(--serif);font-size:1.0625rem;opacity:.85;margin:0}
+.tarjeta .nombre{font-family:var(--serif);font-size:clamp(1.8rem,6vw,2.4rem);font-weight:600;line-height:1.1;margin:.2rem 0 1rem;overflow-wrap:anywhere;min-height:2.6rem}
+.tarjeta .regalo{font-size:1rem;line-height:1.45;margin:0;border-top:1px dashed rgba(24,32,46,.4);padding-top:.9rem}
+@media (prefers-reduced-motion:no-preference){
+  .tarjeta{animation:balanceo 2.4s ease-out 1 both}
+  @keyframes balanceo{0%{transform:rotate(5deg)}45%{transform:rotate(-5deg)}75%{transform:rotate(-1.5deg)}100%{transform:rotate(-3deg)}}
+}
+.probar{margin-top:1.75rem;width:min(20rem,86vw)}
+.probar label{display:block;font-size:.9375rem;margin-bottom:.35rem;opacity:.9}
+.probar input{width:100%;min-height:2.9rem;padding:.6rem .9rem;border-radius:8px;border:1px solid rgba(251,251,248,.35);background:rgba(251,251,248,.08);color:var(--blanco);font:400 1.0625rem var(--sans)}
+.probar input::placeholder{color:rgba(251,251,248,.55)}
+
+/* Secciones */
+section{padding:3.5rem 0}
+.bloque-claro{background:var(--blanco)}
+.estrecho{max-width:42rem}
+.cita{font-family:var(--serif);font-size:1.25rem;line-height:1.5;border-left:3px solid var(--salvia);padding-left:1rem;margin:1.25rem 0}
+
+/* Las 8 culturas */
+.culturas{display:grid;gap:0;margin:1.5rem 0 0;border-top:1px solid rgba(24,32,46,.15)}
+@media (min-width:720px){.culturas{grid-template-columns:1fr 1fr;column-gap:2.5rem}}
+.cultura{display:grid;grid-template-columns:1fr auto;gap:1rem;padding:.85rem 0;border-bottom:1px solid rgba(24,32,46,.15)}
+.cultura dt{font-family:var(--serif);font-weight:600}
+.cultura dd{margin:0;color:var(--salvia);text-align:right}
+
+/* Qué incluye */
+.lista-incluye{list-style:none;padding:0;margin:1.25rem 0 0;display:grid;gap:.75rem}
+.lista-incluye li{background:var(--lino);border-radius:10px;padding:1rem 1.1rem}
+.lista-incluye li strong{display:block;font-family:var(--serif);font-size:1.125rem}
+.nuevo{display:inline-block;margin-left:.4rem;padding:.05rem .55rem;border-radius:999px;background:var(--noche);color:var(--blanco);font:600 .8125rem/1.6 var(--sans);vertical-align:.15em}
+
+/* Cómo funciona: es una secuencia real */
+.pasos{counter-reset:paso;list-style:none;padding:0;margin:1.5rem 0 0;display:grid;gap:1.25rem}
+@media (min-width:720px){.pasos{grid-template-columns:repeat(4,1fr)}}
+.pasos li{counter-increment:paso;position:relative;padding-top:3rem}
+.pasos li::before{content:counter(paso);position:absolute;top:0;left:0;width:2.25rem;height:2.25rem;border-radius:50%;background:var(--azafran);font:600 1.125rem/2.25rem var(--serif);text-align:center}
+
+/* Para quién */
+.dos{display:grid;gap:1.5rem}
+@media (min-width:720px){.dos{grid-template-columns:1fr 1fr}}
+.dos ul{padding-left:1.2rem;margin:.5rem 0 0}
+.dos li{margin-bottom:.4rem}
+.dos h3{font-size:1.25rem}
+
+/* Garantía */
+.garantia{display:grid;gap:1rem;align-items:center;background:var(--blanco);border:1px solid rgba(95,127,106,.45);border-radius:14px;padding:1.5rem}
+@media (min-width:640px){.garantia{grid-template-columns:auto 1fr}}
+.sello{width:5.5rem;height:5.5rem;border-radius:50%;border:3px double var(--salvia);display:grid;place-items:center;text-align:center;font:600 1rem/1.1 var(--serif);color:var(--salvia)}
+.sello span{display:block;font-size:1.75rem}
+
+/* Preguntas */
+details{border-bottom:1px solid rgba(24,32,46,.15);padding:.25rem 0}
+summary{cursor:pointer;font-family:var(--serif);font-weight:600;font-size:1.125rem;padding:.9rem 0;list-style-position:outside}
+summary:hover{color:var(--salvia)}
+details p{margin:0 0 1rem}
+
+/* Cierre */
+.cierre{background:var(--noche);color:var(--blanco);text-align:center}
+.cierre h2{font-weight:400}
+.cierre p{max-width:34rem;margin-left:auto;margin-right:auto}
+footer{padding:2rem 0;font-size:.875rem;color:rgba(24,32,46,.75)}
+footer p{margin:0 0 .5rem}
+</style>
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<header class="portada">
+  <div class="envoltura">
+    <div>
+      <h1>Un regalo bonito y diferente, listo en 10 minutos</h1>
+      <p class="entrada">40 recetas de belleza natural de 8 culturas, con su tarjeta regalo para imprimir. Lo compras, pones su nombre y lo imprimes o se lo envías por correo. Sin colas y sin esperar envíos.</p>
+      <div class="precio"><strong>9,97&nbsp;€</strong><span>pago único</span></div>
+      <a class="boton" href="https://pay.hotmart.com/M108343227O" rel="noopener">Comprar el regalo</a>
+      <p class="nota-pago">Pago seguro en Hotmart. Te llega al correo en cuanto pagas.</p>
+    </div>
+    <div class="colgante">
+      <div class="hilo" aria-hidden="true"></div>
+      <div class="tarjeta" role="img" aria-label="Tarjeta regalo con el nombre de la persona">
+        <p class="para">Para ti,</p>
+        <p class="nombre" id="nombre-tarjeta" aria-live="polite">Carmen</p>
+        <p class="regalo">Recetario de Belleza Ancestral.<br>40 recetas de 8 culturas para el pelo, la piel y la calma.</p>
+      </div>
+      <form class="probar" onsubmit="return false">
+        <label for="nombre">Prueba con su nombre</label>
+        <input id="nombre" name="nombre-regalo" type="text" autocomplete="off" spellcheck="false" maxlength="24" placeholder="Por ejemplo, Mamá…">
+      </form>
+    </div>
+  </div>
+</header>
+
+<main id="contenido">
+  <section>
+    <div class="envoltura estrecho">
+      <h2>¿Qué le regalo este año?</h2>
+      <p>Llega diciembre y la lista no se acaba: el amigo invisible del trabajo, tu suegra, tu amiga de siempre. Con 10&nbsp;€ y poco tiempo, casi todo acaba siendo otra vela o unos calcetines.</p>
+      <p class="cita">Hay regalos que se olvidan en un cajón. Este se abre, se lee y se prueba en casa.</p>
+      <p>Es un libro de recetas de belleza con historia: cada receta cuenta de dónde viene y se prepara con cosas de la cocina, como miel, aceite de oliva, arroz o avena.</p>
+    </div>
+  </section>
+
+  <section class="bloque-claro" aria-labelledby="t-culturas">
+    <div class="envoltura">
+      <h2 id="t-culturas">Un viaje por 8 culturas, 5 recetas en cada una</h2>
+      <p class="estrecho">Un ejemplo de cada capítulo:</p>
+      <dl class="culturas">
+        <div class="cultura"><dt>Egipto</dt><dd>Mascarilla de miel</dd></div>
+        <div class="cultura"><dt>Grecia y Roma</dt><dd>Exfoliante de azúcar y aceite de oliva</dd></div>
+        <div class="cultura"><dt>India</dt><dd>Aceite de coco antes del lavado</dd></div>
+        <div class="cultura"><dt>China y Japón</dt><dd>Agua de arroz fermentada</dd></div>
+        <div class="cultura"><dt>Oriente Medio y al-Ándalus</dt><dd>Agua de rosas casera</dd></div>
+        <div class="cultura"><dt>América</dt><dd>Mascarilla de aguacate</dd></div>
+        <div class="cultura"><dt>España y el Mediterráneo</dt><dd>Enjuague de romero</dd></div>
+        <div class="cultura"><dt>Europa</dt><dd>Saquito de lavanda para la almohada</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-incluye">
+    <div class="envoltura estrecho">
+      <h2 id="t-incluye">Qué recibes</h2>
+      <ul class="lista-incluye">
+        <li><strong>El recetario completo</strong>113 páginas con 40 recetas para el pelo, la piel y la calma. Cada una con su historia, un consejo y una variante.</li>
+        <li><strong>Versión para imprimir</strong>Preparada para imprimir en casa o en una copistería.</li>
+        <li><strong>Fichas de recetas, guía de ingredientes y lista de la compra</strong>Para tenerlo todo a mano en la cocina.</li>
+        <li><strong>Calendario de 4 semanas</strong>Una idea para cada semana del mes.</li>
+        <li><strong>Tarjeta regalo para imprimir <span class="nuevo">Nuevo</span></strong>«Para ti, de parte de…», en 2 diseños.</li>
+        <li><strong>Cómo regalarlo <span class="nuevo">Nuevo</span></strong>Una hoja con ideas para imprimirlo, atarlo con una cinta o enviarlo por correo con un mensaje.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="bloque-claro" aria-labelledby="t-pasos">
+    <div class="envoltura">
+      <h2 id="t-pasos">Así lo tienes listo</h2>
+      <ol class="pasos">
+        <li><h3>Compras</h3><p>Pagas 9,97&nbsp;€ en Hotmart, con tarjeta u otro método.</p></li>
+        <li><h3>Lo recibes</h3><p>Te llega el acceso al correo en cuanto pagas.</p></li>
+        <li><h3>Pones su nombre</h3><p>Escribes el nombre en la tarjeta regalo.</p></li>
+        <li><h3>Lo imprimes o lo envías</h3><p>En papel con una cinta, o por correo con un mensaje.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-quien">
+    <div class="envoltura">
+      <h2 id="t-quien">¿Es para ella?</h2>
+      <div class="dos">
+        <div>
+          <h3>Le va a gustar si…</h3>
+          <ul>
+            <li>Le gusta cuidarse con cosas naturales y sencillas.</li>
+            <li>Disfruta de las historias y costumbres de otros países.</li>
+            <li>Le gusta probar cosas nuevas en la cocina.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Mejor otro regalo si…</h3>
+          <ul>
+            <li>Busca tratamientos médicos o resultados garantizados.</li>
+            <li>Quiere un libro de tapa dura ya impreso: este es digital y lo imprimes tú.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloque-claro" aria-labelledby="t-garantia">
+    <div class="envoltura estrecho">
+      <h2 id="t-garantia">Garantía de 15 días</h2>
+      <div class="garantia">
+        <div class="sello" aria-hidden="true"><div><span>15</span>días</div></div>
+        <p>Si no te convence, pides la devolución desde Hotmart en los 15 días siguientes a la compra y te devuelven el dinero.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-preguntas">
+    <div class="envoltura estrecho">
+      <h2 id="t-preguntas">Preguntas frecuentes</h2>
+      <details><summary>¿Es un libro en papel?</summary><p>No. Es un libro digital en PDF. Lo puedes imprimir en casa o en una copistería, o enviarlo por correo.</p></details>
+      <details><summary>¿Cuándo me llega?</summary><p>Hotmart te envía el acceso al correo en cuanto se confirma el pago. No hay envíos ni esperas.</p></details>
+      <details><summary>¿Puedo regalárselo a varias personas?</summary><p>Cada compra es para un regalo. Si quieres regalarlo a varias personas, compra uno para cada una.</p></details>
+      <details><summary>¿Las recetas son seguras?</summary><p>Usan ingredientes de cocina y cada receta indica hacer antes una prueba en una zona pequeña de la piel. No llevan limón sobre la piel ni aceites esenciales puros. No sustituyen el consejo médico.</p></details>
+      <details><summary>¿Cómo pago?</summary><p>El pago se hace en Hotmart, la plataforma que vende y entrega el libro. Nunca se paga por fuera.</p></details>
+    </div>
+  </section>
+
+  <section class="cierre" aria-labelledby="t-cierre">
+    <div class="envoltura">
+      <h2 id="t-cierre">Un regalo con historia por 9,97&nbsp;€</h2>
+      <p>Listo en 10 minutos, también la noche antes del amigo invisible.</p>
+      <a class="boton" href="https://pay.hotmart.com/M108343227O" rel="noopener">Comprar el regalo</a>
+      <p class="nota-pago">Pago seguro en Hotmart, con garantía de 15 días.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="envoltura">
+    <p>Belleza Ancestral. El pago y la entrega los gestiona Hotmart.</p>
+    <p>Las recetas son de cuidado personal. No curan, tratan ni previenen enfermedades.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var input=document.getElementById('nombre');
+  var salida=document.getElementById('nombre-tarjeta');
+  if(!input||!salida)return;
+  input.addEventListener('input',function(){
+    var v=input.value.trim();
+    salida.textContent=v?v:'Carmen';
+  });
+})();
+</script>
+</body>
+</html>
