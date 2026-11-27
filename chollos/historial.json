@@ -458,6 +458,33 @@
      "antes": "14,00 €"
     }
    ]
+  },
+  {
+   "fecha": "2026-11-27",
+   "hora": "02:52",
+   "video": "NAcnQ3BEImQ",
+   "canal": "UC-wvAtFM1D_ZSbJAi5ZLqfQ",
+   "titulo": "Calvin Klein CK IN2U Eau de Toilette de 70,00 € hoy por 15,00 € #Shorts",
+   "productos": [
+    {
+     "asin": "B000VOLKEA",
+     "nombre": "Calvin Klein CK IN2U Eau de Toilette hombre 100 ml",
+     "precio": "15,00 €",
+     "antes": "70,00 €"
+    },
+    {
+     "asin": "B07GSPTGJJ",
+     "nombre": "Nivea Aceite en Loción Flor de Cerezo y Jojoba – pack 6 x 400 ml",
+     "precio": "12,62 €",
+     "antes": "28,88 €"
+    },
+    {
+     "asin": "B0DLWYZ98W",
+     "nombre": "La Roche-Posay Effaclar Duo+M parches hidrocoloides",
+     "precio": "7,97 €",
+     "antes": "17,40 €"
+    }
+   ]
   }
  ]
 }
