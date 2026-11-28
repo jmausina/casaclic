@@ -485,6 +485,33 @@
      "antes": "17,40 €"
     }
    ]
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora": "02:34",
+   "video": "WpUXBtCbp34",
+   "canal": "UC-wvAtFM1D_ZSbJAi5ZLqfQ",
+   "titulo": "Diesel Only The Brave Eau de Toilette de 88,00 € hoy por 33,80 € #Shorts",
+   "productos": [
+    {
+     "asin": "B07CNLFVKV",
+     "nombre": "Diesel Only The Brave Eau de Toilette 125 ml (hombre)",
+     "precio": "33,80 €",
+     "antes": "88,00 €"
+    },
+    {
+     "asin": "B094K5VKL9",
+     "nombre": "Set Olay Regenerist: crema de día SPF 30 + sérum",
+     "precio": "26,96 €",
+     "antes": "59,98 €"
+    },
+    {
+     "asin": "B0HCVMB8TV",
+     "nombre": "Cepillo moldeador de aire Cecotec AirGlisse 8in1",
+     "precio": "59,00 €",
+     "antes": "124,90 €"
+    }
+   ]
   }
  ]
 }
